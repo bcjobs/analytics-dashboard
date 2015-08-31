@@ -1,25 +1,21 @@
 {
 	"date": "2015-08-20",
 	"summary": {
-		"openSoftwareJobs": {
-			"value": "288",
-			"trend": "Up",
-			"change": "10%"
+		"openJobs": {
+			"current": 1209,
+			"previous": 1100
 		},
-		"averageOpenSoftwareJobs": {
-			"value": "288",
-			"trend": "None",
-			"change": "0%"
+		"openJobsAverage": {
+			"current": 124,
+			"previous": 124
 		},
-		"newSoftwareJobsYesterday": {
-			"value": "38",
-			"trend": "Up",
-			"change": "15%"
+		"newJobs": {
+			"current": 156,
+			"previous": 166
 		},
-		"averageNewSoftwareJobs": {
-			"value": "22",
-			"trend": "Down",
-			"change": "1%"
+		"newJobsAverage": {
+			"current": 112,
+			"previous": 112
 		}
 	},
 	"charts": {
