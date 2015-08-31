@@ -12,7 +12,7 @@ app.use('/api', function(req, res, next) {
 app.use('/assets', express.static(__dirname + '/dist/assets'));
 app.use('/images', express.static(__dirname + '/dist/images'));
 
-app.use(function(req, res, next) {
+app.get('/', function(req, res, next) {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
