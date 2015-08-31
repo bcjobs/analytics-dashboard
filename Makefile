@@ -4,4 +4,4 @@ build:
 	$(NODE-BIN)/bower install
 	$(NODE-BIN)/ember build
 
-	.PHONY: build
+.PHONY: build
