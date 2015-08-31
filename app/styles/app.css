@@ -680,3 +680,7 @@ td.table_row_total_scope .percent{
     margin:0;
   }
 }
+
+.milk {
+  opacity: 0.2;
+}
