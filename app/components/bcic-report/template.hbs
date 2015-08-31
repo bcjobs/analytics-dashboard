@@ -23,14 +23,12 @@
                     <div class="overview_stat_wrapper">
                         <h3>Open</h3>
                         <h4>Software Jobs</h4>
-                        <div class="overview_stat up"><span class="overview_stat_number">1209</span> <span class="icon_delta"></span></div>
-                        <div class="overview_stat_scope">(As of midnight)</div>
+                        {{overview-stats model=model.summary.openJobs scope="(As of midnight)"}}
                     </div>
                     <div class="overview_stat_wrapper">
                         <h3>Open</h3>
                         <h4>Software Jobs (average)</h4>
-                        <div class="overview_stat"><span class="overview_stat_number">124</span></div>
-                        <div class="overview_stat_scope">(# of open jobs per day averaged over previous 30 days)</div>
+                        {{overview-stats model=model.summary.openJobsAverage scope="(# of open jobs per day averaged over previous 30 days)"}}
                     </div>
                 </div>
             </div>
@@ -42,14 +40,12 @@
                     <div class="overview_stat_wrapper">
                         <h3>New</h3>
                         <h4>Software Jobs</h4>
-                        <div class="overview_stat down"><span class="overview_stat_number">156</span> <span class="icon_delta"></span></div>
-                        <div class="overview_stat_scope">(Posted yesterday, as of midnight)</div>
+                        {{overview-stats model=model.summary.newJobs scope="(Posted yesterday, as of midnight)"}}
                     </div>
                     <div class="overview_stat_wrapper">
                         <h3>New</h3>
                         <h4>Software Jobs (average)</h4>
-                        <div class="overview_stat"><span class="overview_stat_number">112</span></div>
-                        <div class="overview_stat_scope">(# of new jobs per day, averaged over previous 30 days)</div>
+                        {{overview-stats model=model.summary.newJobsAverage scope="(# of new jobs per day, averaged over previous 30 days)"}}
                     </div>
                 </div>
             </div>
