@@ -1,0 +1,483 @@
+{
+	"date": "2015-08-20",
+	"summary": {
+		"openSoftwareJobs": {
+			"value": "288",
+			"trend": "Up",
+			"change": "10%"
+		},
+		"averageOpenSoftwareJobs": {
+			"value": "288",
+			"trend": "None",
+			"change": "0%"
+		},
+		"newSoftwareJobsYesterday": {
+			"value": "38",
+			"trend": "Up",
+			"change": "15%"
+		},
+		"averageNewSoftwareJobs": {
+			"value": "22",
+			"trend": "Down",
+			"change": "1%"
+		}
+	},
+	"charts": {
+		"monthly": {
+			"averageOpenJobs": [
+				{
+					"x": "2014-08-01",
+					"y": 5960
+				},
+				{
+					"x": "2014-09-01",
+					"y": 5965
+				},
+				{
+					"x": "2014-10-01",
+					"y": 5975
+				},
+				{
+					"x": "2014-11-01",
+					"y": 5973
+				},
+				{
+					"x": "2014-12-01",
+					"y": 5970
+				},
+				{
+					"x": "2015-01-01",
+					"y": 5965
+				},
+				{
+					"x": "2015-02-01",
+					"y": 5968
+				},
+				{
+					"x": "2015-03-01",
+					"y": 5973
+				},
+				{
+					"x": "2015-04-01",
+					"y": 5970
+				},
+				{
+					"x": "2015-05-01",
+					"y": 5965
+				},
+				{
+					"x": "2015-06-01",
+					"y": 5980
+				},
+				{
+					"x": "2015-07-01",
+					"y": 5985
+				}
+			],
+			"totalNewJobs": [
+				{
+					"x": "2014-08-01",
+					"y": 5960
+				},
+				{
+					"x": "2014-09-01",
+					"y": 5965
+				},
+				{
+					"x": "2014-10-01",
+					"y": 5975
+				},
+				{
+					"x": "2014-11-01",
+					"y": 5973
+				},
+				{
+					"x": "2014-12-01",
+					"y": 5970
+				},
+				{
+					"x": "2015-01-01",
+					"y": 5965
+				},
+				{
+					"x": "2015-02-01",
+					"y": 5968
+				},
+				{
+					"x": "2015-03-01",
+					"y": 5973
+				},
+				{
+					"x": "2015-04-01",
+					"y": 5970
+				},
+				{
+					"x": "2015-05-01",
+					"y": 5965
+				},
+				{
+					"x": "2015-06-01",
+					"y": 5980
+				},
+				{
+					"x": "2015-07-01",
+					"y": 5985
+				}
+			]
+		},
+		"weekly": {
+			"averageOpenJobs": [
+				{
+					"x": "2014-07-30",
+					"y": 5960
+				},
+				{
+					"x": "2014-08-06",
+					"y": 5965
+				},
+				{
+					"x": "2014-08-13",
+					"y": 5975
+				},
+				{
+					"x": "2014-08-20",
+					"y": 5973
+				},
+				{
+					"x": "2014-08-27",
+					"y": 5970
+				},
+				{
+					"x": "2015-09-03",
+					"y": 5965
+				},
+				{
+					"x": "2015-09-10",
+					"y": 5968
+				},
+				{
+					"x": "2015-09-17",
+					"y": 5973
+				}
+			],
+			"totalNewJobs": [
+				{
+					"x": "2014-07-30",
+					"y": 5960
+				},
+				{
+					"x": "2014-08-06",
+					"y": 5965
+				},
+				{
+					"x": "2014-08-13",
+					"y": 5975
+				},
+				{
+					"x": "2014-08-20",
+					"y": 5973
+				},
+				{
+					"x": "2014-08-27",
+					"y": 5970
+				},
+				{
+					"x": "2015-09-03",
+					"y": 5965
+				},
+				{
+					"x": "2015-09-10",
+					"y": 5968
+				},
+				{
+					"x": "2015-09-17",
+					"y": 5973
+				}
+			]
+		}
+	},
+	"tables": {
+		"trendingJobTitles": {
+			"byOpenJobs": {
+				"titles": [
+					{
+						"name": "Ruby on Rails",
+						"jobs": {
+							"value": "288",
+							"trend": "Up",
+							"change": "30%"
+						},
+						"companies": "45",
+						"averageAge": "21"
+					},
+					{
+						"name": ".NET Developer",
+						"jobs": {
+							"value": "54",
+							"trend": "Down",
+							"change": "10%"
+						},
+						"companies": "31",
+						"averageAge": "15"
+					},
+					{
+						"name": "Javascript Developer",
+						"jobs": {
+							"value": "32",
+							"trend": "Down",
+							"change": "5%"
+						},
+						"companies": "24",
+						"averageAge": "14"
+					},
+					{
+						"name": "Java Developer",
+						"jobs": {
+							"value": "54",
+							"trend": "Up",
+							"change": "7%"
+						},
+						"companies": "21",
+						"averageAge": "19"
+					}
+				]
+			},
+			"byNewJobs": {
+				"titles": [
+					{
+						"name": "Ruby on Rails",
+						"jobs": {
+							"value": "288",
+							"trend": "Up",
+							"change": "30%"
+						},
+						"companies": "45",
+						"averageAge": "21"
+					},
+					{
+						"name": ".NET Developer",
+						"jobs": {
+							"value": "54",
+							"trend": "Down",
+							"change": "10%"
+						},
+						"companies": "31",
+						"averageAge": "15"
+					},
+					{
+						"name": "Javascript Developer",
+						"jobs": {
+							"value": "32",
+							"trend": "Down",
+							"change": "5%"
+						},
+						"companies": "24",
+						"averageAge": "14"
+					},
+					{
+						"name": "Java Developer",
+						"jobs": {
+							"value": "54",
+							"trend": "Up",
+							"change": "7%"
+						},
+						"companies": "21",
+						"averageAge": "19"
+					}
+				]
+			}
+		},
+		"trendingSkills": {
+			"byOpenJobs": {
+				"skills": [
+					{
+						"name": "Ruby on Rails",
+						"jobs": {
+							"value": "288",
+							"trend": "Up",
+							"change": "30%"
+						},
+						"companies": "45",
+						"averageAge": "21"
+					},
+					{
+						"name": ".NET Developer",
+						"jobs": {
+							"value": "54",
+							"trend": "Down",
+							"change": "10%"
+						},
+						"companies": "31",
+						"averageAge": "15"
+					},
+					{
+						"name": "Javascript Developer",
+						"jobs": {
+							"value": "32",
+							"trend": "Down",
+							"change": "5%"
+						},
+						"companies": "24",
+						"averageAge": "14"
+					},
+					{
+						"name": "Java Developer",
+						"jobs": {
+							"value": "54",
+							"trend": "Up",
+							"change": "7%"
+						},
+						"companies": "21",
+						"averageAge": "19"
+					}
+				]
+			},
+			"byNewJobs": {
+				"skills": [
+					{
+						"name": "Ruby on Rails",
+						"jobs": {
+							"value": "288",
+							"trend": "Up",
+							"change": "30%"
+						},
+						"companies": "45",
+						"averageAge": "21"
+					},
+					{
+						"name": ".NET Developer",
+						"jobs": {
+							"value": "54",
+							"trend": "Down",
+							"change": "10%"
+						},
+						"companies": "31",
+						"averageAge": "15"
+					},
+					{
+						"name": "Javascript Developer",
+						"jobs": {
+							"value": "32",
+							"trend": "Down",
+							"change": "5%"
+						},
+						"companies": "24",
+						"averageAge": "14"
+					},
+					{
+						"name": "Java Developer",
+						"jobs": {
+							"value": "54",
+							"trend": "Up",
+							"change": "7%"
+						},
+						"companies": "21",
+						"averageAge": "19"
+					}
+				]
+			}
+		},
+		"topHiringEmployers": {
+			"byOpenJobs": {
+				"employers": [
+					{
+						"name": "Telus Corp",
+						"jobs": "42"
+					},
+					{
+						"name": "Lifelabs Medical",
+						"jobs": "21"
+					},
+					{
+						"name": "Shaw Communications",
+						"jobs": "21"
+					},
+					{
+						"name": "Electronics Arts",
+						"jobs": "20"
+					}
+				],
+				"coverage": {
+					"companies": "10",
+					"percent": "18%",
+					"jobs": "179"
+				}
+			},
+			"byYearToDateNewJobs": {
+				"employers": [
+					{
+						"name": "Telus Corp",
+						"jobs": "42"
+					},
+					{
+						"name": "Lifelabs Medical",
+						"jobs": "21"
+					},
+					{
+						"name": "Shaw Communications",
+						"jobs": "21"
+					},
+					{
+						"name": "Electronics Arts",
+						"jobs": "20"
+					}
+				],
+				"coverage": {
+					"companies": "10",
+					"percent": "18%",
+					"jobs": "179"
+				}
+			},
+			"byPrevious7DaysNewJobs": {
+				"employers": [
+					{
+						"name": "Telus Corp",
+						"jobs": "42"
+					},
+					{
+						"name": "Lifelabs Medical",
+						"jobs": "21"
+					},
+					{
+						"name": "Shaw Communications",
+						"jobs": "21"
+					},
+					{
+						"name": "Electronics Arts",
+						"jobs": "20"
+					}
+				],
+				"coverage": {
+					"companies": "10",
+					"percent": "18%",
+					"jobs": "179"
+				}
+			},
+			"byPreviousDayNewJobs": {
+				"employers": [
+					{
+						"name": "Telus Corp",
+						"jobs": "42"
+					},
+					{
+						"name": "Lifelabs Medical",
+						"jobs": "21"
+					},
+					{
+						"name": "Shaw Communications",
+						"jobs": "21"
+					},
+					{
+						"name": "Electronics Arts",
+						"jobs": "20"
+					}
+				],
+				"coverage": {
+					"companies": "10",
+					"percent": "18%",
+					"jobs": "179"
+				}
+			}
+		}
+	}
+}
