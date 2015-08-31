@@ -137,7 +137,6 @@ body{
 }
 
 .overview_stat_wrapper:first-of-type{
-  padding-bottom:30px;
   padding-top:0;
   border:none;
 }
