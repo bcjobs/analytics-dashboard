@@ -11,7 +11,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "install": "if [ -n \"$EMBER_BUILD\" ]; then ember build; fi"
+    "install": "if [ -n \"$EMBER_BUILD\" ]; then make build; fi"
   },
   "repository": "",
   "engines": {
@@ -40,6 +40,7 @@
     "ember-export-application-global": "^1.0.3"
   },
   "dependencies": {
+    "bower": "^1.5.2",
     "express": "^4.13.3",
     "http-proxy": "^1.11.2",
     "lodash": "^3.10.1",
