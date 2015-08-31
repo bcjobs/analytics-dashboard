@@ -1,12 +1,11 @@
 var express = require('express');
-var httpProxy = require('http-proxy');
 var path = require('path');
+var request = require('request');
 
 var app = express();
-var proxy = httpProxy.createProxyServer({changeOrigin: true});
 
-app.use('/api', function(req, res, next) {
-  proxy.web(req, res, { target: 'http://analytics.bcjobs.ca/api' });
+app.use('/api/v1.0/reports/outline', function(req, res, next) {
+  request.get('http://analytics.bcjobs.ca/api/v1.0/reports/outline').pipe(res);
 });
 
 app.use('/assets', express.static(__dirname + '/dist/assets'));
