@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "ember build",
-    "start": "ember server",
+    "start": "ember server --proxy http://analytics.bcjobs.ca",
     "test": "ember test",
     "install": "if [ -n \"$EMBER_BUILD\" ]; then make build; fi"
   },
