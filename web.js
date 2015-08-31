@@ -4,7 +4,7 @@ var request = require('request');
 
 var app = express();
 
-app.use('/api/v1.0/reports/outline', function(req, res, next) {
+app.get('/api/v1.0/reports/outline', function(req, res, next) {
   request.get('http://analytics.bcjobs.ca/api/v1.0/reports/outline').pipe(res);
 });
 
