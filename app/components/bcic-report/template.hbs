@@ -68,29 +68,21 @@
         </div>
         <div class="row clearfix">
             <div class="col global_translucent">
-                <div class="graph_wrapper milk">
+                <div class="graph_wrapper">
                     <h3>Average
                         <strong>Open</strong> Jobs</h3>
                     <h4>Monthly</h4>
-                    <div class="dummy_graph">
-                        <img src="images/dummy_graph_bar.png" />
-                    </div>
-                    <div class="graph graph_2">
-                        <img src="images/graph_1.png" class="graph_column" />
-                    </div>
+
+                    {{bar-chart model=openJobsAverage}}
                 </div>
             </div>
             <div class="col global_translucent">
-                <div class="graph_wrapper milk">
+                <div class="graph_wrapper">
                     <h3>Total
                         <strong>New</strong> Jobs</h3>
                     <h4>Monthly</h4>
-                    <div class="dummy_graph">
-                        <img src="images/dummy_graph_bar.png" />
-                    </div>
-                    <div class="graph graph_2">
-                        <img src="images/graph_1.png" class="graph_column" />
-                    </div>
+
+                    {{bar-chart model=newJobsTotal}}
                 </div>
             </div>
         </div>
