@@ -585,22 +585,6 @@ td.table_row_total_scope .percent{
   .global_fullwidth{ width:1280px ; margin:0 auto; position:relative;}
 }
 
-/* This 1140px one is just for the dummy graph -- you can remove it */
-
-@media (min-width: 1140px) {
-  .dummy_graph{
-    display:none;
-  }
-  .graph{
-    display:block;
-  }
-
-  .graph_wrapper{
-    padding: 30px 120px 70px 110px;
-
-  }
-}
-
 /* But keep the rest below */
 
 @media (min-width: 920px) {
@@ -683,4 +667,8 @@ td.table_row_total_scope .percent{
 
 .milk {
   opacity: 0.2;
+}
+
+.ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut {
+  stroke: #293b5a;
 }
