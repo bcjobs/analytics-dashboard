@@ -19,12 +19,12 @@
                     <div class="overview_stat_wrapper">
                         <h3>Open</h3>
                         <h4>Software Jobs</h4>
-                        {{overview-stats model=model.summary.openJobs scope="(As of midnight)"}}
+                        {{overview-stats model=model.summary.openJobs.current scope="(As of midnight)" direction=openJobsDirection}}
                     </div>
                     <div class="overview_stat_wrapper">
                         <h3>Open</h3>
                         <h4>Software Jobs (average)</h4>
-                        {{overview-stats model=model.summary.openJobsAverage scope="(# of open jobs per day averaged over previous 30 days)"}}
+                        {{overview-stats model=model.summary.openJobsAverage.current scope="(# of open jobs per day averaged over previous 30 days)"}}
                     </div>
                 </div>
             </div>
@@ -36,12 +36,12 @@
                     <div class="overview_stat_wrapper">
                         <h3>New</h3>
                         <h4>Software Jobs</h4>
-                        {{overview-stats model=model.summary.newJobs scope="(Posted yesterday, as of midnight)"}}
+                        {{overview-stats model=model.summary.newJobs.current scope="(Posted yesterday, as of midnight)" direction=newJobsDirection}}
                     </div>
                     <div class="overview_stat_wrapper">
                         <h3>New</h3>
                         <h4>Software Jobs (average)</h4>
-                        {{overview-stats model=model.summary.newJobsAverage scope="(# of new jobs per day, averaged over previous 30 days)"}}
+                        {{overview-stats model=model.summary.newJobsAverage.current scope="(# of new jobs per day, averaged over previous 30 days)"}}
                     </div>
                 </div>
             </div>
