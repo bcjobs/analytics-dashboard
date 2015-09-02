@@ -136,116 +136,33 @@
         <div class="row clearfix">
             <div class="col">
                 <div class="card_wrapper clearfix    global_shadow">
-                    <table class="breakdown_table milk">
-                        <tbody>
-                            <tr>
-                                <th class="table_title">By open jobs
-                                    <span class="table_subtitle">(as of midnight yesterday)</span>
-                                </th>
-                                <th>&nbsp;</th>
-                            </tr>
-
-                            {{#each ten as |index|}}
-                                <tr>
-                                    <td class="table_job_title"><a href="#">&nbsp;</a></td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            {{/each}}
-
-                            <tr>
-                                <td class="table_row_total table_row_total_scope">
-                                    These 10 companies represent
-                                    <span class="percent">00%</span> of total openings.
-                                </td>
-                                <td class="table_row_total">
-                                    000
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    {{#employer-table model=model.tables.employers.byOpenJobs}}
+                        By open jobs
+                        <span class="table_subtitle">(as of midnight yesterday)</span>
+                    {{/employer-table}}
                 </div>
             </div>
             <div class="col">
                 <div class="card_wrapper">
-                    <table class="breakdown_table milk">
-                        <tbody>
-                            <tr>
-                                <th class="table_title">By year-to-date new jobs</th>
-                                <th>&nbsp;</th>
-                            </tr>
-                            {{#each ten as |index|}}
-                                <tr>
-                                    <td class="table_job_title"><a href="#">&nbsp;</a></td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            {{/each}}
-                            <tr>
-                                <td class="table_row_total table_row_total_scope">
-                                    These 10 companies represent
-                                    <span class="percent">00%</span> of total openings.
-                                </td>
-                                <td class="table_row_total">
-                                    000
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    {{#employer-table model=model.tables.employers.byYearToDate}}
+                        By year-to-date new jobs
+                    {{/employer-table}}
                 </div>
             </div>
         </div>
         <div class="row clearfix">
             <div class="col">
                 <div class="card_wrapper clearfix    global_shadow">
-                    <table class="breakdown_table milk">
-                        <tbody>
-                            <tr>
-                                <th class="table_title">By previous 7 days new jobs</th>
-                                <th>&nbsp;</th>
-                            </tr>
-                            {{#each ten as |index|}}
-                                <tr>
-                                    <td class="table_job_title"><a href="#">&nbsp;</a></td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            {{/each}}
-                            <tr>
-                                <td class="table_row_total table_row_total_scope">
-                                    These 10 companies represent
-                                    <span class="percent">00%</span> of total openings.
-                                </td>
-                                <td class="table_row_total">
-                                    000
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    {{#employer-table model=model.tables.employers.byLast7DaysJobs}}
+                        By previous 7 days new jobs
+                    {{/employer-table}}
                 </div>
             </div>
             <div class="col">
                 <div class="card_wrapper">
-                    <table class="breakdown_table milk">
-                        <tbody>
-                            <tr>
-                                <th class="table_title">By previous day new jobs</th>
-                                <th>&nbsp;</th>
-                            </tr>
-                            {{#each ten as |index|}}
-                                <tr>
-                                    <td class="table_job_title"><a href="#">&nbsp;</a></td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            {{/each}}
-                            <tr>
-                                <td class="table_row_total table_row_total_scope">
-                                    These 10 companies represent
-                                    <span class="percent">00%</span> of total openings.
-                                </td>
-                                <td class="table_row_total">
-                                    000
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    {{#employer-table model=model.tables.employers.byPreviousDayNewJobs}}
+                        By previous day new jobs
+                    {{/employer-table}}
                 </div>
             </div>
         </div>

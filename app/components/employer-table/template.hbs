@@ -1,0 +1,27 @@
+<table class="breakdown_table">
+    <tbody>
+        <tr>
+            <th class="table_title">
+              {{yield}}
+            </th>
+            <th>&nbsp;</th>
+        </tr>
+
+        {{#each model.top as |item|}}
+            <tr>
+                <td class="table_job_title">{{item.employer}}</td>
+                <td>{{item.jobs}}</td>
+            </tr>
+        {{/each}}
+
+        <tr>
+            <td class="table_row_total table_row_total_scope">
+                These {{model.companiesRepresented}} companies represent
+                <span class="percent">{{format-number model.openingsCoverage "0%"}}</span> of total openings.
+            </td>
+            <td class="table_row_total">
+                {{format-number model.totalOpenings}}
+            </td>
+        </tr>
+    </tbody>
+</table>
