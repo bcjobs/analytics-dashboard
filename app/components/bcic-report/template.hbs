@@ -92,7 +92,9 @@
                     <h3>Trending Job Titles</h3>
                     <h4>Daily</h4>
 
-                    {{trend-table model=model.tables.trends.titles.byOpenJobs}}
+                    {{#trend-table model=model.tables.trends.titles.byOpenJobs}}
+                        By <strong>open</strong> jobs
+                    {{/trend-table}}
                 </div>
             </div>
             <div class="col global_translucent">
@@ -100,8 +102,9 @@
                     <h3>Trending Job Titles</h3>
                     <h4>Daily</h4>
 
-                    {{trend-table model=model.tables.trends.titles.byNewJobs}}
-
+                    {{#trend-table model=model.tables.trends.titles.byNewJobs}}
+                        By <strong>new</strong> jobs
+                    {{/trend-table}}
                 </div>
             </div>
         </div>
@@ -111,7 +114,9 @@
                     <h3>Trending Skills</h3>
                     <h4>Daily</h4>
 
-                    {{trend-table model=model.tables.trends.skills.byOpenJobs}}
+                    {{#trend-table model=model.tables.trends.skills.byOpenJobs}}
+                        By <strong>open</strong> jobs
+                    {{/trend-table}}
                 </div>
             </div>
             <div class="col global_translucent">
@@ -119,7 +124,9 @@
                     <h3>Trending Skills</h3>
                     <h4>Daily</h4>
 
-                    {{trend-table model=model.tables.trends.skills.byNewJobs}}
+                    {{#trend-table model=model.tables.trends.skills.byNewJobs}}
+                        By <strong>new</strong> jobs
+                    {{/trend-table}}
                 </div>
             </div>
         </div>
