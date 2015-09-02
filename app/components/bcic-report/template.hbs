@@ -107,81 +107,19 @@
         </div>
         <div class="row clearfix">
             <div class="col global_translucent">
-                <div class="card_wrapper global_shadow milk">
+                <div class="card_wrapper global_shadow">
                     <h3>Trending Skills</h3>
                     <h4>Daily</h4>
-                    <table class="breakdown_table">
-                        <tbody>
-                            <tr>
-                                <th class="table_title">By
-                                    <strong>open</strong> jobs</th>
-                                <th class="table_title_jobs">Jobs</th>
-                                <th>Companies</th>
-                                <th>Avg. Age</th>
-                            </tr>
-                            {{#each five as |index|}}
-                                <tr>
-                                    <td class="table_job_title"><a href="#">&nbsp;</a></td>
-                                    <td>
-                                        <span class="table_delta up">
-                                            <span class="icon_delta"></span>
-                                        </span>
-                                    </td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            {{/each}}
-                        </tbody>
-                    </table>
-                    <div class="table_showmore_wrapper">
-                        <div class="table_showmore">
-                            See More
-                        </div>
-                        <span class="loader flex_hidden">
-                        </span>
-                        <span class="table_showmore_finished">
-                            Showing all results.
-                        </span>
-                    </div>
+
+                    {{trend-table model=model.tables.trends.skills.byOpenJobs}}
                 </div>
             </div>
             <div class="col global_translucent">
-                <div class="card_wrapper global_shadow milk">
+                <div class="card_wrapper global_shadow">
                     <h3>Trending Skills</h3>
                     <h4>Daily</h4>
-                    <table class="breakdown_table">
-                        <tbody>
-                            <tr>
-                                <th class="table_title">By
-                                    <strong>new</strong> jobs</th>
-                                <th class="table_title_jobs">Jobs</th>
-                                <th>Companies</th>
-                                <th>Avg. Age</th>
-                            </tr>
-                            {{#each five as |index|}}
-                                <tr>
-                                    <td class="table_job_title"><a href="#">&nbsp;</a></td>
-                                    <td>
-                                        <span class="table_delta up">
-                                            <span class="icon_delta"></span>
-                                        </span>
-                                    </td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            {{/each}}
-                        </tbody>
-                    </table>
-                    <div class="table_showmore_wrapper">
-                        <div class="table_showmore">
-                            See More
-                        </div>
-                        <span class="loader flex_hidden">
-                        </span>
-                        <span class="table_showmore_finished">
-                            Showing all results.
-                        </span>
-                    </div>
+
+                    {{trend-table model=model.tables.trends.skills.byNewJobs}}
                 </div>
             </div>
         </div>
