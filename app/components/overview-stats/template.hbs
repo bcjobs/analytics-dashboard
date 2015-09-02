@@ -1,9 +1,7 @@
 <div class="overview_stat {{direction}}">
   <span class="overview_stat_number">{{format-number model}}</span>
-  <span class="icon_delta">
-    {{#if direction}}
-      {{arrow-icon}}
-    {{/if}}
-  </span>
+  {{#if direction}}
+    {{arrow-icon}}
+  {{/if}}
 </div>
 <div class="overview_stat_scope">{{scope}}</div>

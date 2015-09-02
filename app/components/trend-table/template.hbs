@@ -10,10 +10,7 @@
             <tr>
                 <td class="table_job_title">{{trend.name}}</td>
                 <td>
-                    {{trend.current}}
-                    <span class="table_delta up">
-                        <span class="icon_delta"></span>
-                    </span>
+                    {{job-number current=trend.current previous=trend.previous}}
                 </td>
                 <td>{{format-number trend.companies}}</td>
                 <td>{{format-number trend.averageAge}}</td>
