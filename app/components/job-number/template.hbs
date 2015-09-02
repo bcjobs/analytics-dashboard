@@ -1,7 +1,9 @@
 {{current}}
 <span class="table_delta {{direction}}">
 {{#if direction}}
-    {{format-number differenceRatio "0%"}}
+    {{#if differenceRatio}}
+        {{format-number differenceRatio "0%"}}
+    {{/if}}
     {{arrow-icon}}
 {{/if}}
 </span>

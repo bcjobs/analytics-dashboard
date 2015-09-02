@@ -20,7 +20,10 @@ export default Ember.Component.extend({
   differenceRatio: Ember.computed('current', 'previous', function() {
     var current = this.get('current');
     var previous = this.get('previous');
+    if (previous === 0) {
+      return null;
+    }
     var difference = (current - previous);
-    return Math.abs(difference / current);
+    return Math.abs(difference / previous);
   })
 });
