@@ -4,4 +4,10 @@ build:
 	$(NODE-BIN)/bower install
 	$(NODE-BIN)/ember build --env production
 
-.PHONY: build
+run:
+	node web.js
+
+debug:
+	ember s --proxy http://analytics.bcjobs.ca
+
+.PHONY: build run debug
