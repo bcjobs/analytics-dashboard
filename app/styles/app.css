@@ -248,23 +248,15 @@ body{
   padding-right:40px;
 }
 
-.table_job_title, .table_job_title a{
+.table_job_title {
   text-align:left;
   color:#293b5a;
   text-decoration:none;
-}
-
-.table_job_title a{
-  display:inline-block;
   padding: 5px 0;
   max-width:100px;
   text-overflow:ellipsis;
   white-space:nowrap;
   overflow:hidden;
-}
-
-.table_job_title a:hover{
-  text-decoration:underline;
 }
 
 td.table_row_total{
