@@ -17,10 +17,9 @@
         <tr>
             <td class="table_row_total table_row_total_scope">
                 These {{model.companiesRepresented}} companies represent
-                <span class="percent">{{format-number model.openingsCoverage "0%"}}</span> of total openings.
-            </td>
-            <td class="table_row_total">
-                {{format-number model.totalOpenings}}
+                <span class="percent">{{format-number model.openingsCoverage "0%"}}</span> of
+                <span class="total">{{format-number model.totalOpenings}}</span>
+                total openings.
             </td>
         </tr>
     </tbody>
