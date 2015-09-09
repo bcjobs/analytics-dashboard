@@ -3,7 +3,9 @@
 {{#if direction}}
     {{#if differenceRatio}}
         {{format-number differenceRatio "0%"}}
+        {{arrow-icon}}
+    {{else}}
+        <span class="new">New</span>
     {{/if}}
-    {{arrow-icon}}
 {{/if}}
 </span>
