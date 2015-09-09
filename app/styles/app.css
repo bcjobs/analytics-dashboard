@@ -132,13 +132,22 @@ body{
 }
 
 .overview_stat_wrapper{
-  padding-top:30px;
   border-top:1px solid #ddd;
 }
 
 .overview_stat_wrapper:first-of-type{
-  padding-top:0;
   border:none;
+}
+
+@media (max-width: 479px) {
+  .overview_stat_wrapper{
+    padding-top: 30px;
+  }
+
+  .overview_stat_wrapper:first-of-type{
+    padding-bottom: 30px;
+    padding-top: 0;
+  }
 }
 
 .overview_stat_wrapper h3{
