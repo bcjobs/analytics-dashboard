@@ -624,6 +624,7 @@ td.table_row_total_scope .total{
 @media (min-width: 530px) {
   body{
     background:url(/images/bg.jpg) #959482 no-repeat;
+    background-sizing: cover;
     background-position : center 30%;
     background-attachment: fixed;
     background-size: 100%;
