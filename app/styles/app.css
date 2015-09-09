@@ -665,3 +665,11 @@ td.table_row_total_scope .total{
 .ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut {
   stroke: #293b5a;
 }
+
+.chart-tooltip {
+  font-size: 12px;
+  text-align: center;
+}
+.chart-tooltip--line {
+  margin-top: -5px;
+}
