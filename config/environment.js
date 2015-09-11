@@ -20,7 +20,8 @@ module.exports = function(environment) {
   };
 
   ENV.contentSecurityPolicy = {
-    'style-src': "'self' 'unsafe-inline'"
+    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
+    'font-src': "'self' http://fonts.gstatic.com"
   }
 
 
