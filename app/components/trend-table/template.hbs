@@ -1,14 +1,14 @@
-<table class="breakdown_table">
+<table class="breakdown-table">
     <tbody>
         <tr>
-            <th class="table_title">{{yield}}</th>
-            <th class="table_title_jobs">Jobs</th>
+            <th class="table-title">{{yield}}</th>
+            <th class="table-title-jobs">Jobs</th>
             <th>Companies</th>
             <th>Avg. Age</th>
         </tr>
         {{#each model as |trend|}}
             <tr>
-                <td class="table_job_title">{{trend.name}}</td>
+                <td class="table-job-title">{{trend.name}}</td>
                 <td>
                     {{job-number current=trend.current previous=trend.previous}}
                 </td>
@@ -19,13 +19,13 @@
     </tbody>
 </table>
 
-<!-- <div class="table_showmore_wrapper">
-    <div class="table_showmore">
+<!-- <div class="table-showmore-wrapper">
+    <div class="table-showmore">
         See More
     </div>
-    <span class="loader flex_hidden">
+    <span class="loader flex-hidden">
     </span>
-    <span class="table_showmore_finished">
+    <span class="table-showmore-finished">
         Showing all results.
     </span>
 </div> -->

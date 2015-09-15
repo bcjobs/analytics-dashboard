@@ -1,7 +1,7 @@
-<table class="breakdown_table">
+<table class="breakdown-table">
     <tbody>
         <tr>
-            <th class="table_title">
+            <th class="table-title">
               {{yield}}
             </th>
             <th>&nbsp;</th>
@@ -9,13 +9,13 @@
 
         {{#each model.top as |item|}}
             <tr>
-                <td class="table_job_title">{{item.employer}}</td>
+                <td class="table-job-title">{{item.employer}}</td>
                 <td>{{item.jobs}}</td>
             </tr>
         {{/each}}
 
         <tr>
-            <td class="table_row_total table_row_total_scope">
+            <td class="table-row-total table-row-total-scope">
                 These {{model.companiesRepresented}} companies represent
                 <span class="percent">{{format-number model.openingsCoverage "0%"}}</span> of
                 <span class="total">{{format-number model.totalOpenings}}</span>

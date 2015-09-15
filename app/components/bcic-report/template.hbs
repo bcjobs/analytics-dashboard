@@ -1,27 +1,27 @@
 <div class="header">
-    <img src="images/logo_bctechjobs.png" />
+    <img src="images/logo-bctechjobs.png" />
 </div>
-<div class="title_wrapper">
+<div class="title-wrapper">
 
-    <div class="title global_fullwidth">
+    <div class="title global-fullwidth">
         <h2 class="date">{{format-date model.date}}</h2>
 
     </div>
 </div>
-<div class="content_wrapper">
-    <div class="content global_fullwidth">
+<div class="content-wrapper">
+    <div class="content global-fullwidth">
         <div class="row clearfix">
             <div class="col">
-                <div class="title_general title_column">
+                <div class="title-general title-column">
                     Open Jobs
                 </div>
-                <div class="overview_box global_shadow clearfix">
-                    <div class="overview_stat_wrapper">
+                <div class="overview-box global-shadow clearfix">
+                    <div class="overview-stat-wrapper">
                         <h3>Open</h3>
                         <h4>Software Jobs</h4>
                         {{overview-stats model=model.summary.openJobs.current scope="(As of midnight)" direction=openJobsDirection}}
                     </div>
-                    <div class="overview_stat_wrapper">
+                    <div class="overview-stat-wrapper">
                         <h3>Open</h3>
                         <h4>Software Jobs (average)</h4>
                         {{overview-stats model=model.summary.openJobsAverage.current scope="(# of open jobs per day averaged over previous 30 days)"}}
@@ -29,16 +29,16 @@
                 </div>
             </div>
             <div class="col">
-                <div class="title_general title_column">
+                <div class="title-general title-column">
                     New Jobs
                 </div>
-                <div class="overview_box global_shadow clearfix">
-                    <div class="overview_stat_wrapper">
+                <div class="overview-box global-shadow clearfix">
+                    <div class="overview-stat-wrapper">
                         <h3>New</h3>
                         <h4>Software Jobs</h4>
                         {{overview-stats model=model.summary.newJobs.current scope="(Posted yesterday, as of midnight)" direction=newJobsDirection}}
                     </div>
-                    <div class="overview_stat_wrapper">
+                    <div class="overview-stat-wrapper">
                         <h3>New</h3>
                         <h4>Software Jobs (average)</h4>
                         {{overview-stats model=model.summary.newJobsAverage.current scope="(# of new jobs per day, averaged over previous 30 days)"}}
@@ -47,8 +47,8 @@
             </div>
         </div>
         <div class="row clearfix">
-            <div class="col global_translucent">
-                <div class="graph_wrapper">
+            <div class="col global-translucent">
+                <div class="graph-wrapper">
                     <h3>Average
                         <strong>Open</strong> Jobs</h3>
                     <h4>Weekly</h4>
@@ -56,8 +56,8 @@
                     {{line-chart model=model.charts.weekly.openJobsAverage}}
                 </div>
             </div>
-            <div class="col global_translucent">
-                <div class="graph_wrapper">
+            <div class="col global-translucent">
+                <div class="graph-wrapper">
                     <h3>Total
                         <strong>New</strong> Jobs</h3>
                     <h4>Weekly</h4>
@@ -67,8 +67,8 @@
             </div>
         </div>
         <div class="row clearfix">
-            <div class="col global_translucent">
-                <div class="graph_wrapper">
+            <div class="col global-translucent">
+                <div class="graph-wrapper">
                     <h3>Average
                         <strong>Open</strong> Jobs</h3>
                     <h4>Monthly</h4>
@@ -76,8 +76,8 @@
                     {{bar-chart model=openJobsAverage}}
                 </div>
             </div>
-            <div class="col global_translucent">
-                <div class="graph_wrapper">
+            <div class="col global-translucent">
+                <div class="graph-wrapper">
                     <h3>Total
                         <strong>New</strong> Jobs</h3>
                     <h4>Monthly</h4>
@@ -87,8 +87,8 @@
             </div>
         </div>
         <div class="row clearfix">
-            <div class="col global_translucent">
-                <div class="card_wrapper global_shadow">
+            <div class="col global-translucent">
+                <div class="card-wrapper global-shadow">
                     <h3>Trending Job Titles</h3>
                     <h4>Daily</h4>
 
@@ -97,8 +97,8 @@
                     {{/trend-table}}
                 </div>
             </div>
-            <div class="col global_translucent">
-                <div class="card_wrapper global_shadow">
+            <div class="col global-translucent">
+                <div class="card-wrapper global-shadow">
                     <h3>Trending Job Titles</h3>
                     <h4>Daily</h4>
 
@@ -109,8 +109,8 @@
             </div>
         </div>
         <div class="row clearfix">
-            <div class="col global_translucent">
-                <div class="card_wrapper global_shadow">
+            <div class="col global-translucent">
+                <div class="card-wrapper global-shadow">
                     <h3>Trending Skills</h3>
                     <h4>Daily</h4>
 
@@ -119,8 +119,8 @@
                     {{/trend-table}}
                 </div>
             </div>
-            <div class="col global_translucent">
-                <div class="card_wrapper global_shadow">
+            <div class="col global-translucent">
+                <div class="card-wrapper global-shadow">
                     <h3>Trending Skills</h3>
                     <h4>Daily</h4>
 
@@ -130,20 +130,20 @@
                 </div>
             </div>
         </div>
-        <div class="title_general title_inter">
+        <div class="title-general title-inter">
             Top Hiring Employers
         </div>
         <div class="row clearfix">
             <div class="col">
-                <div class="card_wrapper clearfix    global_shadow">
+                <div class="card-wrapper clearfix    global-shadow">
                     {{#employer-table model=model.tables.employers.byOpenJobs}}
                         By open jobs
-                        <span class="table_subtitle">(as of midnight yesterday)</span>
+                        <span class="table-subtitle">(as of midnight yesterday)</span>
                     {{/employer-table}}
                 </div>
             </div>
             <div class="col">
-                <div class="card_wrapper">
+                <div class="card-wrapper">
                     {{#employer-table model=model.tables.employers.byYearToDate}}
                         By year-to-date new jobs
                     {{/employer-table}}
@@ -152,14 +152,14 @@
         </div>
         <div class="row clearfix">
             <div class="col">
-                <div class="card_wrapper clearfix    global_shadow">
+                <div class="card-wrapper clearfix    global-shadow">
                     {{#employer-table model=model.tables.employers.byLast7DaysJobs}}
                         By previous 7 days new jobs
                     {{/employer-table}}
                 </div>
             </div>
             <div class="col">
-                <div class="card_wrapper">
+                <div class="card-wrapper">
                     {{#employer-table model=model.tables.employers.byPreviousDayNewJobs}}
                         By previous day new jobs
                     {{/employer-table}}
@@ -171,5 +171,5 @@
     </div>
 </div>
 <div class="footer">
-    <img src="images/logo_bctechjobs_inverse.png" />
+    <img src="images/logo-bctechjobs-inverse.png" />
 </div>

@@ -27,12 +27,12 @@ img { max-width:100%;}
 
 /* Global Usage */
 
-.global_fullwidth{ width:100%	; margin:0 auto; position:relative;}
-.flex_hidden { display:none !important;}
-.global_shadow{
+.global-fullwidth{ width:100%	; margin:0 auto; position:relative;}
+.flex-hidden { display:none !important;}
+.global-shadow{
   box-shadow : 0 0px 3px rgba(0,0,0,0.3);
 }
-.global_translucent{
+.global-translucent{
   background:rgba(255,255,255,0.86);
 }
 
@@ -61,7 +61,7 @@ body{
 
 /* Top title with the Date */
 
-.title_wrapper{
+.title-wrapper{
   background:#dfe0e1;
   text-align:center;
   color:#fff;
@@ -87,11 +87,11 @@ body{
   margin-top:10px;
 }
 
-.title_column{
+.title-column{
   display:none;
 }
 
-.title_general{
+.title-general{
   text-align:center;
   font-size:30px;
   font-weight:100;
@@ -99,18 +99,18 @@ body{
   text-shadow:1px 1px 1px rgba(0,0,0,0.3);
 }
 
-.title_inter{
+.title-inter{
   margin-top:50px;
   margin-bottom:30px;
 }
 
-.column_wrapper{
+.column-wrapper{
   float:left;
   width:calc(50% - 15px);
   margin-left:30px;
 }
 
-.column_wrapper:first-of-type{
+.column-wrapper:first-of-type{
   margin-left:0;
 }
 
@@ -123,7 +123,7 @@ body{
 
 /* The white overview boxes that are at the top of the page */
 
-.overview_box{
+.overview-box{
   background:#fff;
   text-align:center;
   padding:30px 0;
@@ -131,64 +131,64 @@ body{
   margin:0px -5px 0 -5px;
 }
 
-.overview_stat_wrapper{
+.overview-stat-wrapper{
   border-top:1px solid #ddd;
 }
 
-.overview_stat_wrapper:first-of-type{
+.overview-stat-wrapper:first-of-type{
   border:none;
 }
 
 @media (max-width: 479px) {
-  .overview_stat_wrapper{
+  .overview-stat-wrapper{
     padding-top: 30px;
   }
 
-  .overview_stat_wrapper:first-of-type{
+  .overview-stat-wrapper:first-of-type{
     padding-bottom: 30px;
     padding-top: 0;
   }
 }
 
-.overview_stat_wrapper h3{
+.overview-stat-wrapper h3{
   font-size:25px;
   font-weight:100;
 }
 
-.overview_stat_wrapper h4{
+.overview-stat-wrapper h4{
   font-size: 18px;
   font-weight:100;
   margin-top:5px;
 }
 
-.overview_stat{
+.overview-stat{
   font-weight: bold;
   margin-top:10px;
   color:#666;
   position:relative;
 }
 
-.overview_stat_number{
+.overview-stat-number{
   font-size:32px;
 }
 
-.overview_stat .icon_delta{
+.overview-stat .icon-delta{
   vertical-align:5px;
 }
 
-.overview_stat.down .icon_delta{
+.overview-stat.down .icon-delta{
   vertical-align:4px;
 }
 
-.overview_stat.up{
+.overview-stat.up{
   color:#293b5a
 }
 
-.overview_stat.down{
+.overview-stat.down{
   color:#e14f33;
 }
 
-.overview_stat_scope{
+.overview-stat-scope{
   font-weight:100;
   font-size:14px;
   line-height:17px;
@@ -199,7 +199,7 @@ body{
 
 /* The sticky-outie cards that wrap the tables */
 
-.card_wrapper{
+.card-wrapper{
   padding: 25px 15px;
   background:#fff;
   margin:0 -5px;
@@ -207,14 +207,14 @@ body{
   border-bottom:1px solid #bbb;
 }
 
-.card_wrapper h3{
+.card-wrapper h3{
   font-size:25px;
   font-weight:100;
   text-align:left;
   display:inline-block;
 }
 
-.card_wrapper h4{
+.card-wrapper h4{
   font-weight:100;
   color:#888;
   margin-top:5px;
@@ -225,39 +225,39 @@ body{
 
 /* The tables */
 
-.breakdown_table{
+.breakdown-table{
   width:100%;
   margin-top:15px;
   text-align:center;
 }
 
-.breakdown_table th{
+.breakdown-table th{
   font-size:12px;
   border-bottom:1px solid #000;
   padding : 0 0 5px 0;
 }
 
-.breakdown_table td{
+.breakdown-table td{
   border-top: 1px solid #ddd;
   vertical-align:middle;
 }
 
-.table_title{
+.table-title{
   font-size:16px;
   color:#e14f33;
   text-align:left;
   font-weight:100;
 }
 
-.table_title .table_subtitle{
+.table-title .table-subtitle{
   font-size:12px;
 }
 
-.breakdown_table .table_title_jobs{
+.breakdown-table .table-title-jobs{
   padding-right:40px;
 }
 
-.table_job_title {
+.table-job-title {
   text-align:left;
   color:#293b5a;
   text-decoration:none;
@@ -268,27 +268,27 @@ body{
   overflow:hidden;
 }
 
-td.table_row_total{
+td.table-row-total{
   border-top:1px dotted #000;
   padding:10px 0;
   font-weight:bold;
 }
 
-td.table_row_total_scope{
+td.table-row-total-scope{
   font-weight:normal;
   color:#888;
   text-align:left;
   font-size:14px;
 }
 
-td.table_row_total_scope .percent,
-td.table_row_total_scope .total{
+td.table-row-total-scope .percent,
+td.table-row-total-scope .total{
   font-size:16px;
   color:#555;
   font-weight:bold;
 }
 
-.table_delta{
+.table-delta{
   font-size: 10px;
   width:45px;
   text-align:right;
@@ -296,15 +296,15 @@ td.table_row_total_scope .total{
   margin-left:5px;
 }
 
-.table_delta .icon_delta{
+.table-delta .icon-delta{
   margin-left:5px;
 }
 
-.table_delta.down{
+.table-delta.down{
   color:#e14f33;
 }
 
-.table_showmore_wrapper{
+.table-showmore-wrapper{
   margin: 25px -15px -25px -15px;
   padding: 15px 0;
   text-align: center;
@@ -312,7 +312,7 @@ td.table_row_total_scope .total{
   position: relative;
 }
 
-.table_showmore_wrapper:after{
+.table-showmore-wrapper:after{
   content:'';
   height:1px;
   width:30%;
@@ -322,20 +322,20 @@ td.table_row_total_scope .total{
   left:35%;
 }
 
-.table_showmore_wrapper.finished{
+.table-showmore-wrapper.finished{
   cursor:default;
   margin-top:15px;
 }
 
-.table_showmore_wrapper.finished:hover{
+.table-showmore-wrapper.finished:hover{
   background:#fff;
 }
 
-.table_showmore_wrapper.finished:after{
+.table-showmore-wrapper.finished:after{
   opacity:0;
 }
 
-.table_showmore{
+.table-showmore{
   color:#888;
   text-transform:uppercase;
   font-weight:bold;
@@ -344,7 +344,7 @@ td.table_row_total_scope .total{
   padding-bottom:10px;
 }
 
-.table_showmore:before{
+.table-showmore:before{
   content:'';
   position: absolute;
   top:calc(100% - 7px);
@@ -352,35 +352,35 @@ td.table_row_total_scope .total{
   margin-left:-5px;
   width:9px;
   height:10px;
-  background:url(/images/icon_chevrons.svg);
+  background:url(/images/icon-chevrons.svg);
   transition:all 0.1s ease-out;
 }
 
-.table_showmore_wrapper:hover .table_showmore{
+.table-showmore-wrapper:hover .table-showmore{
   color:#000;
 }
 
-.table_showmore_wrapper:hover:after{
+.table-showmore-wrapper:hover:after{
   opacity:0;
 }
 
-.table_showmore_wrapper:hover{
+.table-showmore-wrapper:hover{
   background: #f7f7f7;
 }
 
-.table_showmore_wrapper:hover .table_showmore:before{
+.table-showmore-wrapper:hover .table-showmore:before{
   top:calc(100% - 5px);
 }
 
-.table_showmore_wrapper .loader{
+.table-showmore-wrapper .loader{
   opacity:0.5;
 }
 
-.table_secondary{
+.table-secondary{
   display:none;
 }
 
-.table_showmore_finished{
+.table-showmore-finished{
   display:none;
   font-size:12px;
   color:#888;
@@ -388,7 +388,7 @@ td.table_row_total_scope .total{
 
 /* Icons for the arrows */
 
-.icon_delta{
+.icon-delta{
   width:9px;
   height:12px;
   display:inline-block;
@@ -396,33 +396,33 @@ td.table_row_total_scope .total{
   transform-origin:50% 50%;
 }
 
-.down .icon_delta{
+.down .icon-delta{
   -webkit-transform:rotateZ(180deg);
   -moz-transform:rotateZ(180deg);
   transform:rotateZ(180deg);
 }
 
-.down .icon_delta rect{
+.down .icon-delta rect{
   fill:#e14f33;
 }
 
-.icon_delta.on_dark rect{
+.icon-delta.on-dark rect{
   fill:#fff;
 }
 
 /* Graph stuff ~~ This part to keep */
-.graph_wrapper h3{
+.graph-wrapper h3{
   color:#293b5a;
   font-size:25px;
   font-weight:100;
   text-align:center;
 }
 
-.graph_wrapper h3 strong{
+.graph-wrapper h3 strong{
   font-weight:400;
 }
 
-.graph_wrapper{
+.graph-wrapper{
   text-align:center;
   padding:30px;
 }
@@ -436,7 +436,7 @@ td.table_row_total_scope .total{
   width:368px;
 }
 
-.graph_wrapper h4{
+.graph-wrapper h4{
   text-align:center;
   margin-top:5px;
   font-weight:100;
@@ -446,17 +446,17 @@ td.table_row_total_scope .total{
 /* Media Queries */
 
 @media (min-width: 1300px) {
-  .global_fullwidth{ width:1280px ; margin:0 auto; position:relative;}
+  .global-fullwidth{ width:1280px ; margin:0 auto; position:relative;}
 }
 
 /* But keep the rest below */
 
 @media (min-width: 920px) {
-  .title_column{
+  .title-column{
     display:block;
   }
 
-  .title_inter{
+  .title-inter{
     margin-top:50px;
     margin-bottom:10px;
   }
@@ -473,12 +473,12 @@ td.table_row_total_scope .total{
     margin-left:0;
   }
 
-  .overview_box{
+  .overview-box{
     margin:20px -5px 0 -5px;
 
   }
 
-  .overview_box:before{
+  .overview-box:before{
     content:'';
     position:absolute;
     top:-20px;
@@ -504,24 +504,24 @@ td.table_row_total_scope .total{
       padding: 20px 30px 30px 30px;
   }
 
-  .card_wrapper{
+  .card-wrapper{
     padding: 30px 35px;
   }
 
-  .table_showmore_wrapper{
+  .table-showmore-wrapper{
     margin: 25px -35px -30px -35px;
   }
 }
 
 @media (min-width: 480px) {
-  .table_job_title a{
+  .table-job-title a{
     max-width:inherit;
     overflow:show;
   }
-  .breakdown_table .table_title{
+  .breakdown-table .table-title{
     font-size:20px;
   }
-  .overview_stat_wrapper{
+  .overview-stat-wrapper{
     float:left;
     width:50%;
     border:none;
