@@ -261,11 +261,9 @@ body{
   text-align:left;
   color:#293b5a;
   text-decoration:none;
+  line-height: 20px;
   padding: 5px 0;
   max-width:100px;
-  text-overflow:ellipsis;
-  white-space:nowrap;
-  overflow:hidden;
 }
 
 td.table-row-total{
