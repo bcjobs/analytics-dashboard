@@ -20,6 +20,8 @@ export default Ember.Component.extend({
   draw(data) {
     if (data.type === 'bar') {
       var datum = this.get('model')[data.index];
+
+      /*jshint unused:false */
       var tooltip = new Tooltip({
         target: data.element._node,
         content: `${moment(datum.x).format('MMM YYYY')}<br>
