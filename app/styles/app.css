@@ -38,7 +38,6 @@ img { max-width:100%;}
 
 body{
   background:#959482;
-
   height:200px;
   font-family: 'Roboto', sans-serif;
 }
@@ -62,7 +61,7 @@ body{
 /* Top title with the Date */
 
 .title-wrapper{
-  background:#dfe0e1;
+  background:#ced2d6;
   text-align:center;
   color:#fff;
   box-shadow: 0 2px 3px rgba(0,0,0,0.2);
@@ -72,7 +71,7 @@ body{
 
 .title{
   font-size:32px;
-  text-shadow : 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow : 1px 1px 3px rgba(0,0,0,0.3);
   font-weight:bold;
   padding:15px 0;
 }
@@ -441,6 +440,25 @@ td.table-row-total-scope .total{
   color:#888;
 }
 
+.date-filter { width: 150px; }
+input.calendar {
+  background: #ffffff;
+  color: #283a5a;
+  font-size: 16px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 8px;
+  border: 1px solid #a8adb2;
+  width: 100%;
+}
+.date-icon { vertical-align: middle; }
+
+.pull-left { float: left; }
+.pull-right { float: right; }
+.margin-r5 { margin-right: 5px; }
+.margin-r15 { margin-right: 15px; }
+.item-inblock { display: inline-block; }
+
 /* Media Queries */
 
 @media (min-width: 1300px) {
@@ -494,9 +512,12 @@ td.table-row-total-scope .total{
   body{
     background:url(/images/bg.jpg) #959482 no-repeat;
     background-sizing: cover;
-    background-position : center 30%;
+    background-position : center center;
     background-attachment: fixed;
-    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
   .content{
       padding: 20px 30px 30px 30px;
@@ -526,6 +547,12 @@ td.table-row-total-scope .total{
     padding:0;
     margin:0;
   }
+}
+
+@media (max-width: 768px) {
+  .xs-nofloat { float: none; }
+  .xs-mb15 { margin-bottom: 15px; }
+  .xs-mb30 { margin-bottom: 30px; }
 }
 
 .milk {
