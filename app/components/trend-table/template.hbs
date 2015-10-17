@@ -6,7 +6,7 @@
             <th>Companies</th>
             <th>Avg. Age</th>
         </tr>
-        {{#each model as |trend|}}
+        {{#each items as |trend|}}
             <tr>
                 <td class="table-job-title">{{trend.name}}</td>
                 <td>
@@ -19,13 +19,16 @@
     </tbody>
 </table>
 
-<!-- <div class="table-showmore-wrapper">
-    <div class="table-showmore">
-        See More
+{{#if showMoreButton}}
+    <div class="table-showmore-wrapper" {{action "showMore"}}>
+        <div class="table-showmore">
+            See More
+        </div>
     </div>
-    <span class="loader flex-hidden">
-    </span>
-    <span class="table-showmore-finished">
-        Showing all results.
-    </span>
-</div> -->
+{{else}}
+    <div class="table-showmore-wrapper">
+        <span class="table-showmore-finished">
+            Showing all results.
+        </span>
+    </div>
+{{/if}}
