@@ -563,6 +563,10 @@ input.calendar {
   stroke: #293b5a;
 }
 
+.tooltip-inner {
+    white-space:pre-wrap;
+}
+
 .chart-tooltip {
   font-size: 12px;
   text-align: center;
@@ -572,5 +576,5 @@ input.calendar {
 }
 
 body.loading .content-wrapper {
-  opacity: 0.5;  
+  opacity: 0.5;
 }

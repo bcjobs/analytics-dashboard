@@ -2,7 +2,6 @@ import Ember from 'ember';
 import Chartist from 'npm:chartist';
 import moment from 'npm:moment';
 import numeral from 'npm:numeral';
-import Tooltip from 'npm:tether-tooltip';
 
 export default Ember.Component.extend({
   didInsertElement() {
@@ -21,13 +20,12 @@ export default Ember.Component.extend({
     if (data.type === 'bar') {
       var datum = this.get('model')[data.index];
 
-      /*jshint unused:false */
-      var tooltip = new Tooltip({
-        target: data.element._node,
-        content: `${moment(datum.x).format('MMM YYYY')}<br>
-          ${numeral(datum.y).format('0,0')} Jobs`,
-        classes: 'tooltip-theme-arrows chart-tooltip',
-        position: 'top center'
+      var $bar = $(data.element._node);
+
+      $bar.tooltip({
+        placement: 'top',
+        title: `${moment(datum.x).format('MMM YYYY')}\n${numeral(datum.y).format('0,0')} Jobs`,
+        container: this.$(),
       });
     }
   }

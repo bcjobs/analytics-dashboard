@@ -8,7 +8,8 @@ module.exports = function(defaults) {
   });
 
   app.import(path.join(app.bowerDirectory, 'chartist/dist/chartist.min.css'));
-  app.import(path.join(app.bowerDirectory, 'tether-tooltip/dist/css/tooltip-theme-arrows.css'));
+
+  app.import(path.join(app.bowerDirectory, 'bootstrap/dist/js/bootstrap.min.js'));
 
   return app.toTree();
 };

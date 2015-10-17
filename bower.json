@@ -13,7 +13,6 @@
     "loader.js": "ember-cli/loader.js#3.2.1",
     "qunit": "~1.18.0",
     "chartist": "~0.9.4",
-    "tether-tooltip": "~1.1.0",
     "bootstrap-datepicker": "~1.4.1",
     "bootstrap": "~3.3.2"
   },
