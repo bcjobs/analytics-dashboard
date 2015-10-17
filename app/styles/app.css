@@ -570,3 +570,7 @@ input.calendar {
 .chart-tooltip--line {
   margin-top: -5px;
 }
+
+body.loading .content-wrapper {
+  opacity: 0.5;  
+}
