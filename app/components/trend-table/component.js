@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import range from 'npm:lodash/utility/range';
 
 var DEFAULT_ITEMS = 5;
 
@@ -18,6 +19,14 @@ export default Ember.Component.extend({
       return model;
     }
     return model.slice(0, DEFAULT_ITEMS);
+  }),
+
+  emptyItems: Ember.computed('items', function() {
+    var length = this.get('items.length');
+    if (length >= DEFAULT_ITEMS) {
+      return [];
+    }
+    return range(0,  DEFAULT_ITEMS - length);
   }),
 
   actions: {

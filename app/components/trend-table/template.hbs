@@ -16,6 +16,11 @@
                 <td>{{format-number trend.averageAge}}</td>
             </tr>
         {{/each}}
+        {{#each emptyItems}}
+            <tr>
+                <td class="table-job-title" colspan="4">&nbsp;</td>
+            </tr>
+        {{/each}}
     </tbody>
 </table>
 
