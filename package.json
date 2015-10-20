@@ -10,8 +10,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server --proxy http://analytics.bcjobs.ca --env production",
-    "test": "ember test",
-    "install": "if [ -n \"$EMBER_BUILD\" ]; then make build; fi"
+    "test": "ember test"
   },
   "repository": "",
   "engines": {
