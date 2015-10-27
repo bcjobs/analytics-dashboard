@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import $ from 'jquery';
 import Chartist from 'npm:chartist';
 import moment from 'npm:moment';
 import numeral from 'npm:numeral';

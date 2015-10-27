@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import $ from 'jquery';
 
 export default Ember.Route.extend({
   queryParams: {
@@ -11,7 +12,7 @@ export default Ember.Route.extend({
     $('body').addClass('loading');
   },
 
-  model(params) {
+  model(/*params*/) {
     return Ember.RSVP.resolve(
       Ember.$.getJSON('api/v1.0/reports/outline' + window.location.search)
     );
