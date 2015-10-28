@@ -7,7 +7,7 @@
             <th>&nbsp;</th>
         </tr>
 
-        {{#each model.top as |item|}}
+        {{#each items as |item|}}
             <tr>
                 <td class="table-job-title">{{item.employer}}</td>
                 <td>{{item.jobs}}</td>
@@ -19,14 +19,22 @@
                 <td class="table-job-title" colspan="2">&nbsp;</td>
             </tr>
         {{/each}}
-
-        <tr>
-            <td class="table-row-total table-row-total-scope">
-                These {{model.companiesRepresented}} companies represent
-                <span class="percent">{{format-number model.openingsCoverage "0%"}}</span> of
-                <span class="total">{{format-number model.totalOpenings}}</span>
-                total openings.
-            </td>
-        </tr>
     </tbody>
 </table>
+
+{{#if showMoreButton}}
+    <div class="table-showmore-wrapper" {{action "showMore"}}>
+        <div class="table-showmore">
+            See More
+        </div>
+    </div>
+{{else}}
+    <div class="table-showmore-wrapper">
+        <span class="table-showmore-finished">
+          These {{model.companiesRepresented}} companies represent
+          <span class="percent">{{format-number model.openingsCoverage "0%"}}</span> of
+          <span class="total">{{format-number model.totalOpenings}}</span>
+          total openings.
+        </span>
+    </div>
+{{/if}}
