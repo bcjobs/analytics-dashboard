@@ -12,9 +12,9 @@ export default Ember.Route.extend({
     $('body').addClass('loading');
   },
 
-  model(/*params*/) {
+  model(params) {
     return Ember.RSVP.resolve(
-      Ember.$.getJSON('/api/v1.0/reports/outline' + window.location.search)
+      Ember.$.getJSON('/api/v1.0/reports/outline?at=' + params.at)
     );
   },
 
