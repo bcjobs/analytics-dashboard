@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
   atDate: Ember.computed('at', {
     get() {
       var at = this.get('at');
-      return at ? new Date(at) : null;
+      return at ? moment(at).toDate() : null;
     },
     set(key, value) {
       this.set('at', value ? moment(value).format(DATE_FORMAT) : '');
