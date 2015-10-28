@@ -7,6 +7,7 @@ export default Ember.Controller.extend({
   queryParams: ['at'],
 
   at: moment().subtract(1, 'days').format(DATE_FORMAT),
+  startDate: moment("2015-08-20").toDate(),
   yesterday: moment().subtract(1, 'days').startOf('day').toDate(),
 
   atDate: Ember.computed('at', {
