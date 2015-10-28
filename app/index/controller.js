@@ -6,8 +6,8 @@ var DATE_FORMAT = 'YYYY-MM-DD';
 export default Ember.Controller.extend({
   queryParams: ['at'],
 
-  at: moment().format(DATE_FORMAT),
-  today: moment().startOf('day').toDate(),
+  at: moment().subtract(1, 'days').format(DATE_FORMAT),
+  yesterday: moment().subtract(1, 'days').startOf('day').toDate(),
 
   atDate: Ember.computed('at', {
     get() {
