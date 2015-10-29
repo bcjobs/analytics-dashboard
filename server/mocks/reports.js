@@ -4,7 +4,7 @@ var moment = require('moment');
 var router = new express.Router();
 
 router.get('/outline', function(req, res) {
-  var at = req.query.at ? moment(req.query.at) : moment().startOf('day');
+  var at = req.query.at ? moment.utc(req.query.at) : moment.utc().startOf('day');
   res.send({
     "date": at.toISOString(),
     "summary": {
