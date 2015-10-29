@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'bcic-report',
+    modulePrefix: 'analytics-dashboard',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
