@@ -578,3 +578,10 @@ input.calendar {
 body.loading .content-wrapper {
   opacity: 0.5;
 }
+
+.admin {
+  background: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
