@@ -7,7 +7,7 @@ export default Ember.Route.extend({
       ruleType: 'Job Title',
       rules: [{
         isNew: true,
-        terms: ['']
+        terms: []
       }]
     })
   },

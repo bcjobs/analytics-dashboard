@@ -49,6 +49,10 @@ body{
   display:inline-block;
 }
 
+.pointer {
+  cursor: pointer;  
+}
+
 /* Dummy header */
 
 .header{

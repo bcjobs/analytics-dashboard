@@ -6,22 +6,14 @@
         Terms:
       </div>
       <div class="col-md-5">
-        <form>
-          {{#each rule.terms as |term|}}
-            <div class="form-group">
-              <div class="rule-term">
-                {{input class="form-control" value=term}}
-                <span class="glyphicon glyphicon-remove"></span>
-              </div>
-            </div>
-          {{/each}}
+        {{#each terms key="@index" as |term|}}
           <div class="form-group">
             <div class="rule-term">
-              {{input class="form-control"}}
-              <span class="glyphicon glyphicon-remove invisible"></span>
+              {{input class="form-control" value=term.value action=(action 'changeTerm' term) on="input"}}
+              <span class="pointer glyphicon glyphicon-remove {{unless term.canDelete 'invisible'}}" {{action "removeTerm" term}}></span>
             </div>
           </div>
-        </form>
+        {{/each}}
       </div>
 
       <div class="col-md-6">
