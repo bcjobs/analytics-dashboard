@@ -585,5 +585,42 @@ body.loading .content-wrapper {
   background: white;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.rule {
+  display: flex;
+  margin-top: 20px;
+}
+.rule-content {
+  border: 1px solid #eee;
+  padding: 10px;
+  padding-bottom: 0;
+}
+.rule-icon {
+  color: #a94442;
+  padding-left: 10px;
+  width: 24px;
+}
+.rule-term-label {
+  line-height: 34px;
+}
+.rule-option {
+  line-height: 32px;
+  padding-bottom: 15px;
+}
+.rule-term {
+  display: table-row;
+}
+.rule-term > input {
+  display: table-cell;
+}
+.rule-term > span {
+  display: table-cell;
+  width: 1%;
+  padding-left: 6px;
+  line-height: 1;
+  color: #a94442;
+  vertical-align: middle;
 }

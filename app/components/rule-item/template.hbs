@@ -1,0 +1,66 @@
+<div class="rule">
+
+  <div class="rule-content">
+    <div class="row">
+      <div class="col-md-1 rule-term-label">
+        Terms:
+      </div>
+      <div class="col-md-5">
+        <form>
+          {{#each rule.terms as |term|}}
+            <div class="form-group">
+              <div class="rule-term">
+                {{input class="form-control" value=term}}
+                <span class="glyphicon glyphicon-remove"></span>
+              </div>
+            </div>
+          {{/each}}
+          <div class="form-group">
+            <div class="rule-term">
+              {{input class="form-control"}}
+              <span class="glyphicon glyphicon-remove invisible"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <form class="rule-option form-inline">
+          <div class="radio">
+            {{#radio-button
+              value="replace"
+              groupValue=rule.action}}
+              Replace with
+            {{/radio-button}}
+          </div>
+          {{input class="form-control" value=rule.replaceWith}}
+        </form>
+        <form class="rule-option form-inline">
+          <div class="radio">
+            {{#radio-button
+              value="ignoreValue"
+              groupValue=rule.action}}
+              Ignore value
+            {{/radio-button}}
+          </div>
+        </form>
+        <form class="rule-option form-inline">
+          <div class="radio">
+            {{#radio-button
+              value="ignoreJob"
+              groupValue=rule.action}}
+              Ignore job
+            {{/radio-button}}
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule-icon">
+    {{#unless rule.isNew}}
+      <span class="glyphicon glyphicon-remove"></span>
+    {{/unless}}
+  </div>
+</div>
