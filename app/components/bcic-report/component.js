@@ -14,6 +14,8 @@ function direction(current, average) {
 }
 
 export default Ember.Component.extend({
+  classNames: ['bcic-report'],
+
   openJobsDirection: Ember.computed('model.summary.openJobs.current', 'model.summary.openJobsAverage.current', function() {
     return direction(
       this.get('model.summary.openJobs.current'),

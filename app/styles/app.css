@@ -1,6 +1,5 @@
 /* HTML5 display-role reset for older browsers */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
-body{line-height:1;}
 ol,ul{list-style:none;}
 blockquote,q{quotes:none;}
 blockquote:before,blockquote:after,q:before,q:after{content:’’;content:none;}
@@ -24,6 +23,9 @@ img { max-width:100%;}
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* Global Usage */
+
+.bcic-report {line-height:1;}
+
 
 .global-fullwidth{ width:100%	; margin:0 auto; position:relative;}
 .flex-hidden { display:none !important;}
