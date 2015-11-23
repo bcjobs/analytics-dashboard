@@ -24,6 +24,14 @@ export default Ember.Route.extend({
   actions: {
     search(q) {
       this.controller.set('q', q);
+    },
+
+    deleteRule(rule) {
+      $.ajax({
+        url: `/api/v1.0/rules/${rule.id}`,
+        method: 'DELETE'
+      });
+      this.controller.get('model').removeObject(rule);
     }
   }
 });

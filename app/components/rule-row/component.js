@@ -18,4 +18,10 @@ export default Ember.Component.extend({
         return 'Ignore job';
     }
   }),
+
+  actions: {
+    delete() {
+      this.sendAction('delete', this.get('rule'));
+    }
+  }
 });
