@@ -14,6 +14,7 @@ export default Ember.Route.extend({
       Promise.resolve($.ajax({
         url: `/api/v1.0/rules/${rule.id}`,
         method: 'PUT',
+        contentType : 'application/json',        
         data: JSON.stringify(rule)
       })).then(() => {
         this.transitionTo('admin.rules');
