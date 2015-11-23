@@ -1,4 +1,7 @@
 import Ember from 'ember';
+import $ from 'jquery';
+
+var {Promise} = Ember.RSVP;
 
 export default Ember.Route.extend({
   queryParams: {
@@ -8,7 +11,7 @@ export default Ember.Route.extend({
   },
 
   model() {
-    return ["Job Title", "Company Name"];
+    return Promise.resolve($.getJSON('/api/v1.0/ruleTypes'));
   },
 
   setupController(controller, model) {
