@@ -8,7 +8,8 @@ export default Ember.Route.extend({
     return {
       terms: [],
       action: "replace",
-      replaceWith: ""
+      replaceWith: "",
+      ruleType: this.paramsFor('admin.rules').ruleType
     };
   },
 
