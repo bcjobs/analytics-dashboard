@@ -16,7 +16,8 @@ export default Ember.Route.extend({
     }
 
     return Promise.resolve($.getJSON('/api/v1.0/rules', {
-      q: q
+      q: q,
+      ruleType: this.paramsFor('admin.rules').ruleType
     }));
   },
 
