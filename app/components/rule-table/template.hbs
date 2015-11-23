@@ -1,0 +1,20 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>
+        Terms
+      </th>
+      <th>
+        Rule
+      </th>
+      <th>
+        Action
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rules as |rule|}}
+      {{rule-row rule=rule}}
+    {{/each}}
+  </tbody>
+</table>

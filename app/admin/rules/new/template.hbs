@@ -1,0 +1,12 @@
+<form class="admin container" {{action "save" on="submit"}}>
+
+    <h1>Create rule</h1>
+
+    {{rule-edit rule=model}}
+
+    <div class="buttons">
+        <button type="submit" class="btn btn-primary">Create</button>
+        {{#link-to "admin.rules" class="btn btn-default"}}Cancel{{/link-to}}
+    </div>
+
+</form>

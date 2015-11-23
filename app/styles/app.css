@@ -50,7 +50,7 @@ body{
 }
 
 .pointer {
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 /* Dummy header */
@@ -612,7 +612,6 @@ body.loading .content-wrapper {
 }
 .rule-option {
   line-height: 32px;
-  padding-bottom: 15px;
 }
 .rule-term {
   display: table-row;
@@ -627,4 +626,12 @@ body.loading .content-wrapper {
   line-height: 1;
   color: #a94442;
   vertical-align: middle;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.search-form {
+  margin-bottom: 20px;
 }
