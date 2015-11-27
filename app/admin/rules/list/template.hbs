@@ -27,7 +27,11 @@
       Searching for <strong>{{q}}</strong>.
     </div>
 
-    {{rule-table rules=model deleteRule="deleteRule"}}
+    {{#if model.length}}
+      {{rule-table rules=model deleteRule="deleteRule"}}
+    {{else}}
+      No results.
+    {{/if}}
   {{else}}
     Please enter search or click Create button.
   {{/if}}
