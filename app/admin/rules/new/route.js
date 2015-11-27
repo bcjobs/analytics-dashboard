@@ -17,7 +17,7 @@ export default Ember.Route.extend({
     save() {
       var rule = this.controller.get('model');
       Promise.resolve($.ajax({
-        url: `/api/v1.0/rules/`,
+        url: `/api/v1.0/rules`,
         method: 'POST',
         contentType : 'application/json',
         data: JSON.stringify(rule)
