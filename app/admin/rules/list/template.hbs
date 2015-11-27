@@ -20,6 +20,13 @@
   </form>
 
   {{#if q}}
+    <div class="alert alert-info alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" {{action "clearSearch"}}>
+        <span aria-hidden="true">&times;</span>
+      </button>
+      Searching for <strong>{{q}}</strong>.
+    </div>
+
     {{rule-table rules=model deleteRule="deleteRule"}}
   {{else}}
     Please enter search or click Create button.

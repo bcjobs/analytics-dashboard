@@ -23,7 +23,11 @@ export default Ember.Route.extend({
 
   actions: {
     search(q) {
-      this.controller.set('q', q);
+      this.transitionTo(this.routeName, {queryParams: {q: q}});
+    },
+
+    clearSearch() {
+      this.transitionTo(this.routeName, {queryParams: {q: ''}});
     },
 
     deleteRule(rule) {
