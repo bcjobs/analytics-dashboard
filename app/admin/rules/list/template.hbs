@@ -19,6 +19,10 @@
     {{/link-to}}
   </form>
 
-  {{rule-table rules=model deleteRule="deleteRule"}}
+  {{#if q}}
+    {{rule-table rules=model deleteRule="deleteRule"}}
+  {{else}}
+    Please enter search or click Create button.
+  {{/if}}
 
 </div>
