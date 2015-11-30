@@ -16,12 +16,11 @@ export default Ember.Route.extend({
   actions: {
     save() {
       var rule = this.controller.get('model');
-      Promise.resolve($.ajax({
+      this.store.ajax({
         url: `/api/v1.0/rules`,
         method: 'POST',
-        contentType : 'application/json',
-        data: JSON.stringify(rule)
-      })).then(() => {
+        data: rule
+      }).then(() => {
         this.transitionTo('admin.rules');
       });
     }

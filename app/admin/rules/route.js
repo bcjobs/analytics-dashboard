@@ -11,7 +11,7 @@ export default Ember.Route.extend({
   },
 
   model() {
-    return Promise.resolve($.getJSON('/api/v1.0/ruleTypes'));
+    return this.store.ajax({url: '/api/v1.0/ruleTypes'});
   },
 
   setupController(controller, model) {

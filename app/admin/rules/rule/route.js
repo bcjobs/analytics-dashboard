@@ -5,18 +5,17 @@ var {Promise} = Ember.RSVP;
 
 export default Ember.Route.extend({
   model({rule_id}) {
-    return Promise.resolve($.getJSON(`/api/v1.0/rules/${rule_id}`));
+    return this.store.ajax({url: `/api/v1.0/rules/${rule_id}`});
   },
 
   actions: {
     save() {
       var rule = this.controller.get('model');
-      Promise.resolve($.ajax({
+      this.store.ajax({
         url: `/api/v1.0/rules/${rule.id}`,
         method: 'PUT',
-        contentType : 'application/json',        
-        data: JSON.stringify(rule)
-      })).then(() => {
+        data: rule
+      }).then(() => {
         this.transitionTo('admin.rules');
       });
     }

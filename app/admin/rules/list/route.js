@@ -15,10 +15,13 @@ export default Ember.Route.extend({
       return [];
     }
 
-    return Promise.resolve($.getJSON('/api/v1.0/rules', {
-      q: q,
-      ruleType: this.paramsFor('admin.rules').ruleType
-    }));
+    return this.store.ajax({
+      url: '/api/v1.0/rules',
+      query: {
+        q: q,
+        ruleType: this.paramsFor('admin.rules').ruleType
+      }
+    });
   },
 
   actions: {
@@ -31,7 +34,7 @@ export default Ember.Route.extend({
     },
 
     deleteRule(rule) {
-      $.ajax({
+      this.store.ajax({
         url: `/api/v1.0/rules/${rule.id}`,
         method: 'DELETE'
       });
