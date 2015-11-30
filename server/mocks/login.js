@@ -15,5 +15,9 @@ module.exports = function(app) {
     }
   });
 
+  router.delete('/', function(req, res) {
+    res.send();
+  });
+
   app.use('/api/v1.0/authentication/login', router);
 };
