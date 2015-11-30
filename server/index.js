@@ -1,4 +1,5 @@
 var globSync   = require('glob').sync;
+var bodyParser = require('body-parser');
 
 function usingProxy() {
     return !!process.argv.filter(function (arg) {
@@ -18,6 +19,8 @@ module.exports = function(app) {
   // Log proxy requests
   var morgan  = require('morgan');
   app.use(morgan('dev'));
+
+  app.use('/api', bodyParser.json());
 
   mocks.forEach(function(route) { route(app); });
   proxies.forEach(function(route) { route(app); });
