@@ -12,7 +12,8 @@ export default Ember.Route.extend({
       })).then(() => {
         this.transitionTo('admin');
       }).catch(err => {
-        this.controller.set('errorMessage', 'Error');
+        var errorMessage = Ember.get(err, 'responseJSON.message') || 'Internal Error';
+        this.controller.set('errorMessage', errorMessage);
       });
     }
   }
