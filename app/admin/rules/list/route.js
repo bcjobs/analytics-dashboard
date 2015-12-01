@@ -11,10 +11,6 @@ export default Ember.Route.extend({
   },
 
   model({q}) {
-    if (!q) {
-      return [];
-    }
-
     return this.store.ajax({
       url: '/api/v1.0/rules',
       query: {

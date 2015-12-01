@@ -28,14 +28,12 @@
       </button>
       Searching for <strong>{{q}}</strong>.
     </div>
+  {{/if}}
 
-    {{#if model.length}}
-      {{rule-table rules=model deleteRule="deleteRule"}}
-    {{else}}
-      No results.
-    {{/if}}
+  {{#if model.length}}
+    {{rule-table rules=model deleteRule="deleteRule"}}
   {{else}}
-    Please enter search or click Create button.
+    No results.
   {{/if}}
 
 </div>
