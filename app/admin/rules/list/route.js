@@ -14,7 +14,7 @@ export default Ember.Route.extend({
     return this.store.ajax({
       url: '/api/v1.0/rules',
       query: {
-        q: q,
+        q: q || undefined,
         ruleType: this.paramsFor('admin.rules').ruleType
       }
     });
