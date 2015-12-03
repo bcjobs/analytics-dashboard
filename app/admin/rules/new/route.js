@@ -1,7 +1,4 @@
 import Ember from 'ember';
-import $ from 'jquery';
-
-var {Promise} = Ember.RSVP;
 
 export default Ember.Route.extend({
   model() {

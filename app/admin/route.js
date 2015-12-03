@@ -14,7 +14,7 @@ export default Ember.Route.extend({
         method: 'DELETE'
       }).then(() => {
         this.transitionTo('authentication');
-      })
+      });
     }
   }
 });
