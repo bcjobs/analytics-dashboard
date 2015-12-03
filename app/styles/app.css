@@ -604,8 +604,6 @@ body.loading .content-wrapper {
 }
 .rule-icon {
   color: #a94442;
-  padding-left: 10px;
-  width: 24px;
 }
 .rule-term-label {
   line-height: 34px;
@@ -634,4 +632,67 @@ body.loading .content-wrapper {
 
 .search-form {
   margin-bottom: 20px;
+}
+
+.form-control {
+  width: 500px;
+}
+
+.rule-replaceWith {
+  margin-top: 10px;
+}
+
+/* Typeahead */
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 500px;
+  height: 30px;
+  padding: 8px 12px;
+  line-height: 30px;
+  outline: none;
+}
+
+.typeahead {
+  background-color: #fff;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-menu {
+  width: 422px;
+  margin: 4px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  line-height: 20px;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
 }

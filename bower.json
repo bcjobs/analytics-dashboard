@@ -13,7 +13,8 @@
     "qunit": "~1.18.0",
     "chartist": "~0.9.4",
     "bootstrap-datepicker": "~1.4.1",
-    "bootstrap": "~3.3.2"
+    "bootstrap": "~3.3.2",
+    "typeahead.js": "~0.11.1"
   },
   "resolutions": {
     "ember": "2.0.1"

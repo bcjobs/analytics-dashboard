@@ -14,10 +14,11 @@ export default Ember.Component.extend({
     });
     return terms;
   }),
+
   newTerm: '',
 
   actions: {
-    changeTerm({index, value}) {
+    changeTerm(index, value) {
       var terms = this.get('rule.terms');
       if (isNumber(index)) {
         terms.replace(index, 1, [value]);
@@ -27,7 +28,7 @@ export default Ember.Component.extend({
       }
     },
 
-    removeTerm({index}) {
+    removeTerm(index) {
       var terms = this.get('rule.terms');
       terms.removeAt(index, 1);
     }

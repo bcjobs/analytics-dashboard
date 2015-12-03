@@ -11,5 +11,7 @@ module.exports = function(defaults) {
 
   app.import(path.join(app.bowerDirectory, 'bootstrap/dist/js/bootstrap.min.js'));
 
+  app.import(path.join(app.bowerDirectory, 'typeahead.js/dist/typeahead.bundle.min.js'));
+
   return app.toTree();
 };

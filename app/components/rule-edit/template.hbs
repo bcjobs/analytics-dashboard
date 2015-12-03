@@ -1,41 +1,35 @@
 <label>Terms</label>
 {{#each terms key="@index" as |term|}}
   <div class="form-group">
-    <div class="rule-term">
-      {{input class="form-control" value=term.value input=(action 'changeTerm' term)}}
-      <span class="pointer glyphicon glyphicon-remove {{unless term.canDelete 'invisible'}}" {{action "removeTerm" term}}></span>
-    </div>
+    {{term-input value=term.value action=(action "changeTerm" term.index) ruleType=rule.ruleType}}
+
+    <span class="pointer glyphicon glyphicon-remove rule-icon {{unless term.canDelete 'invisible'}}" {{action "removeTerm" term.index}}></span>
   </div>
 {{/each}}
 
 <label>Action</label>
 
-<div class="rule-option form-inline">
-  <div class="radio">
-    {{#radio-button
-      value="replace"
-      groupValue=rule.action}}
-      Replace with
-    {{/radio-button}}
-  </div>
-  {{input class="form-control" value=rule.replaceWith}}
-</div>
-<div class="rule-option form-inline">
-  <div class="radio">
-    {{#radio-button
-      value="ignoreValue"
-      groupValue=rule.action}}
-      Ignore value
-    {{/radio-button}}
+<div class="radio">
+  {{#radio-button
+    value="replace"
+    groupValue=rule.action}}
+    Replace with
+  {{/radio-button}}
+  <div class="rule-replaceWith">
+    {{term-input value=rule.replaceWith ruleType=rule.ruleType}}
   </div>
 </div>
-<div class="rule-option form-inline">
-  <div class="radio">
-    {{#radio-button
-      value="ignoreJob"
-      groupValue=rule.action}}
-      Ignore job
-    {{/radio-button}}
-  </div>
-
+<div class="radio">
+  {{#radio-button
+    value="ignoreValue"
+    groupValue=rule.action}}
+    Ignore value
+  {{/radio-button}}
+</div>
+<div class="radio">
+  {{#radio-button
+    value="ignoreJob"
+    groupValue=rule.action}}
+    Ignore job
+  {{/radio-button}}
 </div>
