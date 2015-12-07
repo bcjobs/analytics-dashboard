@@ -21,6 +21,8 @@ Router.map(function() {
 
   this.route('authentication', function() {
     this.route('login', {path: '/'});
+    this.route('resetPassword');
+    this.route('password');
   });
 });
 

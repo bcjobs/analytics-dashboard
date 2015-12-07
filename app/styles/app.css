@@ -696,3 +696,7 @@ body.loading .content-wrapper {
 .tt-suggestion p {
   margin: 0;
 }
+
+.margin-t20 {
+  margin-top: 20px;
+}
