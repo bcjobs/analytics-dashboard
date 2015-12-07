@@ -34,7 +34,7 @@
           </td>
           <td class="text-nowrap">
             {{#link-to "admin.users.edit" user class="btn btn-primary btn-xs"}}Edit{{/link-to}}
-            <button type="button" class="btn btn-danger btn-xs" {{action "delete"}}>Delete</button>
+            <button type="button" class="btn btn-danger btn-xs" {{action "deleteUser" user}}>Delete</button>
           </td>
         </tr>
       {{/each}}

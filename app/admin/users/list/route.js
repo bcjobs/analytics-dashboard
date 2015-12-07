@@ -5,5 +5,15 @@ export default Ember.Route.extend({
     return this.store.ajax({
       url: '/api/v1.0/users'
     });
-  }  
+  },
+
+  actions: {
+    deleteUser(user) {
+      this.store.ajax({
+        url: `/api/v1.0/users/${user.id}`,
+        method: 'DELETE'
+      });
+      this.controller.get('model').removeObject(user);
+    }
+  }
 });
