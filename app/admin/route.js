@@ -1,6 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  model() {
+    return this.store.ajax({
+      url: '/api/v1.0/users/me'
+    });
+  },
+
   actions: {
     error(err) {
       console.log(err);
@@ -8,6 +14,7 @@ export default Ember.Route.extend({
         this.transitionTo('authentication');
       }
     },
+
     logout() {
       this.store.ajax({
         url: '/api/v1.0/authentication/login',

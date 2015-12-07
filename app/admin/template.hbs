@@ -27,6 +27,11 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
+        {{#link-to "admin.users.edit" model tagName="li"}}
+          {{#link-to "admin.users.edit" model}}
+            {{model.firstName}} {{model.lastName}}
+          {{/link-to}}
+        {{/link-to}}
         <li><a href="#" {{action "logout"}}>Logout</a></li>
       </ul>
 
