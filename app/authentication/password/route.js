@@ -1,6 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  resetController: function(controller, isExiting, transition) {
+    if (isExiting) {
+      controller.setProperties({
+        password: ''
+      });
+    }
+  },
+
   actions: {
     setPassword() {
       var data = this.controller.getProperties('password', 'token', 'id');
