@@ -1,0 +1,49 @@
+<div class="admin container">
+  <div class="page-header">
+    <h1>Users</h1>
+  </div>
+
+  <div class="search-form">
+    {{#link-to "admin.users.new" class="btn btn-default"}}
+      Create
+    {{/link-to}}
+  </div>
+
+  {{#if model.length}}
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Email
+          </th>
+          <th>
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |user|}}
+          <tr>
+            <td>
+              {{user.firstName}} {{user.lastName}}
+            </td>
+            <td>
+              {{user.email}}
+            </td>
+            <td class="text-nowrap">
+              {{#link-to "admin.users.edit" user class="btn btn-primary btn-xs"}}Edit{{/link-to}}
+              <button type="button" class="btn btn-danger btn-xs" {{action "delete"}}>Delete</button>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+
+  {{else}}
+    No results.
+  {{/if}}
+</div>

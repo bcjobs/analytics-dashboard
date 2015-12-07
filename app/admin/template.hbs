@@ -14,9 +14,16 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active">
-          {{#link-to "admin.rules"}}Normalization rules{{/link-to}}
-        </li>
+        {{#link-to "admin.rules" tagName="li"}}
+          {{#link-to "admin.rules"}}
+            Normalization rules
+          {{/link-to}}
+        {{/link-to}}
+        {{#link-to "admin.users" tagName="li"}}
+          {{#link-to "admin.users"}}
+            Users
+          {{/link-to}}
+        {{/link-to}}
       </ul>
 
       <ul class="nav navbar-nav navbar-right">

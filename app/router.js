@@ -12,6 +12,11 @@ Router.map(function() {
       this.route('rule', {path: ':rule_id'});
       this.route('new');
     });
+    this.route('users', function() {
+      this.route('list', {path: '/'});
+      this.route('edit', {path: ':user_id'});
+      this.route('new');
+    });
   });
 
   this.route('authentication', function() {
