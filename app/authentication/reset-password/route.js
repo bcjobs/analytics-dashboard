@@ -11,6 +11,7 @@ export default Ember.Route.extend({
 
   actions: {
     submit() {
+      this.controller.set('errorMessage', null);
       this.store.ajax({
         url: '/api/v1.0/authentication/resetPassword',
         method: 'POST',

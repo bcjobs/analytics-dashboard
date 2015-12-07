@@ -11,6 +11,7 @@ export default Ember.Route.extend({
 
   actions: {
     setPassword() {
+      this.controller.set('errorMessage', null);
       var data = this.controller.getProperties('password', 'token', 'id');
       this.store.ajax({
         url: '/api/v1.0/authentication/password',
