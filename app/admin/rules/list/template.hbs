@@ -1,39 +1,35 @@
-<div class="admin container">
+<div class="page-header">
+  <h1>Rules</h1>
+</div>
 
-  <div class="page-header">
-    <h1>Rules</h1>
+<form class="form-inline search-form" {{action "search" query on="submit"}}>
+  <div class="input-group">
+    {{input type="text" class="form-control" placeholder="Search..." value=query}}
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="submit">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+      </button>
+    </span>
   </div>
 
-  <form class="form-inline search-form" {{action "search" query on="submit"}}>
-    <div class="input-group">
-      {{input type="text" class="form-control" placeholder="Search..." value=query}}
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="submit">
-          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-        </button>
-      </span>
-    </div>
+  <span class="search-form-or">or</span>
 
-    <span class="search-form-or">or</span>
+  {{#link-to "admin.rules.new" class="btn btn-default"}}
+    Create
+  {{/link-to}}
+</form>
 
-    {{#link-to "admin.rules.new" class="btn btn-default"}}
-      Create
-    {{/link-to}}
-  </form>
+{{#if q}}
+  <div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" {{action "clearSearch"}}>
+      <span aria-hidden="true">&times;</span>
+    </button>
+    Searching for <strong>{{q}}</strong>.
+  </div>
+{{/if}}
 
-  {{#if q}}
-    <div class="alert alert-info alert-dismissible" role="alert">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close" {{action "clearSearch"}}>
-        <span aria-hidden="true">&times;</span>
-      </button>
-      Searching for <strong>{{q}}</strong>.
-    </div>
-  {{/if}}
-
-  {{#if model.length}}
-    {{rule-table rules=model deleteRule="deleteRule"}}
-  {{else}}
-    No results.
-  {{/if}}
-
-</div>
+{{#if model.length}}
+  {{rule-table rules=model deleteRule="deleteRule"}}
+{{else}}
+  No results.
+{{/if}}
