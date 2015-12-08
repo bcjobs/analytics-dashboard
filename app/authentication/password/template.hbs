@@ -19,7 +19,12 @@
   </form>
 
   {{#if done}}
-    <div class="alert alert-info" role="alert">Your password has been changed!</div>
+    <div class="alert alert-info margin-t20" role="alert">
+      Your password has been changed!
+      {{#link-to "authentication"}}
+        Continue to login.
+      {{/link-to}}
+    </div>
   {{/if}}
 
   <div class="margin-t20">
