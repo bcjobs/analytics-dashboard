@@ -10,4 +10,7 @@ run:
 debug:
 	ember s --proxy http://analytics.bcjobs.ca
 
+deploy: build
+	./deploy.sh
+
 .PHONY: build run debug
