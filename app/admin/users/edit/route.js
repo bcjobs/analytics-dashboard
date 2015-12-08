@@ -3,9 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model(params) {
     return this.store.ajax({
-      url: `/api/v1.0/users/`
-    }).then(users => {
-      return users.findBy('id', parseInt(params.user_id, 10));
+      url: `/api/v1.0/users/${params.user_id}`
     });
   },
 
