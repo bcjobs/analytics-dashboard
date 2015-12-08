@@ -13,4 +13,4 @@ debug:
 deploy: build
 	./deploy.sh
 
-.PHONY: build run debug
+.PHONY: build run debug deploy
