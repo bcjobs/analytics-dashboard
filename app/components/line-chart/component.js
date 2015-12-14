@@ -5,14 +5,18 @@ import moment from 'npm:moment';
 import numeral from 'npm:numeral';
 
 export default Ember.Component.extend({
-  didInsertElement() {
+  data: Ember.computed('model', function() {
     var model = this.get('model');
-    var chart = new Chartist.Line(this.element, {
+    return {
       labels: model.map(item => moment(item.x).format('MMM D')),
       series: [
         model.map(item => item.y),
       ]
-    }, {
+    };
+  }),
+
+  didInsertElement() {
+    var chart = new Chartist.Line(this.element, this.get('data'), {
       fullWidth: true,
       lineSmooth: Chartist.Interpolation.none({}),
       chartPadding: {
@@ -21,7 +25,13 @@ export default Ember.Component.extend({
       height: '250'
     });
     chart.on('draw', data => this.draw(data));
+    this.chart = chart;
   },
+
+  didUpdate() {
+    this.chart.update(this.get('data'));
+  },
+
   draw(data) {
     if (data.type === 'point') {
       var datum = this.get('model')[data.index];
