@@ -5,6 +5,8 @@ export default Ember.Component.extend({
 
   ruleType: 'Job Title',
 
+  autosubmit: false,
+
   didInsertElement() {
     var search = new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
@@ -18,11 +20,16 @@ export default Ember.Component.extend({
     this.$('.typeahead').typeahead(null, {
       name: 'terms',
       source: search,
-      limit: 10      
+      limit: 10
     });
 
     this.$('.typeahead').bind('typeahead:select', (ev, value) => {
+      this.set('value', value);
       this.sendAction('action', value);
+
+      if (this.get('autosubmit')) {
+        this.$('.typeahead').submit();
+      }
     });
   },
 

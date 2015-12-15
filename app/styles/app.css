@@ -700,3 +700,8 @@ body.loading .content-wrapper {
 .margin-t20 {
   margin-top: 20px;
 }
+
+.typeahead {
+  height: 34px;
+  top: 2px;
+}
