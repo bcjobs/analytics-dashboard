@@ -18,8 +18,8 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    search(q) {
-      this.transitionTo(this.routeName, {queryParams: {q: q}});
+    search() {
+      this.transitionTo(this.routeName, {queryParams: {q: this.controller.get('query')}});
     },
 
     clearSearch() {
