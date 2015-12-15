@@ -4,7 +4,7 @@
 
 <form class="form-inline search-form" {{action "search" on="submit"}}>
   <div class="input-group">
-    {{term-input type="text" placeholder="Search..." value=query autosubmit=true}}
+    {{term-input type="text" placeholder="Search..." value=query autosubmit=true ruleType=ruleType}}
     <span class="input-group-btn">
       <button class="btn btn-default" type="submit">
         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>

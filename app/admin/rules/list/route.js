@@ -17,6 +17,13 @@ export default Ember.Route.extend({
     });
   },
 
+  setupController(controller, model) {
+    controller.setProperties({
+      model: model,
+      ruleType: this.paramsFor('admin.rules').ruleType
+    });
+  },
+
   actions: {
     search() {
       this.transitionTo(this.routeName, {queryParams: {q: this.controller.get('query')}});
