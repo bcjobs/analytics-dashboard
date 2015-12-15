@@ -26,7 +26,7 @@ export default Ember.Route.extend({
     })).catch(error => {
       // handle not found error gracefully
       var body = error.responseJSON;
-      if (body.code) {
+      if (body && body.code) {
         return {
           range: range,
           error: body
