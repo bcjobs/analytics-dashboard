@@ -62,6 +62,12 @@ body{
   background-color:#fff;
 }
 
+.dashboard-error {
+  text-align: center;
+  color: white;
+  margin-top: 60px;
+}
+
 /* Top title with the Date */
 
 .title-wrapper{
