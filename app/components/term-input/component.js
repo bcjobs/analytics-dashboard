@@ -5,6 +5,8 @@ export default Ember.Component.extend({
 
   ruleType: 'Job Title',
 
+  include: 'all',
+
   autosubmit: false,
 
   didInsertElement() {
@@ -12,7 +14,7 @@ export default Ember.Component.extend({
       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
       queryTokenizer: Bloodhound.tokenizers.whitespace,
       remote: {
-        url: `/api/v1.0/search?ruleType=${encodeURIComponent(this.get('ruleType'))}&q=%QUERY`,
+        url: `/api/v1.0/search?ruleType=${encodeURIComponent(this.get('ruleType'))}&include=${encodeURIComponent(this.get('include'))}&q=%QUERY`,
         wildcard: '%QUERY'
       }
     });

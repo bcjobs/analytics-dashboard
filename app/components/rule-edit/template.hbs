@@ -1,7 +1,7 @@
 <label>Terms</label>
 {{#each terms key="@index" as |term|}}
   <div class="form-group">
-    {{term-input value=term.value action=(action "changeTerm" term.index) ruleType=rule.ruleType}}
+    {{term-input value=term.value action=(action "changeTerm" term.index) ruleType=rule.ruleType include="notUsed"}}
 
     <span class="pointer glyphicon glyphicon-remove rule-icon {{unless term.canDelete 'invisible'}}" {{action "removeTerm" term.index}}></span>
   </div>
