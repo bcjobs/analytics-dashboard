@@ -13,8 +13,8 @@
                     class="calendar"
                     orientation="top"
                     autoclose=true
-                    startDate=startDate
-                    endDate=yesterday
+                    startDate=startsAt
+                    endDate=endsAt
                     value=atDate
                 }}
             </div>
@@ -24,4 +24,8 @@
     </div>
 </div>
 
-{{bcic-report model=model}}
+{{#if error}}
+    <h1 class="dashboard-error">{{error.message}}</h1>
+{{else}}
+    {{bcic-report model=outline}}
+{{/if}}
