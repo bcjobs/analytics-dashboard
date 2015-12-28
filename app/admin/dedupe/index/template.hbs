@@ -4,35 +4,4 @@
 
 {{dedupe-export range=model}}
 
-<h2>Import</h2>
-<div class="text-center">
-  {{#if uploadProgress}}
-    <div class="loader"></div>
-  {{/if}}
-
-  {{#if uploadError}}
-    <div class="alert alert-danger" role="alert">
-      {{uploadError}}
-    </div>
-  {{/if}}
-
-  {{#if uploadSuccess}}
-    <div class="alert alert-success" role="alert">
-      {{uploadSuccess}}
-    </div>
-  {{/if}}
-
-  {{#if showUploadButton}}
-    <label class="btn btn-default">
-      Upload
-      {{file-uploader
-        url="/api/v1.0/jobs/csv"
-        method="PUT"
-        onProgress="onUploadProgress"
-        onSuccess="onUploadSuccess"
-        onError="onUploadError"
-        classNames="hidden"}}
-    </label>
-  {{/if}}
-</div>
-`
+{{dedupe-import}}
