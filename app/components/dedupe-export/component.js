@@ -18,14 +18,14 @@ export default Ember.Component.extend({
       this.set('at', value ? moment(value).format(DATE_FORMAT) : '');
       return value;
     }
+  startsAt: Ember.computed('range', function() {
+    return moment(this.get('range.startsAt')).toDate();
   }),
 
-  startsAt: Ember.computed('model', function() {
-    return moment(this.get('model.startsAt')).toDate();
+  endsAt: Ember.computed('range', function() {
+    return moment(this.get('range.endsAt')).toDate();
   }),
 
-  endsAt: Ember.computed('model', function() {
-    return moment(this.get('model.endsAt')).toDate();
   }),
 
   actions: {
