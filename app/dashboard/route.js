@@ -1,8 +1,7 @@
 import Ember from 'ember';
-import $ from 'jquery';
 
 export default Ember.Route.extend({
-  model(params) {
+  model() {
     return this.store.ajax({
       url: '/api/v1.0/reports/range'
     });

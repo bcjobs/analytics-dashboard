@@ -27,7 +27,7 @@ export default EmberUploader.FileField.extend({
     this.sendAction('onSuccess', fileName);
   },
 
-  didError(fileName, jqXHR, textStatus, errorThrown) {
+  didError(fileName, jqXHR/*, textStatus, errorThrown*/) {
     this.sendAction('onError', fileName, jqXHR.responseJSON.message);
   }
 });
