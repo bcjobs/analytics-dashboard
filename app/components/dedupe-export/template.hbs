@@ -1,0 +1,17 @@
+<h2>Export</h2>
+<div class="text-center">
+  <div class="clearfix">
+    <img src="images/icon-date.svg" width="34" class="date-icon item-inblock margin-r5" />
+    <div class="date-filter item-inblock">
+        {{bootstrap-datepicker
+            class="calendar"
+            orientation="top"
+            autoclose=true
+            startDate=startsAt
+            endDate=endsAt
+            value=atDate
+        }}
+    </div>
+  </div>
+  <button class="btn btn-default" {{action "download"}}>Download</button>
+</div>
