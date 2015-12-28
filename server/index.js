@@ -23,5 +23,4 @@ module.exports = function(app) {
   app.use('/api', bodyParser.json());
 
   mocks.forEach(function(route) { route(app); });
-  proxies.forEach(function(route) { route(app); });
 };
