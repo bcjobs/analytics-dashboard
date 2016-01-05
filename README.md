@@ -41,7 +41,30 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+#### Preparation:
+* Make sure `lftp` is installed
+  * ` brew install lftp`
+* Make sure `deploy.sh` exists:
+  * `touch deploy.sh`
+* Set content of `deploy.sh` to:
+
+```
+#!/bin/bash
+
+FTP_USER={user}
+FTP_PASSWORD={password}
+FTP_HOST={host:port} (example: www.example.com:29)
+FTP_DIR=/
+
+# Deploy assets first
+lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate no; mirror --exclude index.html -R dist/ $FTP_DIR"
+
+# Deploy index.html
+lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate no; put -O $FTP_DIR dist/index.html"
+```
+
+#### Deploy
+* `make deploy`
 
 ## Further Reading / Useful Links
 
@@ -50,4 +73,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
