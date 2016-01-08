@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('dashboard', {path: '/'}, function() {
     this.route('index', {path: '/'});
+    this.route('it-jobs');
   });
   this.route('admin', function() {
     this.route('rules', function() {
