@@ -9,7 +9,7 @@ var proxy = httpProxy.createProxyServer({
   target: 'http://analytics.bcjobs.ca'
 });
 
-app.get('/api/v1.0/reports/outline', function(req, res, next) {
+app.get('/api/v1.0/reports/trends', function(req, res, next) {
   proxy.web(req, res);
 });
 

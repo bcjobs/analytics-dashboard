@@ -16,12 +16,13 @@ export default Ember.Route.extend({
     var range = this.modelFor('dashboard');
     var at = params.at || range.endsAt;
     return this.store.ajax({
-      url: `/api/v1.0/reports/outline`,
+      url: `/api/v1.0/reports/trends`,
       query: {
-        at: at
+        at: at,
+        type: 'Software'
       }
-    }).then(outline => ({
-      outline,
+    }).then(trends => ({
+      trends,
       range
     })).catch(error => {
       // handle not found error gracefully
@@ -40,9 +41,9 @@ export default Ember.Route.extend({
     $('body').removeClass('loading');
   },
 
-  setupController(controller, {outline, range, error}) {
+  setupController(controller, {trends, range, error}) {
     controller.setProperties({
-      outline,
+      trends,
       range,
       error
     });
