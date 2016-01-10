@@ -1,31 +1,7 @@
-<div class="header">
-    <img src="images/logo-bctechjobs.png" />
-</div>
-
-<div class="title-wrapper">
-    <div class="title global-fullwidth clearfix">
-      <div class="row">
-        <div class="xs-nofloat">
-          <div class="clearfix">
-            <img src="images/icon-date.svg" width="34" class="date-icon item-inblock margin-r5" />
-            <div class="date-filter item-inblock">
-                {{bootstrap-datepicker
-                    class="calendar"
-                    orientation="top"
-                    autoclose=true
-                    startDate=startsAt
-                    endDate=endsAt
-                    value=atDate
-                }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
-
-{{#if error}}
-    <h1 class="dashboard-error">{{error.message}}</h1>
-{{else}}
-    {{bcic-report model=trends type="IT"}}
-{{/if}}
+{{bcic-report
+  model=trends
+  type="IT"
+  atDate=atDate
+  range=range
+  error=error
+}}
