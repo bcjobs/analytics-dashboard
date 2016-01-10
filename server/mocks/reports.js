@@ -836,7 +836,7 @@ router.get('/trends', function(req, res) {
           "jobsRepresented": 390.0,
           "openingsCoverage": 0.31275060144346434
         },
-        "byPreviousDayNewJobs": {
+        "byNewJobs": {
           "top": [{
             "employer": "Metafore Technologies Inc",
             "jobs": 4.0
@@ -870,6 +870,13 @@ router.get('/trends', function(req, res) {
       }
     }
   })
+});
+
+router.get('/range', function(req, res) {
+  res.send({
+    startsAt: "2015-09-01",
+    endsAt: "2016-01-09"
+  });
 });
 
 module.exports = function(app) {
