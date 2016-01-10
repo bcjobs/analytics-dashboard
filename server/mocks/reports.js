@@ -5,6 +5,14 @@ var router = new express.Router();
 
 router.get('/trends', function(req, res) {
   var at = req.query.at ? moment.utc(req.query.at) : moment.utc().startOf('day');
+
+  if (at.isAfter('2016-01-09Z')) {
+    return res.status(400).send({
+      code: 'no-data',
+      message: 'No data for selected date.'
+    });
+  }
+
   res.send({
     "date": at.toISOString(),
     "summary": {
