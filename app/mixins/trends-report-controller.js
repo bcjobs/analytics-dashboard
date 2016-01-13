@@ -18,13 +18,6 @@ export default Ember.Mixin.create({
       this.set('at', value ? moment(value).format(DATE_FORMAT) : '');
       return value;
     }
-  }),
-
-  startsAt: Ember.computed('range', function() {
-    return moment(this.get('range.startsAt')).toDate();
-  }),
-
-  endsAt: Ember.computed('range', function() {
-    return moment(this.get('range.endsAt')).toDate();
   })
+
 });

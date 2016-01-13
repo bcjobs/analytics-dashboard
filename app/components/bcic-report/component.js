@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import range from 'npm:lodash/utility/range';
+import moment from 'npm:moment';
 
 function direction(current, average) {
   if (current > average) {
@@ -33,6 +33,11 @@ export default Ember.Component.extend({
   newJobsTotal: Ember.computed.or('model.charts.monthly.newJobsTotal', 'model.charts.montly.newJobTotal'),
   openJobsAverage: Ember.computed.or('model.charts.monthly.openJobsAverage', 'model.charts.montly.openJobsAverage'),
 
-  five: range(0, 5),
-  ten: range(0, 10)
+  startsAt: Ember.computed('range', function() {
+    return moment(this.get('range.startsAt')).toDate();
+  }),
+
+  endsAt: Ember.computed('range', function() {
+    return moment(this.get('range.endsAt')).toDate();
+  })
 });

@@ -5,6 +5,14 @@ var router = new express.Router();
 
 router.get('/trends', function(req, res) {
   var at = req.query.at ? moment.utc(req.query.at) : moment.utc().startOf('day');
+
+  if (at.isAfter('2016-01-09Z')) {
+    return res.status(400).send({
+      code: 'no-data',
+      message: 'No data for selected date.'
+    });
+  }
+
   res.send({
     "date": at.toISOString(),
     "summary": {
@@ -836,7 +844,7 @@ router.get('/trends', function(req, res) {
           "jobsRepresented": 390.0,
           "openingsCoverage": 0.31275060144346434
         },
-        "byPreviousDayNewJobs": {
+        "byNewJobs": {
           "top": [{
             "employer": "Metafore Technologies Inc",
             "jobs": 4.0
@@ -870,6 +878,13 @@ router.get('/trends', function(req, res) {
       }
     }
   })
+});
+
+router.get('/range', function(req, res) {
+  res.send({
+    startsAt: "2015-09-01",
+    endsAt: "2016-01-09"
+  });
 });
 
 module.exports = function(app) {
