@@ -2,11 +2,13 @@
   <h1>Users</h1>
 </div>
 
-<div class="search-form">
-  {{#link-to "admin.users.new" class="btn btn-default"}}
-    Create
-  {{/link-to}}
-</div>
+{{#if session.isAdmin}}
+  <div class="search-form">
+    {{#link-to "admin.users.new" class="btn btn-default"}}
+      Create
+    {{/link-to}}
+  </div>
+{{/if}}
 
 {{#if model.length}}
   <table class="table table-bordered">
@@ -18,9 +20,11 @@
         <th>
           Email
         </th>
-        <th>
-          Action
-        </th>
+        {{#if session.isAdmin}}
+          <th>
+            Action
+          </th>
+        {{/if}}
       </tr>
     </thead>
     <tbody>
@@ -32,10 +36,12 @@
           <td>
             {{user.email}}
           </td>
-          <td class="text-nowrap">
-            {{#link-to "admin.users.edit" user class="btn btn-primary btn-xs"}}Edit{{/link-to}}
-            <button type="button" class="btn btn-danger btn-xs" {{action "deleteUser" user}}>Delete</button>
-          </td>
+          {{#if session.isAdmin}}
+            <td class="text-nowrap">
+              {{#link-to "admin.users.edit" user class="btn btn-primary btn-xs"}}Edit{{/link-to}}
+              <button type="button" class="btn btn-danger btn-xs" {{action "deleteUser" user}}>Delete</button>
+            </td>
+          {{/if}}
         </tr>
       {{/each}}
     </tbody>

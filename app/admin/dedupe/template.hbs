@@ -4,6 +4,8 @@
   </div>
 
   {{dedupe-export range=model}}
-
-  {{dedupe-import}}
+  
+  {{#if session.isAdmin}}
+    {{dedupe-import}}
+  {{/if}}
 </div>

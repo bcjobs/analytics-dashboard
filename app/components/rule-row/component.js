@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  session: Ember.inject.service(),
+
   tagName: 'tr',
 
   terms: Ember.computed('rule.terms', function() {

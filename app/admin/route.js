@@ -1,12 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  session: Ember.inject.service(),
+
   model() {
     return this.store.ajax({
       url: '/api/v1.0/users/me'
     });
   },
-
+  
+  afterModel() {
+    this.get('session').set('user', this.modelFor(this.routeName));
+  },
+  
   actions: {
     error(err) {
       if (err.status === 401) {
