@@ -13,7 +13,6 @@ export default Ember.Component.extend({
         uploadError: null,
         uploadSuccess: null
       });
-      console.log('onUploadProgress', fileName, percent);
     },
     onUploadSuccess(fileName) {
       this.setProperties({
@@ -21,7 +20,6 @@ export default Ember.Component.extend({
         uploadError: null,
         uploadSuccess: fileName + ' uploaded successfully!'
       });
-      console.log('onUploadSuccess', fileName);
     },
     onUploadError(fileName, message) {
       this.setProperties({
@@ -29,7 +27,6 @@ export default Ember.Component.extend({
         uploadError: fileName + ' upload error: ' + message,
         uploadSuccess: null
       });
-      console.log('onUploadError', fileName, message);
     }
   }  
 });
