@@ -5,7 +5,8 @@ export default Ember.Route.extend({
     return {
       email: '',
       firstName: '',
-      lastName: ''
+      lastName: '',
+      roles: []
     };
   },
 
