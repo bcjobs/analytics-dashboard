@@ -6,7 +6,11 @@ export default Ember.Route.extend({
       url: '/api/v1.0/users/me'
     });
   },
-
+  
+  afterModel(model) {
+    this.get('session').set('user', model);
+  },
+  
   actions: {
     error(err) {
       if (err.status === 401) {

@@ -7,9 +7,11 @@
       <th>
         Rule
       </th>
-      <th>
-        Action
-      </th>
+      {{#if session.isAdmin}}
+        <th>
+          Action
+        </th>
+      {{/if}}
     </tr>
   </thead>
   <tbody>
