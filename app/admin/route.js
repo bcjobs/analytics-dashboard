@@ -9,8 +9,8 @@ export default Ember.Route.extend({
     });
   },
   
-  afterModel() {
-    this.get('session').set('user', this.modelFor(this.routeName));
+  afterModel(model) {
+    this.get('session').set('user', model);
   },
   
   actions: {
