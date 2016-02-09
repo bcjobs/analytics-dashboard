@@ -3,7 +3,7 @@ var express = require('express');
 module.exports = function (app) {
   router = express.Router();
   var USER = {
-        'id': 1,
+        'id': 3,
         'firstName': 'Lou',
         'lastName': 'Ferrigno',
         'email': 'lou@email.com',
@@ -18,7 +18,7 @@ module.exports = function (app) {
     if (req.cookies.user == USER.id) {
       res.send(USER);
     } else {
-      res.status(400).send({
+      res.status(401).send({
         errors: {base: ['Not logged in']}
       })
     }
