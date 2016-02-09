@@ -5,7 +5,8 @@ module.exports = function(app) {
 
   router.post('/', function(req, res) {
     if (req.body.email === 'lou@email.com') {
-      res.send();
+      res.cookie('user', 1) // id for lou
+          res.status(204).end();
     }
     else {
       res.status(400).send({

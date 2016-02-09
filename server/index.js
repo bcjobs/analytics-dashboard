@@ -1,5 +1,6 @@
 var globSync   = require('glob').sync;
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser')
 
 function usingProxy() {
     return !!process.argv.filter(function (arg) {
@@ -21,6 +22,7 @@ module.exports = function(app) {
   app.use(morgan('dev'));
 
   app.use('/api', bodyParser.json());
+  app.use(cookieParser());
 
   mocks.forEach(function(route) { route(app); });
 };
