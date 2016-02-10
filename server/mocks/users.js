@@ -1,4 +1,7 @@
 var express = require('express');
+var _ = require('lodash');
+
+
 module.exports = function (app) {
   var USERS = [
     {
@@ -101,9 +104,30 @@ module.exports = function (app) {
 
 
   router = express.Router();
+  
   router.get('/', function (req, res) {
     res.send(USERS)
-
   });
+
+  router.post('/', function (req, res) {
+    res.status(201).end();
+  });
+
+  router.get('/:id', function (req, res) {
+    res.send(_.find(USERS, { id: req.params.id }));
+  });
+
+  router.put('/:id', function (req, res) {
+    res.send({
+      'users': {
+        id: req.params.id
+      }
+    });
+  });
+
+  router.delete('/:id', function (req, res) {
+    res.status(204).end();
+  });
+
   app.use('/api/v1.0/users', router);
 };
