@@ -102,11 +102,33 @@ module.exports = function (app) {
     }
   ];
 
+  var LOGIN = {
+    'id': 3,
+    'firstName': 'Lou',
+    'lastName': 'Ferrigno',
+    'email': 'lou@email.com',
+    'lastLoginAt': '2016-02-09T23:06:02.053',
+    'createdAt': '2015-12-09T07:00:32.113',
+    'updatedAt': '2015-12-09T07:01:23.92',
+    'roles': [
+      'Admin'
+    ]
+  };
 
   router = express.Router();
-  
+
   router.get('/', function (req, res) {
     res.send(USERS)
+  });
+
+  router.get('/me', function (req, res) {
+    if (req.cookies.user == LOGIN.id) {
+      res.send(LOGIN);
+    } else {
+      res.status(401).send({
+        errors: { base: ['Not logged in'] }
+      });
+    }
   });
 
   router.post('/', function (req, res) {
