@@ -62,6 +62,7 @@ lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate n
 # Deploy index.html
 lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate no; put -O $FTP_DIR dist/index.html"
 ```
+* Make sure line endings are unix based. For Linux, you can use dos2unix (`dos2unix deploy.sh`) to faciliate this.
 
 #### Deploy
 * `make deploy`
