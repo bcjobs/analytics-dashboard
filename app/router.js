@@ -22,6 +22,9 @@ Router.map(function() {
       this.route('new');
     });
     this.route('dedupe', function() {});
+    this.route('accounts', function() {
+      this.route('list', {path: '/'});
+    });
   });
 
   this.route('authentication', function() {
