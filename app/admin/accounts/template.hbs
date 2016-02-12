@@ -1,3 +1,38 @@
 <div class="admin container">
-  {{outlet}}
+  <div class="page-header">
+    <h1>Accounts</h1>
+  </div>
+  {{#if error}}
+    {{error.message}}
+  {{else}}
+    {{#if model.length}}
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>
+              Name
+            </th>
+            <th>
+              Amount
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each model as |account|}}
+            <tr>
+              <td>
+                {{account.name}}
+              </td>
+              <td>
+                {{account.usage}}
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    {{else}}
+      No results.
+    {{/if}}
+  {{/if}}
+
 </div>
