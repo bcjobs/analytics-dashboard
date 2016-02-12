@@ -9,7 +9,7 @@ function usingProxy() {
 }
 
 module.exports = function(app) {
-  var mocks      = globSync('./mocks/**/*.js', { cwd: __dirname }).map(require);
+  var mocks      = globSync('./mocks/*.js', { cwd: __dirname }).map(require);
   var proxies    = globSync('./proxies/**/*.js', { cwd: __dirname }).map(require);
 
   if (usingProxy()) {

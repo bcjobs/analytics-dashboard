@@ -1,11 +1,14 @@
 var express = require('express');
+var _ = require('lodash');
+var users = require('./fixtures/users');
 
 module.exports = function (app) {
   router = express.Router();
 
   router.post('/', function (req, res) {
-    if (req.body.email === 'lou@email.com') {
-      res.cookie('user', 3) // id for lou
+    var user = _.find(users, { email: req.body.email });
+    if (user) {
+      res.cookie('user', user.id); // id for lou
       res.status(204).end();
     }
     else {
