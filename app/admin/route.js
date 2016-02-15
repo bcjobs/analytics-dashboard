@@ -16,6 +16,7 @@ export default Ember.Route.extend({
       if (err.status === 401) {
         this.transitionTo('authentication');
       }
+      return true;
     },
 
     logout() {

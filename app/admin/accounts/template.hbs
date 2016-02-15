@@ -2,37 +2,33 @@
   <div class="page-header">
     <h1>Accounts</h1>
   </div>
-  {{#if error}}
-    {{error.message}}
+  {{#if model.length}}
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Amount
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |account|}}
+      <tr>
+        <td>
+          {{account.name}}
+        </td>
+        <td>
+          {{account.usage}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
   {{else}}
-    {{#if model.length}}
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>
-              Name
-            </th>
-            <th>
-              Amount
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#each model as |account|}}
-            <tr>
-              <td>
-                {{account.name}}
-              </td>
-              <td>
-                {{account.usage}}
-              </td>
-            </tr>
-          {{/each}}
-        </tbody>
-      </table>
-    {{else}}
-      No results.
-    {{/if}}
+  No results.
   {{/if}}
 
 </div>
