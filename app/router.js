@@ -21,7 +21,8 @@ Router.map(function() {
       this.route('edit', {path: ':user_id'});
       this.route('new');
     });
-    this.route('dedupe', function() {});
+    this.route('dedupe');
+    this.route('accounts');
   });
 
   this.route('authentication', function() {
