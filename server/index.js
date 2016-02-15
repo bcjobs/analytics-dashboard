@@ -1,5 +1,6 @@
 var globSync   = require('glob').sync;
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser')
 
 function usingProxy() {
     return !!process.argv.filter(function (arg) {
@@ -8,7 +9,7 @@ function usingProxy() {
 }
 
 module.exports = function(app) {
-  var mocks      = globSync('./mocks/**/*.js', { cwd: __dirname }).map(require);
+  var mocks      = globSync('./mocks/*.js', { cwd: __dirname }).map(require);
   var proxies    = globSync('./proxies/**/*.js', { cwd: __dirname }).map(require);
 
   if (usingProxy()) {
@@ -21,6 +22,7 @@ module.exports = function(app) {
   app.use(morgan('dev'));
 
   app.use('/api', bodyParser.json());
+  app.use(cookieParser());
 
   mocks.forEach(function(route) { route(app); });
 };
