@@ -8,10 +8,6 @@ export default Ember.Component.extend({
       index: index,
       canDelete: true
     }));
-    terms.push({
-      value: '',
-      canDelete: false
-    });
     return terms;
   }),
 

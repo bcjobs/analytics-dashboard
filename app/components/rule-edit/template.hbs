@@ -1,12 +1,8 @@
 <label>Terms</label>
-{{#each terms key="@index" as |term|}}
-  <div class="form-group">
-    {{term-input value=term.value action=(action "changeTerm" term.index) ruleType=rule.ruleType include="notUsed"}}
-
-    <span class="pointer glyphicon glyphicon-remove rule-icon {{unless term.canDelete 'invisible'}}" {{action "removeTerm" term.index}}></span>
-  </div>
-{{/each}}
-
+<div class="form-group">
+    {{term-input value="" action=(action "changeTerm" term.index) include="notUsed"}}
+</div>
+{{rule-area terms=terms}}
 <label>Action</label>
 
 <div class="radio">

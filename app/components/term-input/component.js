@@ -1,5 +1,5 @@
 import Ember from 'ember';
-
+//~TODO: Need to add 'confirmation' to finishing a rule, currently each keystore is a new rule
 export default Ember.Component.extend({
   tagName: 'span',
 
