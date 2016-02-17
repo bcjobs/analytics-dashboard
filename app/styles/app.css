@@ -64,6 +64,15 @@ body{
   background-color:#fff;
 }
 
+.header-byline {
+  color: #828384;
+  font-size: 12px;
+  font-style: italic;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
 .dashboard-error {
   text-align: center;
   color: white;
@@ -567,6 +576,15 @@ input.calendar {
   .xs-nofloat { float: none; }
   .xs-mb15 { margin-bottom: 15px; }
   .xs-mb30 { margin-bottom: 30px; }
+  
+  .header {
+    height: 100px;
+  }
+  .header-byline {
+    left: 0;
+    right: 0;
+    top: 65px;
+  }
 }
 
 .milk {
