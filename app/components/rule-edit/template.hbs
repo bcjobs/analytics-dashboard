@@ -1,8 +1,10 @@
 <label>Terms</label>
 <div class="form-group">
-    {{term-input value="" action=(action "changeTerm" term.index) include="notUsed"}}
+    {{term-input value=newTerm include="notUsed"}}<button class="btn btn-primary"{{action "saveTerm"}}>Save term</button>
 </div>
-{{rule-area terms=terms}}
+<div class="form-group">
+    {{textarea class="term-edit" value=textValue rows=rows cols=90 input=(action "textEdit" value="target.value")}}
+</div>
 <label>Action</label>
 
 <div class="radio">
