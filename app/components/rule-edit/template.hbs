@@ -1,7 +1,7 @@
 <label>Terms</label>
 <div class="form-group">
   {{term-input value=newTerm include="notUsed"}}
-  <button class="btn btn-primary"{{action "saveTerm"}}>Add term</button>
+  <button class="btn btn-primary"{{action "addTerm"}}>Add term</button>
 </div>
 <div class="form-group">
   {{textarea class="form-control term-edit" value=textValue rows=rows width="100%" input=(action "textEdit" value="target.value")}}

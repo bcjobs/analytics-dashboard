@@ -13,7 +13,7 @@ export default Ember.Component.extend({
   }),
   newTerm: '',
   actions: {
-    saveTerm() {
+    addTerm() {
       this.get('rule.terms').pushObject(this.get('newTerm'));
       this.set('newTerm', '');
     },
