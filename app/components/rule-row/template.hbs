@@ -1,5 +1,7 @@
 <td>
-  {{terms}}
+  {{#each terms as |term|}}
+    {{term}} <br />
+  {{/each}}
 </td>
 <td>
   {{description}}
