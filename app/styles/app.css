@@ -731,3 +731,7 @@ body.loading .content-wrapper {
   height: 34px;
   top: 2px;
 }
+
+.term-edit{
+  width: 100%;
+}
