@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   tagName: 'tr',
 
   terms: Ember.computed('rule.terms', function() {
-    return this.get('rule.terms').join(', ');
+    return this.get('rule.terms');
   }),
 
   description: Ember.computed('rule.action', 'rule.replaceWith', function() {

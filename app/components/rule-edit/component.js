@@ -9,7 +9,7 @@ export default Ember.Component.extend({
     return this.get('terms').join('\n');
   }),
   rows: Ember.computed('rule.terms.[]', function(){
-    return this.get('terms').length + 1 > 10 ? this.get('terms').length : 10
+    return this.get('terms').length + 1 > 10 ? this.get('terms').length + 1: 10
   }),
   newTerm: '',
   actions: {
