@@ -4,7 +4,13 @@ export default Ember.Route.extend({
   model({rule_id}) {
     return this.store.ajax({url: `/api/v1.0/rules/${rule_id}`});
   },
-
+  resetController: function(controller, isExiting/*, transition*/) {
+    if (isExiting) {
+      controller.setProperties({
+        errorMessage: null
+      });
+    }
+  },
   actions: {
     save() {
       var rule = this.controller.get('model');

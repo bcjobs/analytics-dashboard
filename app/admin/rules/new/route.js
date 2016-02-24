@@ -9,7 +9,13 @@ export default Ember.Route.extend({
       ruleType: this.paramsFor('admin.rules').ruleType
     };
   },
-
+  resetController: function(controller, isExiting/*, transition*/) {
+    if (isExiting) {
+      controller.setProperties({
+        errorMessage: null
+      });
+    }
+  },
   actions: {
     save() {
       var rule = this.controller.get('model');
