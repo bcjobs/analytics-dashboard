@@ -3,7 +3,9 @@
     <div class="page-header">
         <h1>Create rule</h1>
     </div>
-
+    {{#if errorMessage}}
+        <div class="alert alert-danger" role="alert">{{errorMessage}}</div>
+    {{/if}}
     {{rule-edit rule=model}}
 
     <div class="buttons">

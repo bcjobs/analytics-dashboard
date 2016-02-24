@@ -14,6 +14,9 @@ export default Ember.Route.extend({
         data: rule
       }).then(() => {
         this.transitionTo('admin.rules');
+      }).catch(err =>{
+        var errorMessage = Ember.get(err, 'responseJSON.message') || 'Internal Error';
+        this.controller.set('errorMessage', errorMessage);
       });
     }
   }
