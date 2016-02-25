@@ -36,4 +36,9 @@
             Showing {{items.length}} results.
         </span>
     </div>
+    {{#if session.loggedIn}}
+      <div class="table-showmore-wrapper" {{action "downloadCSV"}}>
+          Download all records
+      </div>
+    {{/if}}
 {{/if}}
