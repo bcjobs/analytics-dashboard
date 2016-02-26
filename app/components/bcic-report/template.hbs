@@ -114,7 +114,7 @@
                         <h3>Trending Job Titles</h3>
                         <h4>Daily</h4>
 
-                        {{#trend-table model=model.tables.trends.titles.byOpenJobs}}
+                        {{#trend-table model=model.tables.trends.titles.byOpenJobs type=type atDate=atDate exportSet="trendingOpenJobTitles"}}
                             By <strong>open</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -124,7 +124,7 @@
                         <h3>Trending Job Titles</h3>
                         <h4>Daily</h4>
 
-                        {{#trend-table model=model.tables.trends.titles.byNewJobs}}
+                        {{#trend-table model=model.tables.trends.titles.byNewJobs type=type atDate=atDate exportSet="trendingNewJobTitles"}}
                             By <strong>new</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -136,7 +136,7 @@
                         <h3>Trending Skills</h3>
                         <h4>Daily</h4>
 
-                        {{#trend-table model=model.tables.trends.skills.byOpenJobs}}
+                        {{#trend-table model=model.tables.trends.skills.byOpenJobs type=type atDate=atDate exportSet="trendingOpenJobSkills"}}
                             By <strong>open</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -146,7 +146,7 @@
                         <h3>Trending Skills</h3>
                         <h4>Daily</h4>
 
-                        {{#trend-table model=model.tables.trends.skills.byNewJobs}}
+                        {{#trend-table model=model.tables.trends.skills.byNewJobs type=type atDate=atDate exportSet="trendingNewJobSkills"}}
                             By <strong>new</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -158,7 +158,7 @@
             <div class="row clearfix">
                 <div class="col">
                     <div class="card-wrapper clearfix    global-shadow">
-                        {{#employer-table model=model.tables.employers.byOpenJobs}}
+                        {{#employer-table model=model.tables.employers.byOpenJobs type=type atDate=atDate exportSet="employersByOpenJobs"}}
                             By open jobs
                             <span class="table-subtitle">(as of midnight yesterday)</span>
                         {{/employer-table}}
@@ -166,7 +166,7 @@
                 </div>
                 <div class="col">
                     <div class="card-wrapper">
-                        {{#employer-table model=model.tables.employers.byYearToDate}}
+                        {{#employer-table model=model.tables.employers.byYearToDate type=type atDate=atDate exportSet="employersByYearToDateNewJobs"}}
                             By year-to-date new jobs
                         {{/employer-table}}
                     </div>

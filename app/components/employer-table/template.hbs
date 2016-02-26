@@ -37,4 +37,9 @@
           total openings.
         </span>
     </div>
+    {{#if displayDownload}}
+      <div class="table-showmore-wrapper" {{action "downloadCSV"}}>
+          Download all records
+      </div>
+    {{/if}}
 {{/if}}
