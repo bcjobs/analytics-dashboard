@@ -9,7 +9,7 @@ export default Ember.Route.extend({
       ruleType: this.paramsFor('admin.rules').ruleType
     };
   },
-
+  notify: Ember.inject.service(),
   actions: {
     save() {
       var rule = this.controller.get('model');
@@ -19,6 +19,9 @@ export default Ember.Route.extend({
         data: rule
       }).then(() => {
         this.transitionTo('admin.rules');
+      }).catch(err =>{
+        var errorMessage = Ember.get(err, 'responseJSON.message') || 'Internal Error';
+        this.get('notify').alert(errorMessage);
       });
     }
   }
