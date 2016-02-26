@@ -9,10 +9,10 @@ export default Ember.Route.extend({
       });
     }
   },
+  notify: Ember.inject.service(),
 
   actions: {
     login(email, password) {
-      this.controller.set('errorMessage', null);
       this.store.ajax({
         url: `/api/v1.0/authentication/login`,
         method: 'POST',
@@ -21,7 +21,7 @@ export default Ember.Route.extend({
         this.transitionTo('admin.rules');
       }).catch(err => {
         var errorMessage = Ember.get(err, 'responseJSON.message') || 'Internal Error';
-        this.controller.set('errorMessage', errorMessage);
+        this.get('notify').alert(errorMessage);
       });
     }
   }

@@ -8,10 +8,10 @@ export default Ember.Route.extend({
       });
     }
   },
+  notify: Ember.inject.service(),
 
   actions: {
     setPassword() {
-      this.controller.set('errorMessage', null);
       var data = this.controller.getProperties('password', 'token', 'id');
       this.store.ajax({
         url: '/api/v1.0/authentication/password',
@@ -21,7 +21,7 @@ export default Ember.Route.extend({
         this.controller.set('done', true);
       }).catch(err => {
         var errorMessage = Ember.get(err, 'responseJSON.message') || 'Internal Error';
-        this.controller.set('errorMessage', errorMessage);
+        this.get('notify').alert(errorMessage);
       });
     }
   }
