@@ -6,16 +6,13 @@ var DATE_FORMAT = 'YYYY-MM-DD';
 
 export default Ember.Component.extend(ShowMore, {
   items: Ember.computed.alias('model'),
-  loggedIn: function(){
-    this.get('parentView.targetObject.store').ajax({
-      url: '/api/v1.0/users/me'
-    }).then(function(){
-      this.set('session.loggedIn', true && this.get('exportSet') !== undefined); // prevents download link from appearing if there is no endpoint
-    }.bind(this));
-  },
+
+  displayDownload: Ember.computed('exportSet', 'session.isLoggedIn', function(){
+    return this.get('session.isLoggedIn') && this.get('exportSet') !== undefined; // prevents download link from appearing if there is no endpoint
+  }),
+
   actions: {
     showMore() {
-      this.loggedIn();
       this.set('isShowingAll', true);
     },
     downloadCSV(){

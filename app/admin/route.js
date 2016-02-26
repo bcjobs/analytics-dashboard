@@ -25,6 +25,7 @@ export default Ember.Route.extend({
         url: '/api/v1.0/authentication/login',
         method: 'DELETE'
       }).then(() => {
+        this.get('session').set('user', null);
         this.transitionTo('authentication');
       });
     }
