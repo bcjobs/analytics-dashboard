@@ -9,7 +9,6 @@ export default Ember.Route.extend({
       });
     }
   },
-  notify: Ember.inject.service(),
 
   actions: {
     login(email, password) {

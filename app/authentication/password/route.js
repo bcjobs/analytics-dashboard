@@ -8,7 +8,6 @@ export default Ember.Route.extend({
       });
     }
   },
-  notify: Ember.inject.service(),
 
   actions: {
     setPassword() {

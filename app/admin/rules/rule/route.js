@@ -4,7 +4,6 @@ export default Ember.Route.extend({
   model({rule_id}) {
     return this.store.ajax({url: `/api/v1.0/rules/${rule_id}`});
   },
-  notify: Ember.inject.service(),
   actions: {
     save() {
       var rule = this.controller.get('model');
