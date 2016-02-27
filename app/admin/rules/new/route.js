@@ -9,7 +9,6 @@ export default Ember.Route.extend({
       ruleType: this.paramsFor('admin.rules').ruleType
     };
   },
-  notify: Ember.inject.service(),
   actions: {
     save() {
       var rule = this.controller.get('model');

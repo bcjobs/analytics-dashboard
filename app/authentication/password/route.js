@@ -11,17 +11,16 @@ export default Ember.Route.extend({
 
   actions: {
     setPassword() {
-      this.controller.set('errorMessage', null);
       var data = this.controller.getProperties('password', 'token', 'id');
       this.store.ajax({
         url: '/api/v1.0/authentication/password',
         method: 'PUT',
         data: data
       }).then(() => {
-        this.controller.set('done', true);
+        this.get('notify').info({html:'Your password has been changed! <a href="/authentication">Continue to login</a>', closeAfter: null});
       }).catch(err => {
         var errorMessage = Ember.get(err, 'responseJSON.message') || 'Internal Error';
-        this.controller.set('errorMessage', errorMessage);
+        this.get('notify').alert(errorMessage);
       });
     }
   }

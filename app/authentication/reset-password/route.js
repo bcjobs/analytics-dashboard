@@ -11,7 +11,6 @@ export default Ember.Route.extend({
 
   actions: {
     submit() {
-      this.controller.set('errorMessage', null);
       this.store.ajax({
         url: '/api/v1.0/authentication/resetPassword',
         method: 'POST',
@@ -19,10 +18,10 @@ export default Ember.Route.extend({
           email: this.controller.get('email')
         }
       }).then(() => {
-        this.controller.set('done', true);
+        this.get('notify').info('Thank you! We’ve sent you an email with instructions for resetting your password.')
       }).catch(err => {
         var errorMessage = Ember.get(err, 'responseJSON.message') || 'Internal Error';
-        this.controller.set('errorMessage', errorMessage);
+        this.get('notify').alert(errorMessage);
       });
     }
   }
