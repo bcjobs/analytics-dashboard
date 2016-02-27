@@ -13,15 +13,6 @@
     <button type="submit" class="btn btn-default">Set Password</button>
   </form>
 
-  {{#if done}}
-    <div class="alert alert-info margin-t20" role="alert">
-      Your password has been changed!
-      {{#link-to "authentication"}}
-        Continue to login.
-      {{/link-to}}
-    </div>
-  {{/if}}
-
   <div class="margin-t20">
     {{#link-to "authentication"}}
       Login

@@ -17,7 +17,7 @@ export default Ember.Route.extend({
         method: 'PUT',
         data: data
       }).then(() => {
-        this.controller.set('done', true);
+        this.get('notify').info({html:'Your password has been changed! <a href="/authentication">Continue to login</a>', closeAfter: null});
       }).catch(err => {
         var errorMessage = Ember.get(err, 'responseJSON.message') || 'Internal Error';
         this.get('notify').alert(errorMessage);
