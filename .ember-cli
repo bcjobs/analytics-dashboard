@@ -7,5 +7,6 @@
   */
   "disableAnalytics": false,
   "usePods": true,
-  "port": 4100
+  "port": 4100,
+  "output-path": "debug"
 }
