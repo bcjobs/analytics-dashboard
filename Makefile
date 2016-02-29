@@ -2,7 +2,7 @@ NODE-BIN = node_modules/.bin
 
 build:
 	$(NODE-BIN)/bower install
-	$(NODE-BIN)/ember build --env production
+	$(NODE-BIN)/ember build --env production --output-path dist
 
 run:
 	node web.js
