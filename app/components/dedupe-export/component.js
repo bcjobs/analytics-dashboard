@@ -20,7 +20,7 @@ export default Ember.Component.extend({
 
   actions: {
     download() {
-      window.location.href = '/api/v1.0/jobs/csv?at=' + moment(this.get('at')).format(DATE_FORMAT);
+      window.location.href = '/api/v1.0/exports/openJobs?at=' + moment(this.get('at')).format(DATE_FORMAT);
     }
   }
 });
