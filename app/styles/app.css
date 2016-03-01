@@ -736,3 +736,7 @@ body.loading .content-wrapper {
 .term-edit{
   width: 100%;
 }
+
+.tooltip-hint:hover {
+  cursor: pointer;
+}
