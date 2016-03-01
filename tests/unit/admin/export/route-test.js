@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:admin/dedupe', 'Unit | Route | admin/dedupe', {
+moduleFor('route:admin/export', 'Unit | Route | admin/export', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
