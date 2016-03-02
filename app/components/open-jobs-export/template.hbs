@@ -1,0 +1,34 @@
+<h2>Open Jobs</h2>
+<div class="text-center">
+  <div class="clearfix">
+    <div class="form-group">
+    <img src="images/icon-date.svg" width="34" class="date-icon item-inblock margin-r5" />
+    <div class="date-filter item-inblock">
+        {{bootstrap-datepicker
+            class="calendar"
+            orientation="top"
+            autoclose=true
+            startDate=startsAt
+            endDate=endsAt
+            value=from
+        }}
+        <span class="input-group-addon">to</span>
+        {{bootstrap-datepicker
+            class="calendar"
+            orientation="top"
+            autoclose=true
+            startDate=startsAt
+            endDate=endsAt
+            value=to
+        }}
+    </div>
+  </div>
+    <div class="form-group">
+      <label>
+        Normalized
+        {{input type="checkbox" name="processed" checked=processed}}
+      </label>
+    </div>
+  </div>
+  <button class="btn btn-default" {{action "download"}}>Download</button>
+</div>
