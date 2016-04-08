@@ -4,5 +4,6 @@ export default Ember.Controller.extend({
   queryParams: ['q'],
 
   q: '',
-  query: ''
+  query: '',
+  rule: null
 });

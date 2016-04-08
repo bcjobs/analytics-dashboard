@@ -33,12 +33,24 @@ export default Ember.Route.extend({
       this.transitionTo(this.routeName, {queryParams: {q: ''}});
     },
 
-    deleteRule(rule) {
+    deleteDialog(rule) {
+      $('.modal').modal();
+      this.set('controller.rule', rule);
+    },
+
+    confirmDelete() {
+      let rule = this.get('controller.rule');
       this.store.ajax({
         url: `/api/v1.0/rules/${rule.id}`,
         method: 'DELETE'
+      }).then(() =>{
+        this.get('notify').info('Rule successfully deleted.');
+        this.controller.get('model').removeObject(rule);
+        $('.modal').modal('hide');
+      }).catch(err => {
+        var errorMessage = Ember.get(err, 'responseJSON.message') || 'Unable to delete rule.';
+        this.get('notify').alert(errorMessage);
       });
-      this.controller.get('model').removeObject(rule);
     }
   }
 });
