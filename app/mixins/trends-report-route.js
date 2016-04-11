@@ -19,7 +19,7 @@ export default Ember.Mixin.create({
       url: `/api/v1.0/reports/trends`,
       query: {
         at: at,
-        type: this.get('reportType')
+        filter: this.get('reportType')
       }
     }).then(trends => ({
       trends,
