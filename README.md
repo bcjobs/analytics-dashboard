@@ -1,8 +1,5 @@
 # BC Jobs Analytics Dashboard
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
-
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -24,10 +21,6 @@ You will need the following things properly installed on your computer.
 
 * `ember server --proxy http://analytics.bcjobs.ca`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
 
 ### Running Tests
 
