@@ -4,6 +4,15 @@ export default Ember.Route.extend({
   queryParams: {
     at: {
       refreshModel: true
+    },
+    fiter: {
+      refreshModel: true
+    },
+    trend: {
+      refreshModel: true
+    },
+    subject: {
+      refreshModel: true
     }
   },
   beforeModel() {

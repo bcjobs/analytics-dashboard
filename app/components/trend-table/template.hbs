@@ -6,29 +6,20 @@
             <th>Companies</th>
             <th>Avg. Age</th>
         </tr>
-        {{#if session.isLoggedIn}}
-            {{#each visibleItems as |trend|}}
-                <tr class="pointer" {{action "viewSubreport" trend}}>
+        {{#each visibleItems as |trend|}}
+            <tr>
+                {{#if session.isLoggedIn}}
+                    <td class="table-job-title">{{#link-to "dashboard.subreport" (query-params filter=type at=transitionDate trend=trendType subject=trend.name)}}{{trend.name}}{{/link-to}}</td>
+                {{else}}
                     <td class="table-job-title">{{trend.name}}</td>
-                    <td>
-                        {{job-number current=trend.current previous=trend.previous}}
-                    </td>
-                    <td>{{format-number trend.companies}}</td>
-                    <td>{{format-number trend.averageAge}}</td>
-                </tr>
-            {{/each}}
-        {{else}}
-            {{#each visibleItems as |trend|}}
-                <tr>
-                    <td class="table-job-title">{{trend.name}}</td>
-                    <td>
-                        {{job-number current=trend.current previous=trend.previous}}
-                    </td>
-                    <td>{{format-number trend.companies}}</td>
-                    <td>{{format-number trend.averageAge}}</td>
-                </tr>
-            {{/each}}
-        {{/if}}
+                {{/if}}
+                <td>
+                    {{job-number current=trend.current previous=trend.previous}}
+                </td>
+                <td>{{format-number trend.companies}}</td>
+                <td>{{format-number trend.averageAge}}</td>
+            </tr>
+        {{/each}}
         {{#each emptyItems}}
             <tr>
                 <td class="table-job-title" colspan="4">&nbsp;</td>

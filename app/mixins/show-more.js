@@ -1,8 +1,9 @@
 import Ember from 'ember';
 import range from 'npm:lodash/utility/range';
-
+import moment from 'npm:moment';
 // This mixin contains common computed properties for visible and empty items
 // based on list of all items and isShowingAll flag.
+var DATE_FORMAT = 'YYYY-MM-DD';
 
 export default Ember.Mixin.create({
   isShowingAll: false,
@@ -29,5 +30,9 @@ export default Ember.Mixin.create({
       return [];
     }
     return range(0,  this.get('defaultCount') - length);
+  }),
+
+  transitionDate: Ember.computed('atDate', function(){
+    return moment(this.get('atDate')).format(DATE_FORMAT);
   })
 });
