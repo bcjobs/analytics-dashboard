@@ -6,16 +6,29 @@
             <th>Companies</th>
             <th>Avg. Age</th>
         </tr>
-        {{#each visibleItems as |trend|}}
-            <tr>
-                <td class="table-job-title">{{trend.name}}</td>
-                <td>
-                    {{job-number current=trend.current previous=trend.previous}}
-                </td>
-                <td>{{format-number trend.companies}}</td>
-                <td>{{format-number trend.averageAge}}</td>
-            </tr>
-        {{/each}}
+        {{#if session.isLoggedIn}}
+            {{#each visibleItems as |trend|}}
+                <tr class="pointer" {{action "viewSubreport" trend}}>
+                    <td class="table-job-title">{{trend.name}}</td>
+                    <td>
+                        {{job-number current=trend.current previous=trend.previous}}
+                    </td>
+                    <td>{{format-number trend.companies}}</td>
+                    <td>{{format-number trend.averageAge}}</td>
+                </tr>
+            {{/each}}
+        {{else}}
+            {{#each visibleItems as |trend|}}
+                <tr>
+                    <td class="table-job-title">{{trend.name}}</td>
+                    <td>
+                        {{job-number current=trend.current previous=trend.previous}}
+                    </td>
+                    <td>{{format-number trend.companies}}</td>
+                    <td>{{format-number trend.averageAge}}</td>
+                </tr>
+            {{/each}}
+        {{/if}}
         {{#each emptyItems}}
             <tr>
                 <td class="table-job-title" colspan="4">&nbsp;</td>

@@ -6,14 +6,21 @@
             </th>
             <th>&nbsp;</th>
         </tr>
-
-        {{#each visibleItems as |item|}}
-            <tr>
-                <td class="table-job-title">{{item.employer}}</td>
-                <td>{{item.jobs}}</td>
-            </tr>
-        {{/each}}
-
+        {{#if session.isLoggedIn}}
+            {{#each visibleItems as |item|}}
+                <tr class="pointer" {{action "viewSubreport" item}}>
+                    <td class="table-job-title">{{item.employer}}</td>
+                    <td>{{item.jobs}}</td>
+                </tr>
+            {{/each}}
+        {{else}}
+            {{#each visibleItems as |item|}}
+                <tr>
+                    <td class="table-job-title">{{item.employer}}</td>
+                    <td>{{item.jobs}}</td>
+                </tr>
+            {{/each}}
+        {{/if}}
         {{#each emptyItems as |item|}}
             <tr>
                 <td class="table-job-title" colspan="2">&nbsp;</td>
