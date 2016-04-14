@@ -14,6 +14,9 @@ export default Ember.Component.extend(ShowMore, {
     },
     downloadCSV(){
       window.location.href = `/api/v1.0/exports/${this.get('exportSet')}?at=${moment(this.get('atDate')).format(DATE_FORMAT)}&type=${this.get('type')}`;
+    },
+    viewSubreport(item){
+      window.location.href = `/subreport?filter=${this.get('type')}&at=${moment(this.get('atDate')).format(DATE_FORMAT)}&trend=Company&subject=${encodeURIComponent(item.employer)}`;
     }
   }
 });

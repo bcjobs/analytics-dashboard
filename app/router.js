@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('dashboard', {path: '/'}, function() {
     this.route('index', {path: '/'});
     this.route('it-jobs');
+    this.route('subreport');
   });
   this.route('admin', function() {
     this.route('rules', function() {

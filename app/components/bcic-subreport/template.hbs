@@ -1,0 +1,118 @@
+<div class="header">
+  <div class="global-fullwidth">
+    <div class="header-byline">Alpha version: for internal viewing purposes only</div>
+    <img src="images/logo-bctechjobs.png" alt="BC Tech Jobs Logo"/>
+  </div>
+</div>
+
+<div class="title-wrapper">
+  <div class="title global-fullwidth clearfix">
+    <div class="row">
+      <div class="xs-nofloat">
+        <div class="clearfix">
+          <img src="images/icon-date.svg" width="34" class="date-icon item-inblock margin-r5" />
+          <div class="date-filter item-inblock">
+            {{bootstrap-datepicker
+              class="calendar"
+              orientation="top"
+              autoclose=true
+              startDate=startsAt
+              endDate=endsAt
+              value=atDate
+            }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{#if error}}
+  <h1 class="dashboard-error">{{error.message}}</h1>
+{{else}}
+  <div class="content-wrapper">
+    <div class="content global-fullwidth">
+      <div class="row clearfix">
+        <div class="title-general title-column">
+          {{subject}}
+        </div>
+        <div class="title-general title-column">
+          <h4>As of {{currentDate}}</h4>
+        </div>
+        <div class="overview-box global-shadow clearfix">
+          <div class="clearfix subreport-summary">
+            <h4 style="font-weight: bold;">Open Jobs</h4>
+          </div>
+          <div class="clearfix">
+            <div class="col-md-4 col-xs-4">
+              <div class="clearfix">
+                <strong>Jobs</strong>
+              </div>
+              {{data.summary.jobs}}
+            </div>
+            <div class="col-md-4 col-xs-4">
+              <div class="clearfix">
+                <strong>Companies</strong>
+              </div>
+              {{data.summary.companies}}
+            </div>
+            <div class="col-md-4 col-xs-4">
+              <div class="clearfix">
+                <strong>Avg. Age</strong>
+              </div>
+              {{format-number data.summary.averageAge}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row clearfix">
+        <div class="global-translucent">
+          <div class="graph-wrapper">
+            <h3>Average<strong>Open</strong> Jobs</h3>
+            {{subreport-chart model=model.openJobsAverage}}
+          </div>
+        </div>
+      </div>
+      <div class="row clearfix">
+        {{#if data.skillChart}}
+          <div class="col">
+            <div class="global-translucent">
+              <div class="card-wrapper global-shadow">
+                <h3>Top Skills</h3>
+                <h4>For {{subject}}</h4>
+                {{#trend-table model=data.skillChart type=type atDate=atDate trendType="Skill"}}
+                  By <strong>open</strong> jobs
+                {{/trend-table}}
+              </div>
+            </div>
+          </div>
+        {{/if}}
+        {{#if data.titleChart}}
+          <div class="col">
+            <div class="global-translucent">
+              <div class="card-wrapper global-shadow">
+                <h3>Top Job Titles</h3>
+                <h4>For {{subject}}</h4>
+                {{#trend-table model=data.titleChart type=type atDate=atDate trendType="Title"}}
+                  By <strong>open</strong> jobs
+                {{/trend-table}}
+              </div>
+            </div>
+          </div>
+        {{/if}}
+        {{#if data.companyChart}}
+          <div class="col">
+            <div class="card-wrapper clearfix global-shadow">
+              <h3>Top Employers</h3>
+              <h4>For {{subject}}</h4>
+              {{#employer-table model=data.companyChart type=type atDate=atDate}}
+                By open jobs
+                <span class="table-subtitle">(as of midnight yesterday)</span>
+              {{/employer-table}}
+            </div>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+{{/if}}
