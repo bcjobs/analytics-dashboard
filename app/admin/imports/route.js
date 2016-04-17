@@ -16,9 +16,7 @@ export default Ember.Route.extend({
       query: {
         at: at || currentDate
       }
-    }).then(rawData => ({
-        rawData
-    })).catch(error =>{
+    }).catch(error =>{
       var body = error.responseJSON;
       if (body && body.code) {
         return {
@@ -26,12 +24,6 @@ export default Ember.Route.extend({
         };
       }
       throw error;
-    });
-  },
-  setupController(controller, {rawData}) {
-    var reports = rawData.sources
-    controller.setProperties({
-      reports,
     });
   }
 });

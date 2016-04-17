@@ -18,20 +18,20 @@
   </div>
 </div>
 </div>
-  {{#if reports.length}}
+  {{#if model.sources.length}}
   <table class="table table-bordered">
     <thead>
       <tr>
         <th>
-          Name
+          Source
         </th>
         <th>
-          Amount
+          Total Jobs
         </th>
       </tr>
     </thead>
     <tbody>
-      {{#each reports as |report|}}
+      {{#each model.sources as |report|}}
       <tr>
         <td>
           {{report.source}}
