@@ -809,6 +809,7 @@ body.loading .content-wrapper {
   .xs-nofloat { float: none; }
   .xs-mb15 { margin-bottom: 15px; }
   .xs-mb30 { margin-bottom: 30px; }
+  .xs-p0 { padding:0; }
 
   .header {
     height: 100px;
