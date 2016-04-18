@@ -4,7 +4,7 @@ import moment from 'npm:moment';
 export default Ember.Component.extend({
   classNames: ['bcic-subreport'],
   currentDate: Ember.computed('atDate', function(){
-    return moment(this.get('atDate') - 1).format('MMM D, YYYY');
+    return moment(this.get('atDate')).subtract(1, 'days').startOf('day').format('MMM D, YYYY');
   }),
   data: Ember.computed('model', 'model.[]', function(){
     var data = this.get('model');
