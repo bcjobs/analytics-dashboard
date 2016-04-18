@@ -12,7 +12,7 @@ export default Ember.Route.extend({
   model({at}) {
     var currentDate = moment().format(DATE_FORMAT);
     return this.store.ajax({
-      url: '/api/v1.0/reports/raw',
+      url: '/api/v1.0/reports/ads',
       query: {
         at: at || currentDate
       }
