@@ -4,7 +4,7 @@ import moment from 'npm:moment';
 var DATE_FORMAT = 'YYYY-MM-DD';
 
 export default Ember.Controller.extend({
-  endsAt: moment().toDate(),
+  endsAt: moment().subtract(1, 'days').startOf('day').toDate(),
   atDate: Ember.computed('at', {
     get() {
       var at = this.get('at');
