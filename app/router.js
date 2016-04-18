@@ -24,6 +24,7 @@ Router.map(function() {
     });
     this.route('export');
     this.route('accounts');
+    this.route('imports');
   });
 
   this.route('authentication', function() {
