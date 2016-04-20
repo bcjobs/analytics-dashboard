@@ -763,6 +763,6 @@ var subreports = [
       }
     ]
   }
-]
+];
 
 module.exports = subreports;

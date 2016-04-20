@@ -6,7 +6,6 @@ module.exports = function (app) {
   router = express.Router();
 
   router.get('/', function (req, res) {
-    console.log(req.query.trend);
     if(req.query.trend === 'Title'){
       res.status(200).send(subreports[0]);
     } else if (req.query.trend === 'Skill'){
