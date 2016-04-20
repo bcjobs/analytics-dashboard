@@ -695,12 +695,12 @@ body.loading .content-wrapper {
   margin-top:-15px;
 }
 .table-job-title a {
-  color: #e34e2a;
+  color: #0095f8;
   text-decoration: none;
 }
 .table-job-title a:hover
 {
-   color:#e34e2a;
+   color:#0095f8;
    text-decoration:underline;
    cursor:pointer;
 }
