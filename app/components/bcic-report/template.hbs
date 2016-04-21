@@ -124,7 +124,7 @@
                         <h3>Top Job Titles</h3>
                         <h4>All Time</h4>
 
-                        {{#trend-table model=model.tables.trends.titles.byAllJobs type=type atDate=atDate exportSet="trendingNewJobTitles" trendType="Title"}}
+                        {{#trend-table model=model.tables.trends.titles.byAllJobs type=type atDate=atDate exportSet="trendingNewJobTitles" trendType="Title" displayPrevious=false}}
                             By <strong>all</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -146,7 +146,7 @@
                         <h3>Top Skills</h3>
                         <h4>All Time</h4>
 
-                        {{#trend-table model=model.tables.trends.skills.byAllJobs type=type atDate=atDate exportSet="trendingNewJobSkills" trendType="Skill"}}
+                        {{#trend-table model=model.tables.trends.skills.byAllJobs type=type atDate=atDate exportSet="trendingNewJobSkills" trendType="Skill" displayPrevious=false}}
                             By <strong>all</strong> jobs
                         {{/trend-table}}
                     </div>

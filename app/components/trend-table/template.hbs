@@ -15,9 +15,15 @@
                 {{else}}
                     <td class="table-job-title">{{trend.name}}</td>
                 {{/if}}
-                <td>
-                    {{job-number current=trend.current previous=trend.previous}}
-                </td>
+                {{#if displayPrevious}}
+                    <td>
+                        {{job-number current=trend.current previous=trend.previous}}
+                    </td>
+                {{else}}
+                    <td>
+                        {{format-number trend.current}}
+                    </td>
+                {{/if}}
                 {{#unless isCompany}}
                     <td>{{format-number trend.companies}}</td>
                 {{/unless}}
