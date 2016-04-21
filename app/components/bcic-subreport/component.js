@@ -3,6 +3,7 @@ import moment from 'npm:moment';
 
 export default Ember.Component.extend({
   classNames: ['bcic-subreport'],
+  isCompany: false,
   currentDate: Ember.computed('atDate', function(){
     return moment(this.get('atDate')).subtract(1, 'days').startOf('day').format('MMM D, YYYY');
   }),
@@ -10,6 +11,7 @@ export default Ember.Component.extend({
     var data = this.get('model');
     // Decides what charts to show depending on trend
     if(this.get('trend') === 'Company'){
+      this.set('isCompany', true);
       data.skillChart = data.skills;
       data.titleChart = data.titles;
     } else if(this.get('trend') === 'Title') {

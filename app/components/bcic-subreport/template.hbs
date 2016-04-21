@@ -101,7 +101,7 @@
               <div class="card-wrapper global-shadow">
                 <h3>Top Skills</h3>
                 <h4>For {{subject}}</h4>
-                {{#trend-table model=data.skillChart type=type atDate=atDate trendType="Skill"}}
+                {{#trend-table model=data.skillChart type=type atDate=atDate trendType="Skill" isCompany=isCompany}}
                   By <strong>open</strong> jobs
                 {{/trend-table}}
               </div>
@@ -114,7 +114,7 @@
               <div class="card-wrapper global-shadow">
                 <h3>Top Job Titles</h3>
                 <h4>For {{subject}}</h4>
-                {{#trend-table model=data.titleChart type=type atDate=atDate trendType="Title"}}
+                {{#trend-table model=data.titleChart type=type atDate=atDate trendType="Title" isCompany=isCompany}}
                   By <strong>open</strong> jobs
                 {{/trend-table}}
               </div>
