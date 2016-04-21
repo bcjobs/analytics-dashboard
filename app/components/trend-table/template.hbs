@@ -3,7 +3,9 @@
         <tr>
             <th class="table-title">{{yield}}</th>
             <th class="table-title-jobs">Jobs</th>
-            <th>Companies</th>
+            {{#unless isCompany}}
+                <th>Companies</th>
+            {{/unless}}
             <th>Avg. Age</th>
         </tr>
         {{#each visibleItems as |trend|}}
@@ -13,10 +15,18 @@
                 {{else}}
                     <td class="table-job-title">{{trend.name}}</td>
                 {{/if}}
-                <td>
-                    {{job-number current=trend.current previous=trend.previous}}
-                </td>
-                <td>{{format-number trend.companies}}</td>
+                {{#if displayPrevious}}
+                    <td>
+                        {{job-number current=trend.current previous=trend.previous}}
+                    </td>
+                {{else}}
+                    <td>
+                        {{format-number trend.current}}
+                    </td>
+                {{/if}}
+                {{#unless isCompany}}
+                    <td>{{format-number trend.companies}}</td>
+                {{/unless}}
                 <td>{{format-number trend.averageAge}}</td>
             </tr>
         {{/each}}
