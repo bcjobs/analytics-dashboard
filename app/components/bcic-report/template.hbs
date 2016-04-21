@@ -121,11 +121,11 @@
                 </div>
                 <div class="col global-translucent">
                     <div class="card-wrapper global-shadow">
-                        <h3>Trending Job Titles</h3>
-                        <h4>Daily</h4>
+                        <h3>Top Job Titles</h3>
+                        <h4>All Time</h4>
 
-                        {{#trend-table model=model.tables.trends.titles.byNewJobs type=type atDate=atDate exportSet="trendingNewJobTitles" trendType="Title"}}
-                            By <strong>new</strong> jobs
+                        {{#trend-table model=model.tables.trends.titles.byAllJobs type=type atDate=atDate exportSet="trendingNewJobTitles" trendType="Title"}}
+                            By <strong>all</strong> jobs
                         {{/trend-table}}
                     </div>
                 </div>
@@ -143,11 +143,11 @@
                 </div>
                 <div class="col global-translucent">
                     <div class="card-wrapper global-shadow">
-                        <h3>Trending Skills</h3>
-                        <h4>Daily</h4>
+                        <h3>Top Skills</h3>
+                        <h4>All Time</h4>
 
-                        {{#trend-table model=model.tables.trends.skills.byNewJobs type=type atDate=atDate exportSet="trendingNewJobSkills" trendType="Skill"}}
-                            By <strong>new</strong> jobs
+                        {{#trend-table model=model.tables.trends.skills.byAllJobs type=type atDate=atDate exportSet="trendingNewJobSkills" trendType="Skill"}}
+                            By <strong>all</strong> jobs
                         {{/trend-table}}
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 </div>
                 <div class="col">
                     <div class="card-wrapper">
-                        {{#employer-table model=model.tables.employers.byNewJobs type=type atDate=atDate}}
+                        {{#employer-table model=model.tables.employers.byAllJobs type=type atDate=atDate}}
                             By new jobs
                         {{/employer-table}}
                     </div>
