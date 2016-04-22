@@ -21,6 +21,11 @@ module.exports = function(app) {
   var morgan  = require('morgan');
   app.use(morgan('dev'));
 
+  // Delay to show spinner for subreports
+  app.use('/api/v1.0/reports/trends/subreports', function(req, res, next) {
+      setTimeout(next, 2000);
+  });
+
   app.use('/api', bodyParser.json());
   app.use(cookieParser());
 
