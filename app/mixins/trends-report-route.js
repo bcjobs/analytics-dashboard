@@ -9,6 +9,7 @@ export default Ember.Mixin.create({
   },
 
   beforeModel() {
+    $('.spinner-loader').removeClass('hidden');
     $('body').addClass('loading');
   },
 
@@ -38,6 +39,7 @@ export default Ember.Mixin.create({
   },
 
   afterModel() {
+    $('.spinner-loader').addClass('hidden');
     $('body').removeClass('loading');
   },
 
