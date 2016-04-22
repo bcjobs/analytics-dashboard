@@ -1,7 +1,10 @@
 <td>
-  {{#each terms as |term|}}
-    {{term}} <br />
-  {{/each}}
+  <span data-rule="{{rule.id}}" style="display:none">
+    {{#each terms as |term|}}
+      {{term}} <br />
+    {{/each}}
+  </span>
+  <a href="" {{action "toggleTerm"}}>{{toggleText}}</a>
 </td>
 <td>
   {{description}}
