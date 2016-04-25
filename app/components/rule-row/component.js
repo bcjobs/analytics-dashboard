@@ -27,8 +27,12 @@ export default Ember.Component.extend({
       this.sendAction('delete', this.get('rule'));
     },
     toggleTerm() {
-      $(`[data-rule="${this.get('rule.id')}"]`).toggle();
-      $(`[data-rule="${this.get('rule.id')}"]`).is(":visible") ? this.set('toggleText', collapseText) : this.set('toggleText', expandText);
+      this.$(`[data-rule="${this.get('rule.id')}"]`).toggle();
+      if(this.$(`[data-rule="${this.get('rule.id')}"]`).is(":visible")){
+        this.set('toggleText', collapseText);
+      } else {
+        this.set('toggleText', expandText);
+      }
     }
   }
 });
