@@ -10,11 +10,11 @@ export default Ember.Route.extend({
     }
   },
   model({at}) {
-    var currentDate = moment().format(DATE_FORMAT);
+    var yesterday =  moment().subtract(1, 'days').startOf('day').format(DATE_FORMAT);
     return this.store.ajax({
       url: '/api/v1.0/reports/ads',
       query: {
-        at: at || currentDate
+        at: at || yesterday
       }
     }).catch(error =>{
       var body = error.responseJSON;
