@@ -142,6 +142,12 @@ body{
   position:relative;
 }
 
+.title-overview{
+  font-weight: normal;
+  font-size: 14px;
+  text-shadow: none;
+  color: #333F4D;
+}
 /* The white overview boxes that are at the top of the page */
 
 .overview-box{

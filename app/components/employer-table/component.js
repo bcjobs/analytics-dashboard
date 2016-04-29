@@ -5,8 +5,8 @@ var DATE_FORMAT = 'YYYY-MM-DD';
 
 export default Ember.Component.extend(ShowMore, {
   items: Ember.computed.alias('model.top'),
-  displayDownload: Ember.computed('exportSet', 'session.isLoggedIn', function(){
-    return this.get('session.isLoggedIn') && this.get('exportSet') !== undefined; // prevents download link from appearing if there is no endpoint
+  displayDownload: Ember.computed('exportSet', 'session.isAdmin', function(){
+    return this.get('session.isAdmin') && this.get('exportSet') !== undefined; // prevents download link from appearing if there is no endpoint
   }),
   actions: {
     showMore() {

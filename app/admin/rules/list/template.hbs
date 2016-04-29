@@ -12,13 +12,11 @@
     </span>
   </div>
 
-  {{#if session.isAdmin}}
-    <span class="search-form-or">or</span>
+  <span class="search-form-or">or</span>
 
-    {{#link-to "admin.rules.new" class="btn btn-default"}}
-      Create
-    {{/link-to}}
-  {{/if}}
+  {{#link-to "admin.rules.new" class="btn btn-default"}}
+    Create
+  {{/link-to}}
 </form>
 
 {{#if q}}
