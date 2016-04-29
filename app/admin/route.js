@@ -6,11 +6,14 @@ export default Ember.Route.extend({
       url: '/api/v1.0/users/me'
     });
   },
-  
+
   afterModel(model) {
     this.get('session').set('user', model);
+    if(!this.get('session.isAdmin')){
+      this.transitionTo('authentication');
+    }
   },
-  
+
   actions: {
     error(err) {
       if (err.status === 401) {
