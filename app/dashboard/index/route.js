@@ -2,5 +2,10 @@ import Ember from 'ember';
 import TrendsReportRoute from 'analytics-dashboard/mixins/trends-report-route';
 
 export default Ember.Route.extend(TrendsReportRoute, {
-  reportType: 'Software'
+  reportType: 'Software',
+  actions :{
+    switchReport(currentReport, at){
+      this.transitionTo('dashboard.it-jobs', {queryParams: {at: at} })
+    }
+  }
 });

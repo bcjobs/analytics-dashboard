@@ -1,0 +1,42 @@
+<div class="header">
+  <div class="global-fullwidth">
+    <div class="header-byline">Alpha version: for internal viewing purposes only</div>
+    <img src="images/logo-bctechjobs.png" alt="BC Tech Jobs Logo"/>
+  </div>
+</div>
+<div class="title-wrapper">
+  <div class="title global-fullwidth clearfix">
+    <div class="row">
+      <div class="xs-nofloat">
+        <div class="clearfix">
+          {{#unless hideDatepicker}}
+            <img src="images/icon-date.svg" width="34" class="date-icon item-inblock margin-r5" />
+            <div class="date-filter item-inblock">
+              {{bootstrap-datepicker
+                class="calendar"
+                orientation="top"
+                autoclose=true
+                startDate=startsAt
+                endDate=endsAt
+                value=atDate
+              }}
+            </div>
+          {{/unless}}
+        </div>
+      </div>
+    </div>
+    <div class="clearfix title-overview">
+      <div class="pull-left">
+        <a href="#" {{action "switchReport" type}}>{{switchReportName}}</a>
+      </div>
+      <div class="pull-right">
+        {{#if session.user}}
+          {{session.user.firstName}} | <a href="#" {{action "logout"}}>Logout</a>
+        {{else}}
+          {{#link-to "authentication"}}Login{{/link-to}}
+        {{/if}}
+      </div>
+    </div>
+
+  </div>
+</div>
