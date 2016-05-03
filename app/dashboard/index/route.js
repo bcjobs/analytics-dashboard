@@ -5,7 +5,7 @@ export default Ember.Route.extend(TrendsReportRoute, {
   reportType: 'Software',
   actions :{
     switchReport(currentReport, at){
-      this.transitionTo('dashboard.it-jobs', {queryParams: {at: at} })
+      this.transitionTo('dashboard.it-jobs', {queryParams: {at: at} });
     }
   }
 });

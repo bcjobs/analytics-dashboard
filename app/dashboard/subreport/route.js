@@ -63,8 +63,8 @@ export default Ember.Route.extend({
     });
   },
   actions :{
-    switchReport(currentReport, at){
-      this.transitionTo({queryParams: {filter: currentReport === 'Software' ? 'IT' : 'Software'} })
+    switchReport(currentReport/*, at*/){
+      this.transitionTo({queryParams: {filter: currentReport === 'Software' ? 'IT' : 'Software'} });
     }
   }
 });
