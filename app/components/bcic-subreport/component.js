@@ -33,5 +33,13 @@ export default Ember.Component.extend({
 
   endsAt: Ember.computed('range', function() {
     return moment(this.get('range.endsAt')).toDate();
-  })
+  }),
+  actions: {
+    switchReport(currentReport, at){
+      this.sendAction('action', currentReport, at);
+    },
+    logout(){
+      this.sendAction('logout');
+    }
+  }
 });

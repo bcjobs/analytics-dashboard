@@ -5,5 +5,15 @@ export default Ember.Route.extend({
     return this.store.ajax({
       url: '/api/v1.0/reports/range'
     });
+  },
+  actions: {
+    logout() {
+      this.get('store').ajax({
+        url: '/api/v1.0/authentication/login',
+        method: 'DELETE'
+      }).then(() => {
+        this.get('session').set('user', null);
+      });
+    }
   }
 });

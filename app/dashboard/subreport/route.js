@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     at: {
       refreshModel: true
     },
-    fiter: {
+    filter: {
       refreshModel: true
     },
     trend: {
@@ -61,5 +61,10 @@ export default Ember.Route.extend({
       error,
       type
     });
+  },
+  actions :{
+    switchReport(currentReport, at){
+      this.transitionTo({queryParams: {filter: currentReport === 'Software' ? 'IT' : 'Software'} })
+    }
   }
 });
