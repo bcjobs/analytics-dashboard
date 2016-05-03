@@ -28,6 +28,7 @@ img { max-width:100%;}
 /* Global Usage */
 
 .bcic-report {line-height:1;}
+.bcic-subreport {line-height:1;}
 
 
 .global-fullwidth{ width:100%	; margin:0 auto; position:relative;}
