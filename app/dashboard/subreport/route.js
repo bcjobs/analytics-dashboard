@@ -18,6 +18,8 @@ export default Ember.Route.extend({
   },
   beforeModel() {
     $('body').addClass('loading');
+    $('.spinner-loader').removeClass('hidden');
+    $('.spinner-container').removeClass('hidden');
   },
   model(params){
     var range = this.modelFor('dashboard');
@@ -53,6 +55,8 @@ export default Ember.Route.extend({
   },
   afterModel() {
     $('body').removeClass('loading');
+    $('.spinner-loader').addClass('hidden');
+    $('.spinner-container').addClass('hidden');
   },
   setupController(controller, {subreport, range, error, type}) {
     controller.setProperties({
