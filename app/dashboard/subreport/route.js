@@ -56,6 +56,7 @@ export default Ember.Route.extend({
   afterModel() {
     $('body').removeClass('loading');
     $('.spinner-loader').addClass('hidden');
+    $('.spinner-container').addClass('hidden');
   },
   setupController(controller, {subreport, range, error, type}) {
     controller.setProperties({
