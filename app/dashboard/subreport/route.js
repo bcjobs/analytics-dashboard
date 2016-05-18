@@ -19,6 +19,7 @@ export default Ember.Route.extend({
   beforeModel() {
     $('body').addClass('loading');
     $('.spinner-loader').removeClass('hidden');
+    $('.spinner-container').removeClass('hidden');
   },
   model(params){
     var range = this.modelFor('dashboard');

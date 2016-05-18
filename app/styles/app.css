@@ -713,6 +713,21 @@ body.loading .content-wrapper {
    cursor:pointer;
 }
 
+/* Spinner */
+.spinner-container {
+  position: fixed;
+  top: 220px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10000;
+}
+.spinner-base {
+  background: #ffffff;
+  display: inline-block;
+  padding: 30px;
+}
+
 .pull-left { float: left; }
 .pull-right { float: right; }
 .margin-r5 { margin-right: 5px; }
