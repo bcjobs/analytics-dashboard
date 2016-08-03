@@ -86,7 +86,7 @@
                         <h3>Trending Job Titles</h3>
                         <h4>Daily</h4>
 
-                        {{#trend-table model=model.tables.trends.titles.byOpenJobs type=type atDate=atDate exportSet="trendingOpenJobTitles" trendType="Title"}}
+                        {{#trend-table model=model.tables.trends.titles.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobTitles" trendType="Title"}}
                             By <strong>open</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -96,7 +96,7 @@
                         <h3>Top Job Titles</h3>
                         <h4>All Time</h4>
 
-                        {{#trend-table model=model.tables.trends.titles.byAllJobs type=type atDate=atDate exportSet="trendingNewJobTitles" trendType="Title" displayPrevious=false}}
+                        {{#trend-table model=model.tables.trends.titles.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobTitles" trendType="Title" displayPrevious=false}}
                             By <strong>all</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -108,7 +108,7 @@
                         <h3>Trending Skills</h3>
                         <h4>Daily</h4>
 
-                        {{#trend-table model=model.tables.trends.skills.byOpenJobs type=type atDate=atDate exportSet="trendingOpenJobSkills" trendType="Skill"}}
+                        {{#trend-table model=model.tables.trends.skills.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobSkills" trendType="Skill"}}
                             By <strong>open</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -118,7 +118,117 @@
                         <h3>Top Skills</h3>
                         <h4>All Time</h4>
 
-                        {{#trend-table model=model.tables.trends.skills.byAllJobs type=type atDate=atDate exportSet="trendingNewJobSkills" trendType="Skill" displayPrevious=false}}
+                        {{#trend-table model=model.tables.trends.skills.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobSkills" trendType="Skill" displayPrevious=false}}
+                            By <strong>all</strong> jobs
+                        {{/trend-table}}
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col global-translucent">
+                    <div class="card-wrapper global-shadow">
+                        <h3>Degrees</h3>
+                        <h4>Daily</h4>
+
+                        {{#trend-table model=model.tables.trends.educations.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobTitles" trendType="Title"}}
+                            By <strong>open</strong> jobs
+                        {{/trend-table}}
+                    </div>
+                </div>
+                <div class="col global-translucent">
+                    <div class="card-wrapper global-shadow">
+                        <h3>Degrees</h3>
+                        <h4>All Time</h4>
+
+                        {{#trend-table model=model.tables.trends.educations.byAllJobs.data type=type atDate=atDate exportSet="trendingOpenJobTitles" trendType="Title"}}
+                            By <strong>all</strong> jobs
+                        {{/trend-table}}
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col global-translucent">
+                    <div class="card-wrapper global-shadow">
+                        <h3>Experience Levels</h3>
+                        <h4>Daily</h4>
+
+                        {{#trend-table model=model.tables.trends.experiences.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobTitles" trendType="Title"}}
+                            By <strong>open</strong> jobs
+                        {{/trend-table}}
+                    </div>
+                </div>
+                <div class="col global-translucent">
+                    <div class="card-wrapper global-shadow">
+                        <h3>Experience Levels</h3>
+                        <h4>All Time</h4>
+
+                        {{#trend-table model=model.tables.trends.experiences.byAllJobs.data type=type atDate=atDate exportSet="trendingOpenJobTitles" trendType="Title"}}
+                            By <strong>all</strong> jobs
+                        {{/trend-table}}
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col global-translucent">
+                    <div class="card-wrapper global-shadow">
+                        <h3>Job Types</h3>
+                        <h4>Daily</h4>
+
+                        {{#trend-table model=model.tables.trends.jobTypes.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobTitles" trendType="Title"}}
+                            By <strong>open</strong> jobs
+                        {{/trend-table}}
+                    </div>
+                </div>
+                <div class="col global-translucent">
+                    <div class="card-wrapper global-shadow">
+                        <h3>Job Types</h3>
+                        <h4>All Time</h4>
+
+                        {{#trend-table model=model.tables.trends.jobTypes.byAllJobs.data type=type atDate=atDate exportSet="trendingOpenJobTitles" trendType="Title"}}
+                            By <strong>all</strong> jobs
+                        {{/trend-table}}
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col global-translucent">
+                    <div class="card-wrapper global-shadow">
+                        <h3>Regions</h3>
+                        <h4>Daily</h4>
+
+                        {{#trend-table model=model.tables.trends.regions.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobTitles" trendType="Title"}}
+                            By <strong>open</strong> jobs
+                        {{/trend-table}}
+                    </div>
+                </div>
+                <div class="col global-translucent">
+                    <div class="card-wrapper global-shadow">
+                        <h3>Regions</h3>
+                        <h4>All Time</h4>
+
+                        {{#trend-table model=model.tables.trends.regions.byAllJobs.data type=type atDate=atDate exportSet="trendingOpenJobTitles" trendType="Title"}}
+                            By <strong>all</strong> jobs
+                        {{/trend-table}}
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col global-translucent">
+                    <div class="card-wrapper global-shadow">
+                        <h3>Associations</h3>
+                        <h4>Daily</h4>
+
+                        {{#trend-table model=model.tables.trends.associations.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobTitles" trendType="Title"}}
+                            By <strong>open</strong> jobs
+                        {{/trend-table}}
+                    </div>
+                </div>
+                <div class="col global-translucent">
+                    <div class="card-wrapper global-shadow">
+                        <h3>Associations</h3>
+                        <h4>All Time</h4>
+
+                        {{#trend-table model=model.tables.trends.associations.byAllJobs.data type=type atDate=atDate exportSet="trendingOpenJobTitles" trendType="Title"}}
                             By <strong>all</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -160,8 +270,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
     <div class="footer">
