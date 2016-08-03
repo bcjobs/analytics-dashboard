@@ -127,20 +127,20 @@
             <div class="row clearfix">
                 <div class="col global-translucent">
                     <div class="card-wrapper global-shadow">
-                        <h3>Degrees</h3>
+                        <h3>Education</h3>
                         <h4>Daily</h4>
 
-                        {{#trend-table model=model.tables.trends.educations.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobDegrees" trendType="Degree"}}
+                        {{#trend-table model=model.tables.trends.educations.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobDegrees" trendType="Degree" coverageDisplayName="degrees" coverage=model.tables.trends.educations.byOpenJobs.coverage}}
                             By <strong>open</strong> jobs
                         {{/trend-table}}
                     </div>
                 </div>
                 <div class="col global-translucent">
                     <div class="card-wrapper global-shadow">
-                        <h3>Degrees</h3>
+                        <h3>Education</h3>
                         <h4>All Time</h4>
 
-                        {{#trend-table model=model.tables.trends.educations.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobDegrees" trendType="Degree"}}
+                        {{#trend-table model=model.tables.trends.educations.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobDegrees" trendType="Degree" coverageDisplayName="degrees" coverage=model.tables.trends.educations.byAllJobs.coverage}}
                             By <strong>all</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -149,20 +149,20 @@
             <div class="row clearfix">
                 <div class="col global-translucent">
                     <div class="card-wrapper global-shadow">
-                        <h3>Experience Levels</h3>
+                        <h3>Experience</h3>
                         <h4>Daily</h4>
 
-                        {{#trend-table model=model.tables.trends.experiences.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobExperience" trendType="Experience"}}
+                        {{#trend-table model=model.tables.trends.experiences.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobExperience" trendType="Experience" coverageDisplayName="experience levels" coverage=model.tables.trends.experiences.byOpenJobs.coverage}}
                             By <strong>open</strong> jobs
                         {{/trend-table}}
                     </div>
                 </div>
                 <div class="col global-translucent">
                     <div class="card-wrapper global-shadow">
-                        <h3>Experience Levels</h3>
+                        <h3>Experience</h3>
                         <h4>All Time</h4>
 
-                        {{#trend-table model=model.tables.trends.experiences.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobExperience" trendType="Experience"}}
+                        {{#trend-table model=model.tables.trends.experiences.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobExperience" trendType="Experience" coverageDisplayName="experience levels" coverage=model.tables.trends.experiences.byAllJobs.coverage}}
                             By <strong>all</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -171,20 +171,20 @@
             <div class="row clearfix">
                 <div class="col global-translucent">
                     <div class="card-wrapper global-shadow">
-                        <h3>Job Types</h3>
+                        <h3>Job Type</h3>
                         <h4>Daily</h4>
 
-                        {{#trend-table model=model.tables.trends.jobTypes.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobTypes" trendType="JobType"}}
+                        {{#trend-table model=model.tables.trends.jobTypes.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobTypes" trendType="JobType" coverageDisplayName="job types" coverage=model.tables.trends.jobTypes.byOpenJobs.coverage}}
                             By <strong>open</strong> jobs
                         {{/trend-table}}
                     </div>
                 </div>
                 <div class="col global-translucent">
                     <div class="card-wrapper global-shadow">
-                        <h3>Job Types</h3>
+                        <h3>Job Type</h3>
                         <h4>All Time</h4>
 
-                        {{#trend-table model=model.tables.trends.jobTypes.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobTypes" trendType="JobType"}}
+                        {{#trend-table model=model.tables.trends.jobTypes.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobTypes" trendType="JobType" coverageDisplayName="job types" coverage=model.tables.trends.jobTypes.byAllJobs.coverage}}
                             By <strong>all</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -193,20 +193,20 @@
             <div class="row clearfix">
                 <div class="col global-translucent">
                     <div class="card-wrapper global-shadow">
-                        <h3>Regions</h3>
+                        <h3>Region</h3>
                         <h4>Daily</h4>
 
-                        {{#trend-table model=model.tables.trends.regions.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobRegions" trendType="Region"}}
+                        {{#trend-table model=model.tables.trends.regions.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobRegions" trendType="Region" coverageDisplayName="regions" coverage=model.tables.trends.regions.byOpenJobs.coverage}}
                             By <strong>open</strong> jobs
                         {{/trend-table}}
                     </div>
                 </div>
                 <div class="col global-translucent">
                     <div class="card-wrapper global-shadow">
-                        <h3>Regions</h3>
+                        <h3>Region</h3>
                         <h4>All Time</h4>
 
-                        {{#trend-table model=model.tables.trends.regions.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobRegions" trendType="Region"}}
+                        {{#trend-table model=model.tables.trends.regions.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobRegions" trendType="Region" coverageDisplayName="regions" coverage=model.tables.trends.regions.byAllJobs.coverage}}
                             By <strong>all</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -218,7 +218,7 @@
                         <h3>Associations</h3>
                         <h4>Daily</h4>
 
-                        {{#trend-table model=model.tables.trends.associations.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobAssociations" trendType="Association"}}
+                        {{#trend-table model=model.tables.trends.associations.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobAssociations" trendType="Association" coverageDisplayName="associations" coverage=model.tables.trends.associations.byOpenJobs.coverage}}
                             By <strong>open</strong> jobs
                         {{/trend-table}}
                     </div>
@@ -228,7 +228,7 @@
                         <h3>Associations</h3>
                         <h4>All Time</h4>
 
-                        {{#trend-table model=model.tables.trends.associations.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobAssociations" trendType="Association"}}
+                        {{#trend-table model=model.tables.trends.associations.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobAssociations" trendType="Association" coverageDisplayName="associations" coverage=model.tables.trends.associations.byAllJobs.coverage}}
                             By <strong>all</strong> jobs
                         {{/trend-table}}
                     </div>
