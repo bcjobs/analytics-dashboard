@@ -45,11 +45,19 @@
         </div>
     </div>
 {{else}}
-    <div class="table-showmore-wrapper">
-        <span class="table-showmore-finished">
-            Showing {{items.length}} results.
-        </span>
-    </div>
+    {{#if coverage}}
+        <div class="table-showmore-wrapper">
+            <span class="table-showmore-finished">
+                These {{coverageDisplayName}} represent {{format-number percent}}% of total openings.
+            </span>
+        </div>
+    {{else}}
+        <div class="table-showmore-wrapper">
+            <span class="table-showmore-finished">
+                Showing {{items.length}} results.
+            </span>
+        </div>
+    {{/if}}
     {{#if displayDownload}}
       <div class="table-showmore-wrapper" {{action "downloadCSV"}}>
           Download all records

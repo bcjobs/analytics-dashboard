@@ -6,7 +6,9 @@ var DATE_FORMAT = 'YYYY-MM-DD';
 
 export default Ember.Component.extend(ShowMore, {
   items: Ember.computed.alias('model'),
-
+  percent: Ember.computed('coverage', function(){
+    return this.get('coverage') * 100;
+  }),
   displayPrevious: true,
 
   displayDownload: Ember.computed('exportSet', 'session.isAdmin', function(){

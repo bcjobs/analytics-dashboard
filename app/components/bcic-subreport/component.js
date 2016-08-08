@@ -9,22 +9,18 @@ export default Ember.Component.extend({
   }),
   data: Ember.computed('model', 'model.[]', function(){
     var data = this.get('model');
-    // Decides what charts to show depending on trend
-    if(this.get('trend') === 'Company'){
-      this.set('isCompany', true);
-      data.skillChart = data.skills;
-      data.titleChart = data.titles;
-    } else if(this.get('trend') === 'Title') {
-      data.skillChart = data.skills;
-      data.companyChart = {
-        top: data.companies
-      };
-    } else if(this.get('trend') === 'Skill'){
-      data.titleChart = data.titles;
-      data.companyChart = {
-        top: data.companies
-      };
-    }
+    data.skillChart = data.skills;
+    data.titleChart = data.titles;
+    data.companyChart = {
+      top: data.companies
+    };
+
+    // Hide company column when looking at a specific company
+    this.set('isCompany', this.get('trend') === 'Company');
+
+    // Remove chart that isn't relevent to current trend
+    data[`${this.get('trend').toLowerCase()}Chart`] = null;
+
     return data;
   }),
   startsAt: Ember.computed('range', function() {
