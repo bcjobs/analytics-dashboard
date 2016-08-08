@@ -107,6 +107,49 @@
           </div>
         {{/if}}
       </div>
+      <div class="row clearfix">
+        {{#if data.experienceChart}}
+          <div class="col">
+            <div class="global-translucent">
+              <div class="card-wrapper global-shadow">
+                <h3>Experience</h3>
+                <h4>For {{subject}}</h4>
+                {{#trend-table model=data.experienceChart type=type atDate=atDate trendType="Experience" isCompany=isCompany}}
+                  By <strong>open</strong> jobs
+                {{/trend-table}}
+              </div>
+            </div>
+          </div>
+        {{/if}}
+        {{#if data.jobtypeChart}}
+          <div class="col">
+            <div class="global-translucent">
+              <div class="card-wrapper global-shadow">
+                <h3>Job Type</h3>
+                <h4>For {{subject}}</h4>
+                {{#trend-table model=data.jobtypeChart type=type atDate=atDate trendType="JobType" isCompany=isCompany}}
+                  By <strong>open</strong> jobs
+                {{/trend-table}}
+              </div>
+            </div>
+          </div>
+        {{/if}}
+      </div>
+      <div class="row clearfix">
+        {{#if data.regionChart}}
+          <div class="col">
+            <div class="global-translucent">
+              <div class="card-wrapper global-shadow">
+                <h3>Region</h3>
+                <h4>For {{subject}}</h4>
+                {{#trend-table model=data.regionChart type=type atDate=atDate trendType="Region" isCompany=isCompany}}
+                  By <strong>open</strong> jobs
+                {{/trend-table}}
+              </div>
+            </div>
+          </div>
+        {{/if}}
+      </div>
     </div>
   </div>
 
