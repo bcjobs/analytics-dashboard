@@ -11,6 +11,9 @@ export default Ember.Component.extend({
     var data = this.get('model');
     data.skillChart = data.skills;
     data.titleChart = data.titles;
+    data.experienceChart = data.experiences;
+    data.jobtypeChart = data.jobTypes;
+    data.regionChart = data.regions;
     data.companyChart = {
       top: data.companies
     };
