@@ -1,6 +1,6 @@
 <label>Terms</label>
 <div class="form-group">
-  {{term-input value=newTerm include="notUsed"}}
+  {{term-input value=newTerm include="notUsed" ruleType=rule.ruleType}}
   <button class="btn btn-primary"{{action "addTerm"}}>Add term</button>
 </div>
 <div class="form-group">
