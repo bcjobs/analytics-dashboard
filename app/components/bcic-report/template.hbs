@@ -212,28 +212,30 @@
                     </div>
                 </div>
             </div>
-            <div class="row clearfix">
-                <div class="col global-translucent">
-                    <div class="card-wrapper global-shadow">
-                        <h3>Associations</h3>
-                        <h4>Daily</h4>
+            {{#if session.isLoggedIn}}
+              <div class="row clearfix">
+                  <div class="col global-translucent">
+                      <div class="card-wrapper global-shadow">
+                          <h3>Associations</h3>
+                          <h4>Daily</h4>
 
-                        {{#trend-table model=model.tables.trends.associations.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobAssociations" trendType="Association" coverageDisplayName="associations" coverage=model.tables.trends.associations.byOpenJobs.coverage}}
-                            By <strong>open</strong> jobs
-                        {{/trend-table}}
-                    </div>
-                </div>
-                <div class="col global-translucent">
-                    <div class="card-wrapper global-shadow">
-                        <h3>Associations</h3>
-                        <h4>All Time</h4>
+                          {{#trend-table model=model.tables.trends.associations.byOpenJobs.data type=type atDate=atDate exportSet="trendingOpenJobAssociations" trendType="Association" coverageDisplayName="associations" coverage=model.tables.trends.associations.byOpenJobs.coverage}}
+                              By <strong>open</strong> jobs
+                          {{/trend-table}}
+                      </div>
+                  </div>
+                  <div class="col global-translucent">
+                      <div class="card-wrapper global-shadow">
+                          <h3>Associations</h3>
+                          <h4>All Time</h4>
 
-                        {{#trend-table model=model.tables.trends.associations.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobAssociations" trendType="Association" coverageDisplayName="associations" coverage=model.tables.trends.associations.byAllJobs.coverage}}
-                            By <strong>all</strong> jobs
-                        {{/trend-table}}
-                    </div>
-                </div>
-            </div>
+                          {{#trend-table model=model.tables.trends.associations.byAllJobs.data type=type atDate=atDate exportSet="trendingNewJobAssociations" trendType="Association" coverageDisplayName="associations" coverage=model.tables.trends.associations.byAllJobs.coverage}}
+                              By <strong>all</strong> jobs
+                          {{/trend-table}}
+                      </div>
+                  </div>
+              </div>
+            {{/if}}
             <div class="title-general title-inter">
                 Top Hiring Employers
             </div>
