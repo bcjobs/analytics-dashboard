@@ -479,8 +479,8 @@ td.table-row-total-scope .total{
   padding-top: 125px;
 }
 
-.date-filter { width: 150px; }
-input.calendar {
+.date-filter, .dropdown-filter { width: 150px; }
+input.calendar, input.filter {
   background: #ffffff;
   color: #283a5a;
   font-size: 16px;
@@ -490,7 +490,11 @@ input.calendar {
   border: 1px solid #a8adb2;
   width: 100%;
 }
+
 .date-icon { vertical-align: middle; }
+.filter-columns {
+  padding: 0 5px;
+}
 
 .milk {
   opacity: 0.2;
@@ -830,9 +834,11 @@ body.loading .content-wrapper {
 
 @media (max-width: 768px) {
   .xs-nofloat { float: none; }
+  .xs-m0 { margin: 0; }
   .xs-mb15 { margin-bottom: 15px; }
   .xs-mb30 { margin-bottom: 30px; }
   .xs-p0 { padding:0; }
+  .xs-text-center{ text-align:center; }
 
   .header {
     height: 100px;
@@ -841,5 +847,14 @@ body.loading .content-wrapper {
     left: 0;
     right: 0;
     top: 65px;
+  }
+}
+
+@media(max-width: 480px) {
+  .date-icon { max-width: 20px; }
+  .date-filter, .dropdown-filter { width: 100px; }
+  input.filter {
+    font-size: 14px;
+    padding: 5px;
   }
 }
