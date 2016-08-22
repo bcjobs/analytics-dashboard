@@ -16,7 +16,7 @@
               orientation="top"
               autoclose=true
               startDate=startsAt
-              endDate=endsAt
+              endDate=endsAtF
               value=atDate
             }}
           </div>
@@ -25,7 +25,41 @@
       <div class="col-xs-6 text-left xs-text-center filter-columns">
         <img src="images/icon-filter.svg" width="34" class="date-icon item-inblock margin-r5 xs-m0" />
         <div class="dropdown-filter item-inblock">
-          <input class="filter" />
+          <span class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <div style="color: grey;">
+                Sector
+              </div>
+              <li>
+                {{#link-to  (query-params sector="")}}
+                  No Sector
+                {{/link-to}}
+              </li>
+              {{#each sectorList as |sector|}}
+                <li>
+                  {{#link-to  (query-params sector=sector)}}
+                    {{sector}}
+                  {{/link-to}}
+                </li>
+              {{/each}}
+              <div style="color: grey;">
+                SubSector
+              </div>
+              <li>
+                {{#link-to  (query-params subsector="")}}
+                  No Subsector
+                {{/link-to}}
+              </li>
+              {{#each subsectorList as |subsector|}}
+                <li>
+                  {{#link-to  (query-params subsector=subsector)}}
+                    {{subsector}}
+                  {{/link-to}}
+                </li>
+              {{/each}}
+            </ul>
+          </span>
         </div>
       </div>
     </div>
