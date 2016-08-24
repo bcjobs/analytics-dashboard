@@ -4,7 +4,7 @@ import moment from 'npm:moment';
 var DATE_FORMAT = 'YYYY-MM-DD';
 
 export default Ember.Mixin.create({
-  queryParams: ['at', 'sector', 'subsector'],
+  queryParams: ['at', 'sector', 'subSector'],
 
   at: '',
 

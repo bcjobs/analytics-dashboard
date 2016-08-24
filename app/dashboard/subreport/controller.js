@@ -4,7 +4,7 @@ import moment from 'npm:moment';
 var DATE_FORMAT = 'YYYY-MM-DD';
 
 export default Ember.Controller.extend({
-  queryParams: ['at', 'filter', 'trend', 'subject', 'sector', 'subsector'],
+  queryParams: ['at', 'filter', 'trend', 'subject', 'sector', 'subSector'],
   atDate: Ember.computed('at', 'range', {
     get() {
       var at = this.get('at');
@@ -16,7 +16,7 @@ export default Ember.Controller.extend({
       return value;
     }
   }),
-  currentSector: Ember.computed('sector', 'subsector', function(){
-    return this.get('sector') || this.get('subsector') || "No sector";
+  currentSector: Ember.computed('sector', 'subSector', function(){
+    return this.get('sector') || this.get('subSector') || "No sector";
   })
 });

@@ -18,7 +18,7 @@ export default Ember.Route.extend({
     sector: {
       refreshModel: true
     },
-    subsector: {
+    subSector: {
       refreshModel: true
     }
   },
@@ -31,7 +31,7 @@ export default Ember.Route.extend({
     var range = this.modelFor('dashboard');
     var trend = params.trend;
     var subject = params.subject.toLowerCase();
-    var subsector = params.subsector;
+    var subSector = params.subSector;
     var sector = params.sector;
     var at = params.at || range.endsAt;
     var type = params.filter;
@@ -43,7 +43,7 @@ export default Ember.Route.extend({
         trend: trend,
         subject: subject,
         sector: sector,
-        subsector: subsector
+        subSector: subSector
       }
     }).then(subreport => ({
       subreport,
@@ -51,7 +51,7 @@ export default Ember.Route.extend({
       trend,
       subject,
       sector,
-      subsector,
+      subSector,
       type
     })).catch(error => {
       // handle not found error gracefully

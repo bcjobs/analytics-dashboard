@@ -9,7 +9,7 @@ export default Ember.Mixin.create({
     sector: {
       refreshModel: true
     },
-    subsector: {
+    subSector: {
       refreshModel: true
     }
   },
@@ -24,13 +24,13 @@ export default Ember.Mixin.create({
     var range = this.modelFor('dashboard');
     var at = params.at || range.endsAt;
     var sector = params.sector;
-    var subsector = params.subsector;
+    var subSector = params.subSector;
     return this.store.ajax({
       url: `/api/v1.0/reports/trends`,
       query: {
         at: at,
         sector: sector,
-        subsector: subsector,
+        subSector: subSector,
         filter: this.get('reportType')
       }
     }).then(trends => ({
