@@ -11,7 +11,7 @@
         {{#each visibleItems as |trend|}}
             <tr>
                 {{#if displaySubreport}}
-                    <td class="table-job-title">{{#link-to "dashboard.subreport" (query-params filter=type at=transitionDate trend=trendType subject=trend.name)}}{{trend.name}}{{/link-to}}</td>
+                    <td class="table-job-title">{{#link-to "dashboard.subreport" (query-params filter=type at=transitionDate trend=trendType subject=trend.name sector=sector subsector=subsector)}}{{trend.name}}{{/link-to}}</td>
                 {{else}}
                     <td class="table-job-title">{{trend.name}}</td>
                 {{/if}}

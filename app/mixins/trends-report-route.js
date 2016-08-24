@@ -5,6 +5,12 @@ export default Ember.Mixin.create({
   queryParams: {
     at: {
       refreshModel: true
+    },
+    sector: {
+      refreshModel: true
+    },
+    subsector: {
+      refreshModel: true
     }
   },
 
@@ -17,10 +23,14 @@ export default Ember.Mixin.create({
   model(params) {
     var range = this.modelFor('dashboard');
     var at = params.at || range.endsAt;
+    var sector = params.sector;
+    var subsector = params.subsector;
     return this.store.ajax({
       url: `/api/v1.0/reports/trends`,
       query: {
         at: at,
+        sector: sector,
+        subsector: subsector,
         filter: this.get('reportType')
       }
     }).then(trends => ({

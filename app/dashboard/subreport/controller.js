@@ -15,5 +15,8 @@ export default Ember.Controller.extend({
       this.set('at', value ? moment(value).format(DATE_FORMAT) : '');
       return value;
     }
+  }),
+  currentSector: Ember.computed('sector', 'subsector', function(){
+    return this.get('sector') || this.get('subsector') || "No sector";
   })
 });

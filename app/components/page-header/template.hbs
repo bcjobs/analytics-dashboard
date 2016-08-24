@@ -16,7 +16,7 @@
               orientation="top"
               autoclose=true
               startDate=startsAt
-              endDate=endsAtF
+              endDate=endsAt
               value=atDate
             }}
           </div>
@@ -26,19 +26,19 @@
         <img src="images/icon-filter.svg" width="34" class="date-icon item-inblock margin-r5 xs-m0" />
         <div class="dropdown-filter item-inblock">
           <span class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span style="font-size:16px;">{{currentSector}} <span class="caret"></span></span></a>
             <ul class="dropdown-menu">
               <div style="color: grey;">
                 Sector
               </div>
               <li>
-                {{#link-to  (query-params sector="")}}
+                {{#link-to  (query-params sector="" subsector="")}}
                   No Sector
                 {{/link-to}}
               </li>
               {{#each sectorList as |sector|}}
                 <li>
-                  {{#link-to  (query-params sector=sector)}}
+                  {{#link-to  (query-params sector=sector subsector="")}}
                     {{sector}}
                   {{/link-to}}
                 </li>
@@ -46,14 +46,9 @@
               <div style="color: grey;">
                 SubSector
               </div>
-              <li>
-                {{#link-to  (query-params subsector="")}}
-                  No Subsector
-                {{/link-to}}
-              </li>
               {{#each subsectorList as |subsector|}}
                 <li>
-                  {{#link-to  (query-params subsector=subsector)}}
+                  {{#link-to  (query-params subsector=subsector sector="")}}
                     {{subsector}}
                   {{/link-to}}
                 </li>
