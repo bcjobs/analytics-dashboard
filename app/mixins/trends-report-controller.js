@@ -8,6 +8,10 @@ export default Ember.Mixin.create({
 
   at: '',
 
+  currentSector: Ember.computed('sector', 'subSector', function(){
+    return this.get('sector') || this.get('subSector') || "No sector";
+  }),
+
   atDate: Ember.computed('at', 'range', {
     get() {
       var at = this.get('at');
@@ -19,5 +23,4 @@ export default Ember.Mixin.create({
       return value;
     }
   })
-
 });
