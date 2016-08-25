@@ -14,6 +14,12 @@ export default Ember.Route.extend({
     },
     subject: {
       refreshModel: true
+    },
+    sector: {
+      refreshModel: true
+    },
+    subSector: {
+      refreshModel: true
     }
   },
   beforeModel() {
@@ -25,6 +31,8 @@ export default Ember.Route.extend({
     var range = this.modelFor('dashboard');
     var trend = params.trend;
     var subject = params.subject.toLowerCase();
+    var subSector = params.subSector;
+    var sector = params.sector;
     var at = params.at || range.endsAt;
     var type = params.filter;
     return this.store.ajax({
@@ -33,13 +41,17 @@ export default Ember.Route.extend({
         at: at,
         filter: type,
         trend: trend,
-        subject: subject
+        subject: subject,
+        sector: sector,
+        subSector: subSector
       }
     }).then(subreport => ({
       subreport,
       range,
       trend,
       subject,
+      sector,
+      subSector,
       type
     })).catch(error => {
       // handle not found error gracefully

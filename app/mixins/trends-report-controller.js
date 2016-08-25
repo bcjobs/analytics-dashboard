@@ -4,9 +4,13 @@ import moment from 'npm:moment';
 var DATE_FORMAT = 'YYYY-MM-DD';
 
 export default Ember.Mixin.create({
-  queryParams: ['at'],
+  queryParams: ['at', 'sector', 'subSector'],
 
   at: '',
+
+  currentSector: Ember.computed('sector', 'subSector', function(){
+    return this.get('sector') || this.get('subSector') || "No sector";
+  }),
 
   atDate: Ember.computed('at', 'range', {
     get() {
@@ -19,5 +23,4 @@ export default Ember.Mixin.create({
       return value;
     }
   })
-
 });

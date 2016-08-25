@@ -10,8 +10,8 @@
         </tr>
         {{#each visibleItems as |trend|}}
             <tr>
-                {{#if session.isLoggedIn}}
-                    <td class="table-job-title">{{#link-to "dashboard.subreport" (query-params filter=type at=transitionDate trend=trendType subject=trend.name)}}{{trend.name}}{{/link-to}}</td>
+                {{#if displaySubreport}}
+                    <td class="table-job-title">{{#link-to "dashboard.subreport" (query-params filter=type at=transitionDate trend=trendType subject=trend.name sector=sector subSector=subSector)}}{{trend.name}}{{/link-to}}</td>
                 {{else}}
                     <td class="table-job-title">{{trend.name}}</td>
                 {{/if}}

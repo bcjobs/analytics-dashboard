@@ -1,4 +1,4 @@
-{{page-header type=type endsAt=endsAt startsAt=startsAt atDate=atDate action="switchReport" logout="logout"}}
+{{page-header type=type endsAt=endsAt startsAt=startsAt atDate=atDate action="switchReport" logout="logout" currentSector=currentSector}}
 {{#if error}}
   <h1 class="dashboard-error">{{error.message}}</h1>
 {{else}}
@@ -74,7 +74,7 @@
               <div class="card-wrapper global-shadow">
                 <h3>Top Skills</h3>
                 <h4>For {{subject}}</h4>
-                {{#trend-table model=data.skillChart type=type atDate=atDate trendType="Skill" isCompany=isCompany}}
+                {{#trend-table model=data.skillChart type=type atDate=atDate trendType="Skill" isCompany=isCompany sector=sector subSector=subSector}}
                   By <strong>open</strong> jobs
                 {{/trend-table}}
               </div>
@@ -87,19 +87,19 @@
               <div class="card-wrapper global-shadow">
                 <h3>Top Job Titles</h3>
                 <h4>For {{subject}}</h4>
-                {{#trend-table model=data.titleChart type=type atDate=atDate trendType="Title" isCompany=isCompany}}
+                {{#trend-table model=data.titleChart type=type atDate=atDate trendType="Title" isCompany=isCompany sector=sector subSector=subSector}}
                   By <strong>open</strong> jobs
                 {{/trend-table}}
               </div>
             </div>
           </div>
         {{/if}}
-        {{#if data.companyChart}}
+        {{#if data.companyChart.top}}
           <div class="col">
             <div class="card-wrapper clearfix global-shadow">
               <h3>Top Employers</h3>
               <h4>For {{subject}}</h4>
-              {{#employer-table model=data.companyChart type=type atDate=atDate}}
+              {{#employer-table model=data.companyChart type=type atDate=atDate sector=sector subSector=subSector}}
                 By open jobs
                 <span class="table-subtitle">(as of midnight yesterday)</span>
               {{/employer-table}}
@@ -114,7 +114,7 @@
               <div class="card-wrapper global-shadow">
                 <h3>Experience</h3>
                 <h4>For {{subject}}</h4>
-                {{#trend-table model=data.experienceChart type=type atDate=atDate trendType="Experience" isCompany=isCompany}}
+                {{#trend-table model=data.experienceChart type=type atDate=atDate isCompany=isCompany sector=sector subSector=subSector}}
                   By <strong>open</strong> jobs
                 {{/trend-table}}
               </div>
@@ -127,7 +127,7 @@
               <div class="card-wrapper global-shadow">
                 <h3>Job Type</h3>
                 <h4>For {{subject}}</h4>
-                {{#trend-table model=data.jobtypeChart type=type atDate=atDate trendType="JobType" isCompany=isCompany}}
+                {{#trend-table model=data.jobtypeChart type=type atDate=atDate isCompany=isCompany sector=sector subSector=subSector}}
                   By <strong>open</strong> jobs
                 {{/trend-table}}
               </div>
@@ -142,7 +142,7 @@
               <div class="card-wrapper global-shadow">
                 <h3>Region</h3>
                 <h4>For {{subject}}</h4>
-                {{#trend-table model=data.regionChart type=type atDate=atDate trendType="Region" isCompany=isCompany}}
+                {{#trend-table model=data.regionChart type=type atDate=atDate isCompany=isCompany sector=sector subSector=subSector}}
                   By <strong>open</strong> jobs
                 {{/trend-table}}
               </div>
