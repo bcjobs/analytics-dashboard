@@ -478,22 +478,46 @@ td.table-row-total-scope .total{
 .label-vertical {
   padding-top: 125px;
 }
-
-.date-filter, .dropdown-filter { width: 150px; }
-input.calendar, input.filter {
+.filter-wrapper {
+  margin: 0 auto;
+  width: 700px;
+}
+.date-filter, .dropdown-filter {
   background: #ffffff;
   color: #283a5a;
   font-size: 16px;
   height: 32px;
   line-height: 32px;
-  padding: 0 8px;
   border: 1px solid #a8adb2;
+  text-shadow: none;
+  text-align: left;
   width: 100%;
 }
+.date-filter {
+  padding: 0 8px;
+}
 
+.dropdown-filter>span>a {
+  color: #283a5a;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0 8px;
+}
+.dropdown-filter>span>a:hover, .dropdown-filter>span>a:active, .dropdown-filter .dropdown.open>a {
+  text-decoration: none;
+}
+.dropdown-filter .caret {
+  float: right;
+  margin: 13px 5px 10px 10px;
+}
 .date-icon { vertical-align: middle; }
 .filter-columns {
   padding: 0 5px;
+}
+.dropdown-sublink {
+  color: grey;
+  margin-left: 10px;
 }
 
 .milk {
@@ -734,6 +758,7 @@ body.loading .content-wrapper {
 
 .pull-left { float: left; }
 .pull-right { float: right; }
+.margin-b15 { margin-bottom: 15px; }
 .margin-r5 { margin-right: 5px; }
 .margin-r15 { margin-right: 15px; }
 .item-inblock { display: inline-block; }
@@ -848,13 +873,13 @@ body.loading .content-wrapper {
     right: 0;
     top: 65px;
   }
+  .filter-wrapper {
+    width: 100%;
+  }
+  .filter-columns { padding: 0 10px 0 0; }
+  .date-icon { max-height: 20px; }
 }
 
 @media(max-width: 480px) {
-  .date-icon { max-width: 20px; }
-  .date-filter, .dropdown-filter { width: 100px; }
-  input.filter {
-    font-size: 14px;
-    padding: 5px;
-  }
+
 }
