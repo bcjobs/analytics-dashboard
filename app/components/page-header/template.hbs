@@ -38,12 +38,12 @@
               {{#each sectorList as |sector|}}
                 <li>
                   {{#link-to  (query-params sector=sector.name subSector="")}}
-                    {{sector.Name}}
+                    {{sector.name}}
                   {{/link-to}}
                   {{! Display all subSectors in a specific sector }}
-                  {{#each sector.SubSectors as |subSector|}}
-                    {{#link-to  (query-params subSector=subSector.Name sector="")}}
-                      <span class="dropdown-sublink">{{subSector.Name}}</span>
+                  {{#each sector.subSectors as |subSector|}}
+                    {{#link-to  (query-params subSector=subSector.name sector="")}}
+                      <span class="dropdown-sublink">{{subSector.name}}</span>
                     {{/link-to}}
                   {{/each}}
                 </li>
