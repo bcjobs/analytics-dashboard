@@ -13,19 +13,19 @@
         </div>
         <div class="overview-box global-shadow clearfix">
           <div class="clearfix subreport-summary">
-            <h4 style="font-weight: bold;">Open Jobs</h4>
+            <h4 style="font-weight: bold;">Open <strong>{{type}}</strong> Jobs</h4>
           </div>
           <div class="clearfix">
             <div class="hidden-xs col-sm-3">&nbsp;</div>
             <div class="col-xs-12 col-sm-6">
               <div class="col-xs-4">
-                <div class="clearfix">
+                <div class="clearfix margin-b5">
                   <strong>Jobs</strong>
                 </div>
                 {{data.summary.jobs}}
               </div>
               <div class="col-xs-4">
-                <div class="clearfix">
+                <div class="clearfix margin-b5">
                   <strong>Companies</strong>
                 </div>
                 <!-- Company trends don't display this -->
@@ -36,7 +36,7 @@
                 {{/if}}
               </div>
               <div class="col-xs-4">
-                <div class="clearfix">
+                <div class="clearfix margin-b5">
                   <strong>Avg. Days</strong>
                 </div>
                 {{format-number data.summary.averageAge}}
@@ -49,7 +49,7 @@
       <div class="row clearfix">
         <div class="global-translucent">
           <div class="graph-wrapper">
-            <h3>Average <strong>Open</strong> Jobs</h3>
+            <h3>Average open <strong>{{type}}</strong> Jobs</h3>
             <div class="clearfix">
               <div class="hidden-xs col-sm-2">&nbsp;</div>
               <div class="col-xs-12 col-sm-8 xs-p0">
@@ -75,7 +75,7 @@
                 <h3>Top Skills</h3>
                 <h4>For {{subject}}</h4>
                 {{#trend-table model=data.skillChart type=type atDate=atDate trendType="Skill" isCompany=isCompany sector=sector subSector=subSector}}
-                  By <strong>open</strong> jobs
+                  By open <strong>{{type}}</strong> jobs
                 {{/trend-table}}
               </div>
             </div>
@@ -88,7 +88,7 @@
                 <h3>Top Job Titles</h3>
                 <h4>For {{subject}}</h4>
                 {{#trend-table model=data.titleChart type=type atDate=atDate trendType="Title" isCompany=isCompany sector=sector subSector=subSector}}
-                  By <strong>open</strong> jobs
+                  By open <strong>{{type}}</strong> jobs
                 {{/trend-table}}
               </div>
             </div>
@@ -100,7 +100,7 @@
               <h3>Top Employers</h3>
               <h4>For {{subject}}</h4>
               {{#employer-table model=data.companyChart type=type atDate=atDate sector=sector subSector=subSector}}
-                By open jobs
+                By open <strong>{{type}}</strong> jobs
                 <span class="table-subtitle">(as of midnight yesterday)</span>
               {{/employer-table}}
             </div>
@@ -115,7 +115,7 @@
                 <h3>Experience</h3>
                 <h4>For {{subject}}</h4>
                 {{#trend-table model=data.experienceChart type=type atDate=atDate isCompany=isCompany sector=sector subSector=subSector}}
-                  By <strong>open</strong> jobs
+                  By open <strong>{{type}}</strong> jobs
                 {{/trend-table}}
               </div>
             </div>
@@ -128,7 +128,7 @@
                 <h3>Job Type</h3>
                 <h4>For {{subject}}</h4>
                 {{#trend-table model=data.jobtypeChart type=type atDate=atDate isCompany=isCompany sector=sector subSector=subSector}}
-                  By <strong>open</strong> jobs
+                  By open <strong>{{type}}</strong> jobs
                 {{/trend-table}}
               </div>
             </div>
@@ -143,7 +143,7 @@
                 <h3>Region</h3>
                 <h4>For {{subject}}</h4>
                 {{#trend-table model=data.regionChart type=type atDate=atDate isCompany=isCompany sector=sector subSector=subSector}}
-                  By <strong>open</strong> jobs
+                  By open <strong>{{type}}</strong> jobs
                 {{/trend-table}}
               </div>
             </div>
