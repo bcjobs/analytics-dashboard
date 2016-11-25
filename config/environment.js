@@ -21,11 +21,18 @@ module.exports = function(environment) {
 
   ENV.contentSecurityPolicy = {
     'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
-    'font-src': "'self' http://fonts.gstatic.com"
+    'font-src': "'self' http://fonts.gstatic.com",
+    'connect-src': "'self' https://dc.services.visualstudio.com",
+    'script-src': "'self' 'unsafe-inline' http://az416426.vo.msecnd.net"
   }
 
 
   if (environment === 'development') {
+    // Uncomment to enable application insights in dev environment
+    // ENV['ember-cli-ai'] = {
+    //   instrumentationKey: 'eb509bae-b863-4088-b91e-d9e620a2f1bc'
+    // };
+
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -46,7 +53,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV['ember-cli-ai'] = {
+      instrumentationKey: '78b5faad-89c3-4309-b973-26fc2cd41cea'
+    };
   }
 
   return ENV;
