@@ -30,7 +30,7 @@ module.exports = function(environment) {
   if (environment === 'development') {
     // Uncomment to enable application insights in dev environment
     // ENV['ember-cli-ai'] = {
-    //   instrumentationKey: 'eb509bae-b863-4088-b91e-d9e620a2f1bc'
+    //   instrumentationKey: '3e543fbe-b10a-4235-aa5e-19d5300a3b4c'
     // };
 
     // ENV.APP.LOG_RESOLVER = true;
@@ -54,7 +54,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV['ember-cli-ai'] = {
-      instrumentationKey: '78b5faad-89c3-4309-b973-26fc2cd41cea'
+      instrumentationKey: '7d2f875f-f896-4de1-82ab-02b51f8eadc2'
     };
   }
 
