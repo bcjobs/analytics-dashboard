@@ -6,7 +6,8 @@ import numeral from 'npm:numeral';
 
 export default Ember.Component.extend({
   data: Ember.computed('model', function() {
-    var model = this.get('model');
+    // Filter out empty data points
+    var model = this.get('model').filter(item => { if(item.y !== 0.0) return item});
     return {
       labels: model.map(item => moment(item.x).format('MMM')),
       series: [
