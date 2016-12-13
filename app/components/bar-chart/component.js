@@ -7,7 +7,7 @@ import numeral from 'npm:numeral';
 export default Ember.Component.extend({
   data: Ember.computed('model', function() {
     // Filter out empty data points
-    var model = this.get('model').filter(item => { if(item.y !== 0.0) return item});
+    var model = this.get('model').filter(item => { if(item.y !== 0.0) { return item; } });
     return {
       labels: model.map(item => moment(item.x).format('MMM')),
       series: [
@@ -30,7 +30,7 @@ export default Ember.Component.extend({
 
   draw(data) {
     if (data.type === 'bar') {
-      var datum = this.get('model')[data.index];
+      var datum = this.get('model').filter(item => { if(item.y !== 0.0) { return item; } })[data.index];
 
       var $bar = $(data.element._node);
 
