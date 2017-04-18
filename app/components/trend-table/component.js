@@ -15,9 +15,7 @@ export default Ember.Component.extend(ShowMore, {
     return this.get('session.isAdmin') && this.get('exportSet') !== undefined; // prevents download link from appearing if there is no endpoint
   }),
 
-  displaySubreport: Ember.computed('trendType', function(){
-    return this.get('trendType') && true;
-  }),
+  displaySubreport: Ember.computed.bool('trendType'),
 
   actions: {
     showMore() {
