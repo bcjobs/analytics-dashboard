@@ -8,11 +8,7 @@
         </tr>
         {{#each visibleItems as |item|}}
             <tr>
-              {{#if session.isLoggedIn}}
-                  <td class="table-job-title">{{#link-to "dashboard.subreport" (query-params filter=type at=transitionDate trend="Company" subject=item.employer sector=sector subSector=subSector)}}{{item.employer}}{{/link-to}}</td>
-              {{else}}
-                  <td class="table-job-title">{{item.employer}}</td>
-              {{/if}}
+                <td class="table-job-title">{{#link-to "dashboard.subreport" (query-params filter=type at=transitionDate trend="Company" subject=item.employer sector=sector subSector=subSector)}}{{item.employer}}{{/link-to}}</td>
                 <td>{{item.jobs}}</td>
             </tr>
         {{/each}}
